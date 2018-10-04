@@ -1,5 +1,7 @@
 {
   "presets": [
-    "module:metro-react-native-babel-preset"
+    "module:metro-react-native-babel-preset",
+    "module:react-native-dotenv",
+    "react-native-uport-connect/babel-preset.js"
   ]
 }

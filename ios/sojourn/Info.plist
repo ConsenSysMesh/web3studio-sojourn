@@ -56,5 +56,18 @@
 			</dict>
 		</dict>
 	</dict>
+
+	<!--See https://github.com/uport-project/react-native-uport-connect -->
+	<key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>2onKAS55Vs9hGwDPsBT6DYHwAP1HJ3FsBXh</string>
+        </array>
+    </dict>
+  </array>
 </dict>
 </plist>
