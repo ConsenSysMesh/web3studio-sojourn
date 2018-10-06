@@ -5,23 +5,40 @@
   "scripts": {
     "start": "react-native start",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "lint": "eslint .",
+    "jest": "jest",
+    "test": "npm run lint && npm run jest",
+    "prettier": "prettier \"**/*.{js,json,css,md}\" --write"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
     "react": "16.5.0",
     "react-native": "0.57.1"
   },
   "devDependencies": {
-    "babel-jest": "23.6.0",
-    "jest": "23.6.0",
+    "@babel/runtime": "^7.1.2",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.3.0",
+    "husky": "^1.1.0",
+    "jest": "^23.6.0",
     "metro-react-native-babel-preset": "0.47.0",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.7.0",
     "react-test-renderer": "16.5.0"
   },
   "jest": {
     "preset": "react-native",
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
