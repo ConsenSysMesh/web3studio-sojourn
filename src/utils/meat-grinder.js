@@ -1,8 +1,19 @@
+import Aes from '@trackforce/react-native-aes-crypto';
 //arguments: file - plaintext file
 //return value:encrypted file
-function encryptWtihAes(plainTextFile) {}
+export async function encryptWithAes(privateKey, plainTextFile) {
+  const iv = 'base 64 random 16 bytes string';
+  try {
+    const ciphertext = await Aes.encrypt(plainTextFile, privateKey, iv);
+    return { ciphertext, iv };
+  } catch (error) {
+    throw error;
+  }
+}
+
 //arguments: encrypted file
 //return value: array of (x,y) coordinates
+/*
 function encryptWithShamirs(encryptedFile) {}
 //arguments:array points needed to reconstruct encryptedFile
 //return value: array of new (x,y) coordinates
@@ -18,3 +29,4 @@ async function saveToVault(plainTextFile) {
   let ipfsHashes = await submitPointsToIPFS(points);
   return ipfsHashes;
 }
+*/
