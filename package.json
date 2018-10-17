@@ -23,6 +23,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "detox": "^9.0.4",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
@@ -48,5 +49,16 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/sojourn.app",
+        "build": "xcodebuild -project ios/sojourn.xcodeproj -scheme sojourn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone XS"
+      }
+    },
+    "test-runner": "jest"
   }
 }
