@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "ios": "react-native run-ios",
+    "ios": "cp index.debug.js index.js && react-native run-ios",
     "lint": "eslint .",
     "jest": "jest",
     "test": "npm run lint && npm run jest",
-    "prettier": "prettier \"**/*.{js,json,css,md}\" --write"
+    "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
+    "postinstall": "react-native link"
   },
   "dependencies": {
     "@trackforce/react-native-aes-crypto": "^1.2.3",
