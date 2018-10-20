@@ -8,11 +8,14 @@
     "start:ganache": "yarn build:truffle && ganache-cli",
     "build:truffle": "truffle compile",
     "ios": "react-native run-ios",
+    "start": "react-native start",
+    "ios": "cp index.debug.js index.js && react-native run-ios",
     "lint": "eslint .",
     "jest": "yarn build:truffle && jest",
     "test": "npm run lint && npm run jest",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
     "postinstall": "node ./scripts/post-install.js"
+    "postinstall": "react-native link"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -56,16 +59,13 @@
     "metro-react-native-babel-preset": "^0.48.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
-<<<<<<< HEAD
     "prop-types": "^15.6.2",
     "react-test-renderer": "16.5.0",
     "truffle": "^5.0.0-next.12",
     "web3-fake-provider": "^0.1.0"
-=======
     "react-test-renderer": "16.5.0",
     "browserify": "^12.0.1",
     "uglify-js": "^2.6.0"
->>>>>>> test app for detox
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
