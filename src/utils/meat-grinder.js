@@ -2,7 +2,7 @@ import Aes from '@trackforce/react-native-aes-crypto';
 //arguments: file - plaintext file
 //return value:encrypted file
 export async function encryptWithAes(privateKey, plainTextFile) {
-  const iv = 'base 64 random 16 bytes string';
+  const iv = 'sixteen bytes iv'; //To DO: randomly generate
   try {
     const ciphertext = await Aes.encrypt(plainTextFile, privateKey, iv);
     return { ciphertext, iv };
