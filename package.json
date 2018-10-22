@@ -8,14 +8,11 @@
     "start:ganache": "yarn build:truffle && ganache-cli",
     "build:truffle": "truffle compile",
     "ios": "react-native run-ios",
-    "start": "react-native start",
-    "ios": "cp index.debug.js index.js && react-native run-ios",
     "lint": "eslint .",
     "jest": "yarn build:truffle && jest",
     "test": "npm run lint && npm run jest",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
-    "postinstall": "node ./scripts/post-install.js",
-    "postinstall": "react-native link"
+    "postinstall": "react-native link && node ./scripts/post-install.js",
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -24,6 +21,10 @@
     "drizzle-react": "^1.2.0",
     "eth-block-tracker": "^4.0.3",
     "node-libs-react-native": "^1.0.3",
+=======
+    "postinstall": "react-native link"
+  },
+  "dependencies": {
     "@trackforce/react-native-aes-crypto": "^1.2.3",
     "big-integer": "^1.6.5",
     "bitcore-mnemonic-react-native": "^1.2.4",
@@ -37,7 +38,6 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.1",
     "whatwg-url": "^7.0.0",
-    "react-native-uport-connect": "git+https://github.com/barlock/react-native-uport-connect.git#support-babel-7",
     "utf-8": "^1.0.0"
   },
   "devDependencies": {
@@ -80,7 +80,7 @@
     "configurations": {
       "ios.sim.debug": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/sojourn.app",
-        "build": "xcodebuild -project ios/sojourn.xcodeproj -scheme sojourn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "build": "cp index.test.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -destination id=AC488766-22CC-4F2F-AEE5-F699F8D3BE7A -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone XS"
       }

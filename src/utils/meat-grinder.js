@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Aes from '@trackforce/react-native-aes-crypto';
 //arguments: file - plaintext file
 //return value:encrypted file
@@ -17,9 +15,10 @@ export async function encryptWithAes(privateKey, plainTextFile) {
 //return value: array of (x,y) coordinates
 /*
 
-=======
+
+
 import Aes from '@trackforce/react-native-aes-crypto';
->>>>>>> implemented aes function
+
 //arguments: file - plaintext file
 //return value:encrypted file
 export async function encryptWithAes(privateKey, plainTextFile) {
@@ -34,11 +33,6 @@ export async function encryptWithAes(privateKey, plainTextFile) {
 
 //arguments: encrypted file
 //return value: array of (x,y) coordinates
-<<<<<<< HEAD
-
-=======
-/*
->>>>>>> implemented aes function
 function encryptWithShamirs(encryptedFile) {}
 //arguments:array points needed to reconstruct encryptedFile
 //return value: array of new (x,y) coordinates
