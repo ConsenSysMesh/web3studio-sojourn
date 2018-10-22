@@ -17,6 +17,6 @@ beforeEach(async () => {
 afterAll(async () => {
   await adapter.afterAll();
   console.log('cleaning up');
-  exec('cp ../index.debug.js index.js');
+  exec('cp index.debug.js index.js');
   await detox.cleanup();
 });

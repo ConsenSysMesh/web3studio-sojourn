@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { encryptWithAes } from '../utils/meat-grinder.js';
+import { encryptWithAes } from './utils/meat-grinder.js';
 import { View } from 'react-native';
 const testPrivateKey =
   '8238BAE35C77FE4AEBB2DEB1B83A6F0027A01D0E4D93BF5B81F7117796955A17';
