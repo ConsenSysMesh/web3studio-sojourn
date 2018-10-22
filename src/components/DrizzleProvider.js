@@ -11,18 +11,20 @@ const drizzleOptions = {
 const drizzleStore = generateStore(drizzleOptions);
 const drizzle = new Drizzle(drizzleOptions, drizzleStore);
 
-// Drizzle init shim
-// https://github.com/trufflesuite/drizzle/pull/100
-drizzleStore.dispatch({
-  type: 'DRIZZLE_INITIALIZING',
-  drizzle: drizzle,
-  options: drizzleOptions
-});
-
 export default class DrizzleProvider extends PureComponent {
   static propTypes = {
     children: PropTypes.element.isRequired
   };
+
+  componentDidMount() {
+    // Drizzle init shim
+    // https://github.com/trufflesuite/drizzle/pull/100
+    drizzleStore.dispatch({
+      type: 'DRIZZLE_INITIALIZING',
+      drizzle: drizzle,
+      options: drizzleOptions
+    });
+  }
 
   render() {
     return (
