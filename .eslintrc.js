@@ -4,14 +4,15 @@ module.exports = {
     es6: true,
     node: true,
     browser: true,
-    jest: true
+    jest: true,
+    jasmine: true
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: ['react', 'react-native'],
+  plugins: ['react', 'react-native', 'jasmine', 'detox'],
   settings: {
     react: {
       pragma: 'React',
@@ -19,6 +20,7 @@ module.exports = {
     }
   },
   rules: {
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    'no-console': 'off'
   }
 };

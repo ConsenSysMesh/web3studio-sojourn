@@ -12,33 +12,28 @@
     "jest": "yarn build:truffle && jest",
     "test": "npm run lint && npm run jest",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
-    "postinstall": "react-native link && node ./scripts/post-install.js",
+    "postinstall": "react-native link && node ./scripts/post-install.js"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@trackforce/react-native-aes-crypto": "^1.2.3",
     "Base64": "^1.0.1",
+    "big-integer": "^1.6.5",
+    "bitcore-mnemonic-react-native": "^1.2.4",
     "drizzle": "git+https://github.com/trufflesuite/drizzle.git#1.2.3",
     "drizzle-react": "^1.2.0",
     "eth-block-tracker": "^4.0.3",
-    "node-libs-react-native": "^1.0.3",
-=======
-    "postinstall": "react-native link"
-  },
-  "dependencies": {
-    "@trackforce/react-native-aes-crypto": "^1.2.3",
-    "big-integer": "^1.6.5",
-    "bitcore-mnemonic-react-native": "^1.2.4",
     "get-random-values": "^1.1.1",
     "global": "^4.3.0",
-    "bitcore-mnemonic-react-native": "^1.2.4",
+    "node-libs-react-native": "^1.0.3",
     "react": "16.5.0",
     "react-native": "0.57.2",
     "react-native-dotenv": "^0.2.0",
     "react-native-uport-connect": "^0.1.3",
     "react-redux": "^5.0.7",
     "redux": "^4.0.1",
-    "whatwg-url": "^7.0.0",
-    "utf-8": "^1.0.0"
+    "utf-8": "^1.0.0",
+    "whatwg-url": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -46,10 +41,13 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "browserify": "^12.0.1",
     "concurrently": "^4.0.1",
     "detox": "^9.0.4",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-detox": "^1.0.0",
+    "eslint-plugin-jasmine": "^2.10.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-native": "^3.3.0",
@@ -63,10 +61,8 @@
     "prop-types": "^15.6.2",
     "react-test-renderer": "16.5.0",
     "truffle": "^5.0.0-next.12",
-    "web3-fake-provider": "^0.1.0",
-    "react-test-renderer": "16.5.0",
-    "browserify": "^12.0.1",
-    "uglify-js": "^2.6.0"
+    "uglify-js": "^2.6.0",
+    "web3-fake-provider": "^0.1.0"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
