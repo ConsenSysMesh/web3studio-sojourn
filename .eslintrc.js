@@ -2,6 +2,7 @@ module.exports = {
   parser: 'babel-eslint',
   env: {
     es6: true,
+    node: true,
     browser: true,
     jest: true
   },
@@ -16,5 +17,8 @@ module.exports = {
       pragma: 'React',
       version: '16.5.0'
     }
+  },
+  rules: {
+    'react/display-name': 'off'
   }
 };
