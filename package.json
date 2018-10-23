@@ -10,7 +10,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "jest": "yarn build:truffle && jest src/_tests_",
-    "test": "npm run lint && npm run jest",
+    "test": "npm run lint && npm run jest && detox build && detox test",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
     "postinstall": "react-native link && node ./scripts/post-install.js"
   },
