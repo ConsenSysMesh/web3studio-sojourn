@@ -76,7 +76,7 @@
     "configurations": {
       "ios.sim.debug": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/sojourn.app",
-        "build": "cp index.test.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -destination id=AC488766-22CC-4F2F-AEE5-F699F8D3BE7A -derivedDataPath ios/build",
+        "build": "cp index.test.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
         "name": "iPhone XS"
       }
