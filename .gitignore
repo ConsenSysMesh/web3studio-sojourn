@@ -36,6 +36,10 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+# Testing
+#
+coverage/
+
 # BUCK
 buck-out/
 \.buckd/

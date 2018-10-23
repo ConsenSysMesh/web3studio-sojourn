@@ -12,3 +12,9 @@ UPORT_APP_NAME=Sojourn
 UPORT_APP_ADDRESS=2onKAS55Vs9hGwDPsBT6DYHwAP1HJ3FsBXh
 UPORT_PRIVATE_KEY=<YOUR_PRIVATE_KEY>
 ```
+
+# Testing
+
+### End to End Tests
+
+Run `detox build` followed by `detox test` for end to end tests
