@@ -9,7 +9,7 @@
     "build:truffle": "truffle compile",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "jest": "yarn build:truffle && jest",
+    "jest": "yarn build:truffle && jest src/_tests_",
     "test": "npm run lint && npm run jest",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
     "postinstall": "react-native link && node ./scripts/post-install.js"
