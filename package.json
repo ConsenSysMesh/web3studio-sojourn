@@ -76,7 +76,7 @@
     "configurations": {
       "ios.sim.debug": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/sojourn.app",
-        "build": "cp index.test.js index.js && set -o pipefail && export CODE_SIGNING_REQUIRED=NO && export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "build": "cp index.test.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }
