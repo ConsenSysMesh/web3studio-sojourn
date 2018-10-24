@@ -9,14 +9,20 @@ import { mockUport } from 'react-native-uport-connect';
 describe('signInReducer', () => {
   const payload = {
     name: 'Pinkie Pie',
-    address: '0x0'
+    address: '0x0',
+    eth: '0x0',
+    networkAddress: '2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX'
   };
+
+  const expectedAddress = '0x00521965e7bd230323c423d96c657db5b79d099f';
 
   it('Adds uport payload to uport state', () => {
     const action = signInSuccess(payload);
 
     expect(reducer(null, action)).toEqual(
-      expect.objectContaining({ uport: payload })
+      expect.objectContaining({
+        uport: { ...payload, address: expectedAddress }
+      })
     );
   });
 

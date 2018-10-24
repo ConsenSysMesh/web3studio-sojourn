@@ -5,7 +5,7 @@ import {
   UPORT_PRIVATE_KEY
 } from 'react-native-dotenv';
 
-export const { uport } = configureUportConnect({
+export const { uport, MNID } = configureUportConnect({
   appName: UPORT_APP_NAME,
   appAddress: UPORT_APP_ADDRESS,
   privateKey: UPORT_PRIVATE_KEY

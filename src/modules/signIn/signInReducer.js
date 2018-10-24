@@ -1,4 +1,4 @@
-import { uport } from '../../util/uport';
+import { uport, MNID } from '../../util/uport';
 
 export const SIGN_IN_SUCCESSFUL = 'sojourn/sign-in/SIGN_IN_SUCCESSFUL';
 export const SIGN_IN_FAILURE = 'sojourn/sign-in/SIGN_IN_FAILURE';
@@ -22,7 +22,10 @@ export const reducer = (state = INITIAL_STATE, action) => {
     case SIGN_IN_SUCCESSFUL:
       return {
         ...state,
-        uport: action.payload
+        uport: {
+          ...action.payload,
+          address: MNID.decode(action.payload.networkAddress).address
+        }
       };
 
     case SIGN_IN_FAILURE:
