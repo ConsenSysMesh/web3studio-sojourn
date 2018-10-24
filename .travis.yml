@@ -4,7 +4,6 @@
 language: objective-c
 xcode_project: ios/sojourn.xcodeproj
 xcode_scheme: sojourn
-xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 xcode_sdk: iphonesimulator
 branches:
   only:
