@@ -5,6 +5,7 @@ branches:
   only:
     - master
 os: osx
+install: -npm install -g react-native-cli
 addons:
   homebrew:
     taps: wix/brew
