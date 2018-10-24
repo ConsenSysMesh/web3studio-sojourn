@@ -1,10 +1,11 @@
-#language: node_js
-#node_js:
-#  - '8'
-language: objective-c
-xcode_project: ios/sojourn.xcodeproj
-xcode_scheme: sojourn
-xcode_sdk: iphonesimulator
+language: node_js
+node_js:
+  - '8'
 branches:
   only:
     - master
+osx_image: xcode10
+addons:
+  homebrew:
+    taps: wix/brew
+    packages: wix/brew/applesimutils
