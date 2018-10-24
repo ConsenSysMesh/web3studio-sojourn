@@ -78,7 +78,7 @@
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/sojourn.app",
         "build": "cp index.test.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
-        "name": "iPhone XS"
+        "name": "iPhone 7"
       }
     },
     "test-runner": "jest"
