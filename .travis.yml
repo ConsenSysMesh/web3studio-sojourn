@@ -4,6 +4,7 @@ node_js:
 branches:
   only:
     - master
+os: osx
 osx_image: xcode10
 addons:
   homebrew:
