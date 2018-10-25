@@ -1,5 +1,5 @@
 import './polyfill';
 import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
-import RCTAesTests from './e2e/RCTAesTests';
-AppRegistry.registerComponent(appName, () => RCTAesTests);
+import E2ETests from './e2e/E2ETests';
+AppRegistry.registerComponent(appName, () => E2ETests);

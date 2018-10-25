@@ -11,6 +11,7 @@
     "lint": "eslint .",
     "jest": "yarn build:truffle && jest src/_tests_",
     "test": "npm run lint && npm run jest",
+    "e2e": "detox build && detox test",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
     "postinstall": "react-native link && node ./scripts/post-install.js"
   },
@@ -76,7 +77,7 @@
     "configurations": {
       "ios.sim.debug": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/sojourn.app",
-        "build": "cp index.test.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "build": "cp index.e2e.js index.js && xcodebuild -project ios/sojourn.xcodeproj -configuration Debug -scheme sojourn -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }

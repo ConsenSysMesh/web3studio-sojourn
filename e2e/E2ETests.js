@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 var inputSizes = [16, 20, 48];
 const testPrivateKey =
   '8238BAE35C77FE4AEBB2DEB1B83A6F0027A01D0E4D93BF5B81F7117796955A17';
-export default class RCTAesTests extends Component {
+export default class E2ETests extends Component {
   constructor(props) {
     super(props);
     this.state = { input16: 0, input20: 0, input48: 0 };
