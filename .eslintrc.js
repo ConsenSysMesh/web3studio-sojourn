@@ -7,6 +7,9 @@ module.exports = {
     jest: true,
     jasmine: true
   },
+  globals: {
+    __DEV__: false
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',

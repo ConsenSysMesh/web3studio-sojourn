@@ -60,6 +60,6 @@ buck-out/
 *.jsbundle
 
 #index file that gets replaced by e2e test scripts
-index.js
+./index.js
 # env
 .env.*
