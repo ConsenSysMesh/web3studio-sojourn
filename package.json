@@ -10,10 +10,10 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "jest": "yarn build:truffle && jest",
-    "e2e": "detox build && detox test",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
+    "test": "yarn lint && yarn jest --coverage && yarn solidity-coverage",
     "post-install": "react-native link",
-    "test": "yarn lint && yarn jest --coverage"
+    "e2e": "detox build && detox test"
   },
   "dependencies": {
     "react-native-aes-crypto": "^1.2.3",
@@ -26,7 +26,8 @@
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "solidity-coverage": "^0.5.11"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -35,6 +36,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "chai": "^4.2.0",
     "concurrently": "^4.0.1",
     "detox": "^9.0.4",
     "eslint": "^5.6.1",

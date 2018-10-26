@@ -39,6 +39,7 @@ yarn-error.log
 # Testing
 #
 coverage/
+coverage.json
 
 # BUCK
 buck-out/

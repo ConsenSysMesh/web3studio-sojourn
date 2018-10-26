@@ -5,10 +5,14 @@ module.exports = {
     node: true,
     browser: true,
     jest: true,
-    jasmine: true
+    jasmine: true,
+    mocha: true
   },
   globals: {
-    __DEV__: false
+    __DEV__: false,
+    web3: false,
+    contract: false,
+    artifacts: false
   },
   extends: [
     'eslint:recommended',
