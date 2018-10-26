@@ -1,4 +1,4 @@
-import Aes from '@trackforce/react-native-aes-crypto';
+import Aes from 'react-native-aes-crypto';
 //arguments: file - plaintext file
 //return value:encrypted file
 export async function encryptWithAes(privateKey, plainTextFile) {
