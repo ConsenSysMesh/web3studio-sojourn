@@ -10,6 +10,7 @@ const { store, persistor } = configureStore();
 
 // Un(re)comment to clear history for next load
 // persistor.purge();
+// require('react-native').AsyncStorage.removeItem(navigationPersistenceKey);
 
 /**
  * App Entry point

@@ -1,4 +1,4 @@
-import { uport, MNID } from '../../util/uport';
+import { requestCredentials } from './uport';
 
 export const SIGN_IN_SUCCESSFUL = 'sojourn/sign-in/SIGN_IN_SUCCESSFUL';
 export const SIGN_IN_FAILURE = 'sojourn/sign-in/SIGN_IN_FAILURE';
@@ -24,11 +24,8 @@ export const signInFailure = error => ({ type: SIGN_IN_FAILURE, error });
  *
  * @returns {Function} - redux thunk
  */
-export const signInWithUPort = () => async dispatch =>
-  uport
-    .requestCredentials({
-      requested: ['address']
-    })
+export const signInWithUPort = () => dispatch =>
+  requestCredentials()
     .then(payload => dispatch(signInSuccess(payload)))
     .catch(error => dispatch(signInFailure(error)));
 
@@ -49,8 +46,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         uport: {
-          ...action.payload,
-          address: MNID.decode(action.payload.networkAddress).address
+          ...action.payload
         }
       };
 

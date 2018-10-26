@@ -3,7 +3,7 @@ import { promisify } from 'util';
 import { persistHash, persistStatus } from './meatGrinderReducer';
 import hashPersistor from './hashPersistor';
 import configureStore from '../../store/configureStore';
-import { web3 } from '../../util/uport';
+import { web3 } from '../signIn/uport';
 import { signInSuccess } from '../signIn/signInReducer';
 import { selectHashes } from './meatGrinderSelectors';
 
