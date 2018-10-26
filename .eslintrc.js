@@ -5,6 +5,7 @@ module.exports = {
     node: true,
     browser: true,
     jest: true,
+    jasmine: true,
     mocha: true
   },
   globals: {
@@ -18,7 +19,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: ['react', 'react-native'],
+  plugins: ['react', 'react-native', 'jasmine', 'detox'],
   settings: {
     react: {
       pragma: 'React',

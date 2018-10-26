@@ -8,5 +8,5 @@ module.exports = {
   },
   transformIgnorePatterns: ['node_modules/(?!react-|drizzle).+\\.js$'],
   setupFiles: ['./src/setupJest.js'],
-  testPathIgnorePatterns: ['/node_modules/', '/test/']
+  testPathIgnorePatterns: ['/node_modules', '/e2e/', '/test/']
 };
