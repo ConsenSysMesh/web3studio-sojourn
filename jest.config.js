@@ -7,5 +7,6 @@ module.exports = {
     window: true
   },
   transformIgnorePatterns: ['node_modules/(?!react-|drizzle).+\\.js$'],
-  setupFiles: ['./test/setup.js']
+  setupFiles: ['./test/setup.js'],
+  testPathIgnorePatterns: ['/node_modules', '/e2e/', '/test/']
 };

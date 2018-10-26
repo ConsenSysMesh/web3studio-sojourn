@@ -21,7 +21,6 @@ export default class E2ETests extends Component {
       throw Error('output is not good');
     }
     this.setState({ ['input'.concat(sizeInBytes)]: aesOutput.ciphertext });
-    console.warn(this.state);
     return 'success';
   }
   render() {

@@ -23,7 +23,6 @@ module.exports = {
     }
   },
   rules: {
-    'react/display-name': 'off',
-    'no-console': 'off'
+    'react/display-name': 'off'
   }
 };
