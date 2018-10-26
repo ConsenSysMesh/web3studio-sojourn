@@ -19,7 +19,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: ['react', 'react-native', 'jasmine', 'detox', 'jsdoc' ],
+  plugins: ['react', 'react-native', 'jasmine', 'detox', 'jsdoc'],
   settings: {
     react: {
       pragma: 'React',

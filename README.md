@@ -11,7 +11,21 @@ create a file `.env.development` in the root of the directory and fill in the de
 UPORT_APP_NAME=Sojourn
 UPORT_APP_ADDRESS=2onKAS55Vs9hGwDPsBT6DYHwAP1HJ3FsBXh
 UPORT_PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+INFURA_KEY=<INFURA_API_KEY>
+DEPLOY_WALLET_MNEMONIC=<HD_WALLET_MNEMONIC>
 ```
+
+### Deploying your own Smart Contracts
+
+With `INFURA_KEY` and `DEPLOY_WALLET_MNEMONIC` set up in your `.env.development`, you can now deploy contracts.
+
+Network definitions are located in `truffle.js`. You can add your own test-net or use ours. We've provided deployed contracts in Rinkeby for your use. To run a migration, simply run:
+
+```bash
+$ yarn truffle migrate
+```
+
+For more details see [Truffle's Documentation.](https://truffleframework.com/docs/truffle/getting-started/running-migrations)
 
 # Testing
 

@@ -8,5 +8,14 @@ module.exports = {
   },
   transformIgnorePatterns: ['node_modules/(?!react-|drizzle).+\\.js$'],
   setupFiles: ['./src/setupJest.js'],
-  testPathIgnorePatterns: ['/node_modules', '/e2e/', '/test/']
+  testPathIgnorePatterns: ['/node_modules', '/e2e/', '/test/'],
+  collectCoverageFrom: ['src/**/*.js', '!src/setupJest.js'],
+  coverageThreshold: {
+    global: {
+      statements: 50,
+      branches: 40,
+      functions: 65,
+      lines: 50
+    }
+  }
 };
