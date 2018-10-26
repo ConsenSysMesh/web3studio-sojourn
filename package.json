@@ -12,7 +12,7 @@
     "jest": "yarn build:truffle && jest",
     "e2e": "detox build && detox test",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",
-    "postinstall": "react-native link && node ./scripts/post-install.js",
+    "post-install": "react-native link",
     "test": "yarn lint && yarn jest --coverage"
   },
   "dependencies": {
