@@ -4,11 +4,3 @@ node_js:
 branches:
   only:
     - master
-os: osx
-before_install:
-  - npm install -g react-native-cli
-  - npm install -g detox-cli
-addons:
-  homebrew:
-    taps: wix/brew
-    packages: wix/brew/applesimutils
