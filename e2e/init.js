@@ -7,7 +7,7 @@ jest.setTimeout(120000);
 jasmine.getEnv().addReporter(adapter);
 
 beforeAll(async () => {
-  exec('cp index.test.js index.js');
+  exec('cp index.e2e.js index.js');
   await detox.init(config);
 });
 
