@@ -11,7 +11,15 @@ const { store, persistor } = configureStore();
 // Un(re)comment to clear history for next load
 // persistor.purge();
 
+/**
+ * App Entry point
+ */
 export default class App extends Component {
+  /**
+   * Renders the component.
+   *
+   * @returns {React.Element} Element to render.
+   */
   render() {
     return (
       <ReduxProvider store={store}>
