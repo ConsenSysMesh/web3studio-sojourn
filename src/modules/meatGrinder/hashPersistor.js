@@ -1,7 +1,12 @@
-import { web3, uport } from '../../util/uport';
-import HashPersistorContract from '../../../build/contracts/HashPersistor.json';
+import { web3, networkId } from '../signIn/uport';
+import DeviceInfo from 'react-native-device-info';
 
-const networkId = web3.utils.hexToNumberString(uport.network.id);
+let HashPersistorContract = require('../../contracts/HashPersistor.json');
+
+if (DeviceInfo.isEmulator()) {
+  HashPersistorContract = require('../../../build/contracts/HashPersistor.json');
+}
+
 const currentContractNetwork = HashPersistorContract.networks[networkId];
 
 /* istanbul ignore next */
@@ -10,7 +15,7 @@ if (!currentContractNetwork && __DEV__) {
   // eslint-disable-next-line no-console
   console.error(
     'Unable to find deployed HashPersistor contract on network ',
-    uport.network.id
+    networkId
   );
 }
 

@@ -9,6 +9,7 @@ const mnemonic = process.env.DEPLOY_WALLET_MNEMONIC;
 module.exports = {
   networks: {
     development: {
+      contracts_build_directory: `{__dirname}/build/devContracts`,
       host: '127.0.0.1',
       port: 8545,
       network_id: '*'

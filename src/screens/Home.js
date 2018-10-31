@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { persistHash } from '../modules/meatGrinder/meatGrinderReducer';
 import { selectHashes } from '../modules/meatGrinder/meatGrinderSelectors';
-import { web3 } from '../util/uport';
+import { web3 } from '../modules/signIn/uport';
 
 /**
  * Application Home Screen
  */
 class Home extends PureComponent {
   static propTypes = {
-    hashes: PropTypes.Object
+    hashes: PropTypes.object
   };
 
   /**
