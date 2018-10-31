@@ -12,7 +12,10 @@ module.exports = {
     __DEV__: false,
     web3: false,
     contract: false,
-    artifacts: false
+    artifacts: false,
+    device: false,
+    element: false,
+    by: false
   },
   extends: [
     'eslint:recommended',

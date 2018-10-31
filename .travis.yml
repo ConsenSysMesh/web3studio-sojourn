@@ -1,6 +1,19 @@
 language: node_js
 node_js:
   - '8'
+os:
+  - linux
+  - osx
+
+matrix:
+  fast_finish: true
+
+addons:
+  homebrew:
+    taps: wix/brew
+    packages: wix/brew/applesimutils
+
+script: yarn ci
 branches:
   only:
     - master
