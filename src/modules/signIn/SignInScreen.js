@@ -5,12 +5,18 @@ import { connect } from 'react-redux';
 import { signInWithUPort } from './signInReducer';
 import { isSignedIn } from './signInSelectors';
 
+/**
+ * Sign in screen. Allows users to log in with uPort.
+ */
 class SignInScreen extends Component {
   static propTypes = {
     navigation: PropTypes.object,
     isSignedIn: PropTypes.bool
   };
 
+  /**
+   * Navigates to Application router when signed in
+   */
   componentDidUpdate() {
     const { navigation, isSignedIn } = this.props;
 
@@ -19,12 +25,20 @@ class SignInScreen extends Component {
     }
   }
 
+  /**
+   * Dispatches sign in redux action
+   */
   uPortLogin = async () => {
     const { signInWithUPort } = this.props;
 
     signInWithUPort();
   };
 
+  /**
+   * Renders the component.
+   *
+   * @returns {React.Element} Element to render.
+   */
   render() {
     return (
       <View style={styles.container}>
@@ -54,6 +68,12 @@ const styles = StyleSheet.create({
   }
 });
 
+/**
+ * Redux connect mappings
+ *
+ * @param {Object} state - redux state
+ * @returns {{isSignedIn}} - injected props
+ */
 const mapStateToProps = state => ({
   isSignedIn: isSignedIn(state)
 });

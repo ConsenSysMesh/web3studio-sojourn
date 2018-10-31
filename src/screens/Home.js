@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+/**
+ * Application Home Screen
+ */
 export default class Home extends Component {
+  /**
+   * Renders the component.
+   *
+   * @returns {React.Element} Element to render.
+   */
   render() {
     return (
       <View style={styles.container}>

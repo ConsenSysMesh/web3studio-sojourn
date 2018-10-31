@@ -4,12 +4,18 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { isSignedIn } from '../modules/signIn/signInSelectors';
 
+/**
+ * App loading screen. Handles routing to authentication flow.
+ */
 export class Loading extends Component {
   static propTypes = {
     isSignedIn: PropTypes.bool,
     navigation: PropTypes.object
   };
 
+  /**
+   * Redirects to correct screen.
+   */
   componentDidMount() {
     const { navigation, isSignedIn } = this.props;
 
@@ -21,6 +27,11 @@ export class Loading extends Component {
     navigation.navigate(isSignedIn ? 'App' : 'Auth');
   }
 
+  /**
+   * Renders the component.
+   *
+   * @returns {React.Element} Element to render.
+   */
   render() {
     return (
       <View style={styles.container}>
@@ -44,6 +55,12 @@ const styles = StyleSheet.create({
   }
 });
 
+/**
+ * Redux connect mappings
+ *
+ * @param {Object} state - redux state
+ * @returns {{isSignedIn}} - injected props
+ */
 const mapStateToProps = state => ({
   isSignedIn: isSignedIn(state)
 });
