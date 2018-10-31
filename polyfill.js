@@ -1,4 +1,4 @@
-// https://github.com/trufflesuite/drizzle/issues/130
+// Node/Browser polyfills for web3@1.x
 
 import 'node-libs-react-native/globals';
 import { URL, URLSearchParams } from 'whatwg-url';
