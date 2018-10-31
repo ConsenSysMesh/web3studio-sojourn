@@ -41,7 +41,7 @@ class SignInScreen extends Component {
    */
   render() {
     return (
-      <View style={styles.container}>
+      <View testID="sign-in-screen" style={styles.container}>
         <Text style={styles.welcome}>Sojourn</Text>
         <Button title={'Continue with uPort'} onPress={this.uPortLogin} />
       </View>
