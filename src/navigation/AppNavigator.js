@@ -1,6 +1,13 @@
-import { createBottomTabNavigator } from 'react-navigation';
-import HomeScreen from '../screens/Home';
+import { createStackNavigator } from 'react-navigation';
+import NotesScreen from '../screens/Notes';
 
-const BottomTabNavigator = createBottomTabNavigator({ Home: HomeScreen });
+const BottomTabNavigator = createStackNavigator(
+  { Home: NotesScreen },
+  {
+    navigationOptions: () => ({
+      header: null
+    })
+  }
+);
 
 export default BottomTabNavigator;

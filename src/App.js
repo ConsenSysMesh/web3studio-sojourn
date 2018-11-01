@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
+import { StyleProvider } from 'native-base';
 import { PersistGate } from 'redux-persist/integration/react';
 import RootNavigator from './navigation/RootNavigator';
 import configureStore from './store/configureStore';
 import Loading from './screens/Loading';
+import theme from './theme';
 
 const navigationPersistenceKey = __DEV__ ? 'NavigationStateDEV' : null;
 const { store, persistor } = configureStore();
@@ -25,7 +27,9 @@ export default class App extends Component {
     return (
       <ReduxProvider store={store}>
         <PersistGate loading={<Loading />} persistor={persistor}>
-          <RootNavigator persistenceKey={navigationPersistenceKey} />
+          <StyleProvider style={theme}>
+            <RootNavigator persistenceKey={navigationPersistenceKey} />
+          </StyleProvider>
         </PersistGate>
       </ReduxProvider>
     );
