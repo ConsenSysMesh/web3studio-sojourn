@@ -16,25 +16,22 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { persistHash } from '../modules/meatGrinder/meatGrinderReducer';
 import { selectHashDisplayList } from '../modules/meatGrinder/meatGrinderSelectors';
-import { web3 } from '../modules/signIn/uport';
 import theme from '../theme/variables';
 
 /**
  * Notes List screen
  */
-class Home extends PureComponent {
+export class Notes extends PureComponent {
   static propTypes = {
-    hashes: PropTypes.array
+    hashes: PropTypes.array,
+    navigation: PropTypes.object
   };
 
   /**
-   * Persists a random hash as a test of uPort interacting with a smart contract
+   * Navigates to the Edit Note screen
    */
-  persistHash = async () => {
-    const { persistHash } = this.props;
-    const hash = web3.utils.sha3(Date.now().toString());
-
-    persistHash(hash);
+  createNewNote = () => {
+    this.props.navigation.navigate('EditNote');
   };
 
   /**
@@ -70,7 +67,7 @@ class Home extends PureComponent {
             ))}
           </Content>
         </ScrollView>
-        <Fab active={false} onPress={this.persistHash} style={styles.fab}>
+        <Fab active={false} onPress={this.createNewNote} style={styles.fab}>
           <Icon name="plus" />
         </Fab>
       </Container>
@@ -102,4 +99,4 @@ const mapDispatchToProps = { persistHash };
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(Notes);

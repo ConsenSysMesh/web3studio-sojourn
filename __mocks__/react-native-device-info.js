@@ -1,3 +1,4 @@
 export default {
-  isEmulator: () => false
+  isEmulator: () => false,
+  hasNotch: () => false
 };

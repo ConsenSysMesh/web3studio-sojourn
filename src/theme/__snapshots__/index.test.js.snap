@@ -673,7 +673,7 @@ Object {
         },
         "borderBottomWidth": 0.5,
       },
-      "borderBottomWidth": 0.5,
+      "borderBottomWidth": undefined,
       "borderColor": "#ccc",
     },
     ".cardBody": Object {
@@ -749,7 +749,7 @@ Object {
       },
       "NativeBase.Text": Object {
         ".note": Object {
-          "color": "#757575",
+          "color": "#888FA1",
           "fontWeight": "200",
           "marginRight": 20,
         },
@@ -770,7 +770,7 @@ Object {
       "NativeBase.Body": Object {
         "NativeBase.Text": Object {
           ".note": Object {
-            "color": "#757575",
+            "color": "#888FA1",
             "fontWeight": "400",
             "marginRight": 20,
           },
@@ -870,7 +870,7 @@ Object {
     },
     "NativeBase.Text": Object {
       ".note": Object {
-        "color": "#757575",
+        "color": "#888FA1",
         "fontWeight": "200",
       },
     },
@@ -914,7 +914,7 @@ Object {
   "NativeBase.Container": Object {
     "backgroundColor": "#FAFAFA",
     "flex": 1,
-    "height": 1334,
+    "height": 768,
   },
   "NativeBase.Content": Object {
     "NativeBase.Segment": Object {
@@ -1368,10 +1368,10 @@ Object {
           "backgroundColor": "transparent",
         },
         "NativeBase.Icon": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "NativeBase.IconNB": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "NativeBase.Text": Object {
           "backgroundColor": "transparent",
@@ -1391,13 +1391,13 @@ Object {
     "NativeBase.Button": Object {
       ".transparent": Object {
         "NativeBase.Icon": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "NativeBase.IconNB": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "NativeBase.Text": Object {
-          "color": "#007aff",
+          "color": "#444F6C",
           "fontWeight": "600",
         },
         "paddingHorizontal": 6,
@@ -1411,21 +1411,21 @@ Object {
       "NativeBase.Button": Object {
         ".hasText": Object {
           "NativeBase.Icon": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 33,
             "marginLeft": 2,
             "marginRight": 5,
             "marginTop": 2,
           },
           "NativeBase.IconNB": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 33,
             "marginLeft": 2,
             "marginRight": 5,
             "marginTop": 2,
           },
           "NativeBase.Text": Object {
-            "color": "#007aff",
+            "color": "#444F6C",
             "fontSize": 17,
             "lineHeight": 19.5,
             "marginLeft": 7,
@@ -1435,7 +1435,7 @@ Object {
         },
         ".transparent": Object {
           "NativeBase.Icon": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 34,
             "marginLeft": 1,
             "marginRight": 2,
@@ -1443,7 +1443,7 @@ Object {
             "paddingTop": 1,
           },
           "NativeBase.IconNB": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 34,
             "marginLeft": 1,
             "marginRight": 2,
@@ -1451,7 +1451,7 @@ Object {
             "paddingTop": 1,
           },
           "NativeBase.Text": Object {
-            "color": "#007aff",
+            "color": "#444F6C",
             "fontSize": 17,
             "paddingLeft": 2,
             "paddingRight": undefined,
@@ -1467,10 +1467,10 @@ Object {
           "shadowRadius": null,
         },
         "NativeBase.Icon": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "NativeBase.IconNB": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "alignSelf": null,
         "paddingLeft": 4,
@@ -1484,21 +1484,21 @@ Object {
       "NativeBase.Button": Object {
         ".hasText": Object {
           "NativeBase.Icon": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 31,
             "marginLeft": 5,
             "marginRight": 2,
             "marginTop": 2,
           },
           "NativeBase.IconNB": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 31,
             "marginLeft": 5,
             "marginRight": 2,
             "marginTop": 2,
           },
           "NativeBase.Text": Object {
-            "color": "#007aff",
+            "color": "#444F6C",
             "fontSize": 17,
             "lineHeight": 19.5,
           },
@@ -1506,21 +1506,21 @@ Object {
         },
         ".transparent": Object {
           "NativeBase.Icon": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 31,
             "marginLeft": 2,
             "marginRight": 0,
             "marginTop": 0,
           },
           "NativeBase.IconNB": Object {
-            "color": "#C84F0E",
+            "color": "#444F6C",
             "fontSize": 31,
             "marginLeft": 2,
             "marginRight": 0,
             "marginTop": 0,
           },
           "NativeBase.Text": Object {
-            "color": "#007aff",
+            "color": "#444F6C",
             "fontSize": 17,
             "paddingRight": 0,
             "top": 1,
@@ -1539,10 +1539,10 @@ Object {
           "shadowRadius": null,
         },
         "NativeBase.Icon": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "NativeBase.IconNB": Object {
-          "color": "#C84F0E",
+          "color": "#444F6C",
         },
         "alignSelf": null,
         "paddingHorizontal": 6,
@@ -1624,7 +1624,7 @@ Object {
       ".success": Object {
         "borderColor": "#2b8339",
       },
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderWidth": 0.5,
       "paddingLeft": 5,
     },
@@ -1635,7 +1635,7 @@ Object {
       ".success": Object {
         "borderColor": "#2b8339",
       },
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderRadius": 30,
       "borderWidth": 0.5,
       "paddingLeft": 5,
@@ -1665,7 +1665,7 @@ Object {
       ".success": Object {
         "borderColor": "#2b8339",
       },
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderLeftWidth": 0,
       "borderRightWidth": 0,
       "borderTopWidth": 0,
@@ -1693,7 +1693,7 @@ Object {
     },
     "alignItems": "center",
     "backgroundColor": "transparent",
-    "borderColor": "#D9D5DC",
+    "borderColor": "#888FA1",
     "borderLeftWidth": 0,
     "borderRightWidth": 0,
     "borderTopWidth": 0,
@@ -1801,7 +1801,7 @@ Object {
       "NativeBase.Input": Object {
         "paddingLeft": 8,
       },
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderWidth": 1,
     },
     ".rounded": Object {
@@ -1817,7 +1817,7 @@ Object {
       "NativeBase.Input": Object {
         "paddingLeft": 8,
       },
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderRadius": 30,
       "borderWidth": 1,
     },
@@ -1879,7 +1879,7 @@ Object {
       "NativeBase.Input": Object {
         "paddingLeft": 15,
       },
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderLeftWidth": 0,
       "borderRightWidth": 0,
       "borderTopWidth": 0,
@@ -1904,13 +1904,13 @@ Object {
       "top": 1.5,
     },
     "NativeBase.Label": Object {
-      "color": "#575757",
+      "color": "#888FA1",
       "fontSize": 17,
       "paddingRight": 5,
     },
     "alignItems": "center",
     "backgroundColor": "transparent",
-    "borderColor": "#D9D5DC",
+    "borderColor": "#888FA1",
     "borderLeftWidth": 0,
     "borderRightWidth": 0,
     "borderTopWidth": 0,
@@ -2275,7 +2275,7 @@ Object {
     "NativeBase.Body": Object {
       "NativeBase.Text": Object {
         ".note": Object {
-          "color": "#757575",
+          "color": "#888FA1",
           "fontWeight": "200",
         },
         "marginHorizontal": 10,
@@ -2306,7 +2306,7 @@ Object {
       "NativeBase.Body": Object {
         "NativeBase.Text": Object {
           ".note": Object {
-            "color": "#757575",
+            "color": "#888FA1",
             "fontWeight": "200",
           },
           "fontWeight": "600",
@@ -2372,7 +2372,7 @@ Object {
       },
       "NativeBase.Text": Object {
         ".note": Object {
-          "color": "#757575",
+          "color": "#888FA1",
           "fontWeight": "200",
         },
         "alignSelf": null,
@@ -2385,7 +2385,7 @@ Object {
     },
     "NativeBase.Text": Object {
       ".note": Object {
-        "color": "#757575",
+        "color": "#888FA1",
         "fontWeight": "200",
       },
       "alignSelf": "center",
@@ -2745,7 +2745,7 @@ Object {
     "NativeBase.Body": Object {
       "NativeBase.Text": Object {
         ".note": Object {
-          "color": "#757575",
+          "color": "#888FA1",
           "fontWeight": "200",
         },
         "marginHorizontal": 10,
@@ -2776,7 +2776,7 @@ Object {
       "NativeBase.Body": Object {
         "NativeBase.Text": Object {
           ".note": Object {
-            "color": "#757575",
+            "color": "#888FA1",
             "fontWeight": "200",
           },
           "fontWeight": "600",
@@ -2842,7 +2842,7 @@ Object {
       },
       "NativeBase.Text": Object {
         ".note": Object {
-          "color": "#757575",
+          "color": "#888FA1",
           "fontWeight": "200",
         },
         "alignSelf": null,
@@ -2855,7 +2855,7 @@ Object {
     },
     "NativeBase.Text": Object {
       ".note": Object {
-        "color": "#757575",
+        "color": "#888FA1",
         "fontWeight": "200",
       },
       "alignSelf": "center",
@@ -3156,13 +3156,13 @@ Object {
   },
   "NativeBase.Textarea": Object {
     ".bordered": Object {
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "borderWidth": 1,
       "marginTop": 5,
     },
     ".underline": Object {
       "borderBottomWidth": 0.5,
-      "borderColor": "#D9D5DC",
+      "borderColor": "#888FA1",
       "marginTop": 5,
     },
     "color": "#000",
@@ -3329,8 +3329,8 @@ Object {
     "defaultProgressColor": "#E4202D",
     "defaultSpinnerColor": "#45D56E",
     "defaultTextColor": "#000",
-    "deviceHeight": 1334,
-    "deviceWidth": 750,
+    "deviceHeight": 768,
+    "deviceWidth": 320,
     "dropdownLinkColor": "#414142",
     "expandedIconStyle": "#000",
     "fontFamily": "Nunito-Regular",
@@ -3348,9 +3348,9 @@ Object {
     "iconSizeLarge": 45,
     "iconSizeSmall": 18,
     "iconStyle": "#000",
-    "inputBorderColor": "#D9D5DC",
+    "inputBorderColor": "#888FA1",
     "inputColor": "#000",
-    "inputColorPlaceholder": "#575757",
+    "inputColorPlaceholder": "#888FA1",
     "inputErrorBorderColor": "#ed2f2f",
     "inputFontSize": 17,
     "inputGroupRoundedBorderRadius": 30,
@@ -3361,7 +3361,7 @@ Object {
     "inverseSpinnerColor": "#1A191B",
     "inverseTextColor": "#fff",
     "iosStatusbar": "dark-content",
-    "isIphoneX": undefined,
+    "isIphoneX": false,
     "lineHeight": 20,
     "lineHeightH1": 32,
     "lineHeightH2": 27,
@@ -3372,7 +3372,7 @@ Object {
     "listDividerBg": "#f4f4f4",
     "listItemPadding": 10,
     "listItemSelected": "#007aff",
-    "listNoteColor": "#757575",
+    "listNoteColor": "#888FA1",
     "listNoteSize": 10,
     "noteFontSize": 14,
     "platform": "ios",
@@ -3404,8 +3404,8 @@ Object {
     "titleFontColor": "#C84F0E",
     "titleFontSize": 17,
     "titleFontfamily": "Nunito-SemiBold",
-    "toolbarBtnColor": "#C84F0E",
-    "toolbarBtnTextColor": "#007aff",
+    "toolbarBtnColor": "#444F6C",
+    "toolbarBtnTextColor": "#444F6C",
     "toolbarDefaultBg": "#fff",
     "toolbarDefaultBorder": "#a7a6ab",
     "toolbarHeight": 64,
