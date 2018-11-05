@@ -1,5 +1,5 @@
-var HashPersistor = artifacts.require('./HashPersistor.sol');
+var HashNotary = artifacts.require('./HashNotary.sol');
 
 module.exports = deployer => {
-  deployer.deploy(HashPersistor);
+  deployer.deploy(HashNotary);
 };

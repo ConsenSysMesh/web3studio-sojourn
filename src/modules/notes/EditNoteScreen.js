@@ -15,7 +15,7 @@ import {
 import { connect } from 'react-redux';
 import theme from '../../theme/variables';
 import { web3 } from '../signIn/uport';
-import { persistHash } from './meatGrinderReducer';
+import { persistHash } from './notesReducer';
 
 /**
  * Screen to allow users to create or edit a note
@@ -67,7 +67,7 @@ export class EditNoteScreen extends PureComponent {
           </Body>
           <Right>
             <Button transparent onPress={this.handleSave}>
-              <Text>Save</Text>
+              <Text>Done</Text>
             </Button>
           </Right>
         </Header>

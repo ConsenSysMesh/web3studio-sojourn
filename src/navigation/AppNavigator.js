@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 import NotesScreen from '../screens/Notes';
-import EditNoteScreen from '../modules/meatGrinder/EditNoteScreen';
+import EditNoteScreen from '../modules/notes/EditNoteScreen';
 
 const BottomTabNavigator = createStackNavigator(
   {

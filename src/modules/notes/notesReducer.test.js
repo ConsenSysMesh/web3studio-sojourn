@@ -1,13 +1,13 @@
 import { EventEmitter } from 'events';
 import { promisify } from 'util';
-import { persistHash, persistStatus } from './meatGrinderReducer';
-import hashPersistor from './hashPersistor';
+import { persistHash, persistStatus } from './notesReducer';
+import hashNotary from './hashNotary';
 import configureStore from '../../store/configureStore';
 import { web3 } from '../signIn/uport';
 import { signInSuccess } from '../signIn/signInReducer';
-import { selectHashes } from './meatGrinderSelectors';
+import { selectHashes } from './notesSelectors';
 
-jest.mock('./hashPersistor');
+jest.mock('./hashNotary');
 
 /**
  * Creates a mocked contract method
@@ -44,10 +44,10 @@ describe('Meat Grinder reducer', () => {
       })
     );
 
-    hashPersistor.methods.save = mockContractMethod();
-    hashPersistor.methods.getTimestamp = mockContractMethod();
+    hashNotary.methods.save = mockContractMethod();
+    hashNotary.methods.getTimestamp = mockContractMethod();
 
-    hashPersistor.methods.getTimestamp._mockCall.mockReturnValue(
+    hashNotary.methods.getTimestamp._mockCall.mockReturnValue(
       expectedTimestamp
     );
   });
@@ -58,7 +58,7 @@ describe('Meat Grinder reducer', () => {
 
     store.dispatch(persistHash(hash));
 
-    hashPersistor.methods.save._mockSendEmitter.emit('transactionHash', txHash);
+    hashNotary.methods.save._mockSendEmitter.emit('transactionHash', txHash);
 
     // Skip a tick for callbacks to pop off
     await promisify(setImmediate)();
@@ -79,7 +79,7 @@ describe('Meat Grinder reducer', () => {
 
     store.dispatch(persistHash(hash));
 
-    hashPersistor.methods.save._mockSendEmitter.emit('error', error);
+    hashNotary.methods.save._mockSendEmitter.emit('error', error);
 
     // Skip a tick for callbacks to pop off
     await promisify(setImmediate)();
@@ -101,10 +101,7 @@ describe('Meat Grinder reducer', () => {
 
     // Simulate 24 confirmations
     new Array(24).fill('').forEach((val, index) => {
-      hashPersistor.methods.save._mockSendEmitter.emit(
-        'confirmation',
-        index + 1
-      );
+      hashNotary.methods.save._mockSendEmitter.emit('confirmation', index + 1);
     });
 
     // Skip a tick for callbacks to pop off
