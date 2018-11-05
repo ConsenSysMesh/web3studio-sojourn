@@ -8,22 +8,36 @@ import { isSignedIn } from './signInSelectors';
 /**
  * Sign in screen. Allows users to log in with uPort.
  */
-class SignInScreen extends Component {
+export class SignInScreen extends Component {
   static propTypes = {
     navigation: PropTypes.object,
     isSignedIn: PropTypes.bool
   };
 
   /**
-   * Navigates to Application router when signed in
+   * Called on prop update
    */
   componentDidUpdate() {
+    this.navigateOnSignIn();
+  }
+
+  /**
+   * Called on mount
+   */
+  componentDidMount() {
+    this.navigateOnSignIn();
+  }
+
+  /**
+   * Navigates to Application router when signed in
+   */
+  navigateOnSignIn = () => {
     const { navigation, isSignedIn } = this.props;
 
     if (isSignedIn) {
       navigation.navigate('App');
     }
-  }
+  };
 
   /**
    * Dispatches sign in redux action

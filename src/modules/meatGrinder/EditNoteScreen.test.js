@@ -1,5 +1,5 @@
 import React from 'react';
-import EditNoteScreen from './EditNoteScreen';
+import { EditNoteScreen } from './EditNoteScreen';
 import { StyleProvider } from 'native-base';
 import render from 'react-test-renderer';
 import theme from '../../theme';

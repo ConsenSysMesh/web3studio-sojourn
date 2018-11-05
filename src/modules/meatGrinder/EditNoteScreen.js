@@ -12,18 +12,29 @@ import {
   Text,
   Title
 } from 'native-base';
+import { connect } from 'react-redux';
 import theme from '../../theme/variables';
+import { web3 } from '../signIn/uport';
+import { persistHash } from './meatGrinderReducer';
 
 /**
  * Screen to allow users to create or edit a note
  */
-class EditNoteScreen extends PureComponent {
+export class EditNoteScreen extends PureComponent {
   static propTypes = {
-    navigation: PropTypes.object
+    navigation: PropTypes.object,
+    persistHash: PropTypes.func
   };
 
   goBack = () => {
     this.props.navigation.goBack();
+  };
+
+  handleSave = () => {
+    const { persistHash } = this.props;
+    const hash = web3.utils.sha3(Date.now().toString());
+
+    persistHash(hash);
   };
 
   /**
@@ -55,7 +66,7 @@ class EditNoteScreen extends PureComponent {
             <Title>New Note</Title>
           </Body>
           <Right>
-            <Button transparent>
+            <Button transparent onPress={this.handleSave}>
               <Text>Save</Text>
             </Button>
           </Right>
@@ -111,4 +122,9 @@ const styles = StyleSheet.create({
   }
 });
 
-export default EditNoteScreen;
+const mapDispatchToProps = { persistHash };
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(EditNoteScreen);
