@@ -14,8 +14,9 @@ import {
 } from 'native-base';
 import { connect } from 'react-redux';
 import theme from '../../theme/variables';
-import { web3 } from '../signIn/uport';
-import { persistHash } from './notesReducer';
+import { noteChanged, notarizeAndSaveNoteToVault } from './notesReducer';
+import { selectCurrentNote } from './notesSelectors';
+import { Note } from '../propTypes';
 
 /**
  * Screen to allow users to create or edit a note
@@ -23,7 +24,9 @@ import { persistHash } from './notesReducer';
 export class EditNoteScreen extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object,
-    persistHash: PropTypes.func
+    noteChanged: PropTypes.func,
+    notarizeAndSaveNoteToVault: PropTypes.func,
+    note: Note
   };
 
   goBack = () => {
@@ -31,15 +34,18 @@ export class EditNoteScreen extends PureComponent {
   };
 
   handleSave = () => {
-    const { persistHash } = this.props;
-    const hash = web3.utils.sha3(Date.now().toString());
+    const { notarizeAndSaveNoteToVault, note } = this.props;
 
-    persistHash(hash);
+    notarizeAndSaveNoteToVault(note);
+
+    this.goBack();
   };
 
   /**
    * Give focus to the text area on enter.
    * Allows for a line-wrapping single line header
+   *
+   * @private
    */
   handleTitleSubmitEditing = () => {
     this.textAreaInputRef.current.focus();
@@ -47,6 +53,29 @@ export class EditNoteScreen extends PureComponent {
 
   titleInputRef = createRef();
   textAreaInputRef = createRef();
+
+  /**
+   * Handle change for fields and set the state
+   *
+   * @private
+   * @param {string} name - name of the field
+   * @returns {Function} - A onChangeText handler
+   */
+  handleTextChange = name => text => {
+    const { note, noteChanged, navigation } = this.props;
+
+    navigation.setParams({
+      noteId: note.id
+    });
+
+    noteChanged({
+      ...note,
+      [name]: text
+    });
+  };
+
+  handleTitleTextChange = this.handleTextChange('title');
+  handleBodyTextChange = this.handleTextChange('body');
 
   /**
    * Renders the component
@@ -77,6 +106,7 @@ export class EditNoteScreen extends PureComponent {
               ref={this.titleInputRef}
               style={styles.title}
               placeholderTextColor={theme.inputColorPlaceholder}
+              onChangeText={this.handleTitleTextChange}
               placeholder="Title"
               multiline
               autoCapitalize="sentences"
@@ -87,6 +117,7 @@ export class EditNoteScreen extends PureComponent {
             <TextInput
               ref={this.textAreaInputRef}
               style={styles.textArea}
+              onChangeText={this.handleBodyTextChange}
               placeholder="Start writing"
               autoFocus
               placeholderTextColor={theme.inputColorPlaceholder}
@@ -122,9 +153,20 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapDispatchToProps = { persistHash };
+/**
+ * Redux state mapper
+ *
+ * @param {Object} state - Redux state
+ * @param {Object} props - React element props
+ * @returns {{hashes}} - Mapped props
+ */
+const mapStateToProps = (state, props) => ({
+  note: selectCurrentNote(state, props)
+});
+
+const mapDispatchToProps = { noteChanged, notarizeAndSaveNoteToVault };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(EditNoteScreen);

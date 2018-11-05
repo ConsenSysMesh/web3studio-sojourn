@@ -12,6 +12,7 @@ const { store, persistor } = configureStore();
 
 // Un(re)comment to clear history for next load
 // persistor.purge();
+// require('./store/secureStorage').default.removeItem('persist:StoreRoot');
 // require('react-native').AsyncStorage.removeItem(navigationPersistenceKey);
 
 /**

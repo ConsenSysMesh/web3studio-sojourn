@@ -1,11 +1,15 @@
 import { EventEmitter } from 'events';
 import { promisify } from 'util';
-import { persistHash, persistStatus } from './notesReducer';
+import {
+  notarizeAndSaveNoteToVault,
+  notaryStatus,
+  noteChanged
+} from './notesReducer';
 import hashNotary from './hashNotary';
 import configureStore from '../../store/configureStore';
 import { web3 } from '../signIn/uport';
 import { signInSuccess } from '../signIn/signInReducer';
-import { selectHashes } from './notesSelectors';
+import { selectCurrentVaultRecord, selectCurrentNote } from './notesSelectors';
 
 jest.mock('./hashNotary');
 
@@ -29,7 +33,11 @@ const mockContractMethod = () => {
   return mockMethod;
 };
 
-describe('Meat Grinder reducer', () => {
+describe('Notes reducer', () => {
+  const txHash = '0x0';
+  const note = { id: '10', title: '10 is best', body: 'We all love David' };
+  const noteHash = web3.utils.sha3(JSON.stringify(note));
+
   let store;
   let expectedTimestamp;
 
@@ -52,53 +60,57 @@ describe('Meat Grinder reducer', () => {
     );
   });
 
-  it('saves a status and hash for later on start', async () => {
-    const hash = web3.utils.sha3('10 is best');
-    const txHash = '0x0';
-
-    store.dispatch(persistHash(hash));
+  it('saves a status and a txHash for later on notary start', async () => {
+    store.dispatch(notarizeAndSaveNoteToVault(note));
 
     hashNotary.methods.save._mockSendEmitter.emit('transactionHash', txHash);
 
     // Skip a tick for callbacks to pop off
     await promisify(setImmediate)();
+    const vaultRecord = selectCurrentVaultRecord(store.getState(), {
+      vaultRecord: noteHash
+    });
 
-    const hashes = selectHashes(store.getState());
-
-    expect(hashes[hash]).toEqual(
+    expect(vaultRecord).toEqual(
       expect.objectContaining({
-        status: persistStatus.pending,
-        txHash
+        noteHash,
+        notary: {
+          status: notaryStatus.pending,
+          txHash
+        }
       })
     );
   });
 
   it('saves an error and status on failure', async () => {
-    const hash = web3.utils.sha3('10 is best');
     const error = new Error('A wild Dalek appeared');
 
-    store.dispatch(persistHash(hash));
+    store.dispatch(notarizeAndSaveNoteToVault(note));
 
     hashNotary.methods.save._mockSendEmitter.emit('error', error);
 
     // Skip a tick for callbacks to pop off
     await promisify(setImmediate)();
 
-    const hashes = selectHashes(store.getState());
+    const vaultRecord = selectCurrentVaultRecord(store.getState(), {
+      vaultRecord: noteHash
+    });
 
-    expect(hashes[hash]).toEqual(
+    expect(vaultRecord).toEqual(
       expect.objectContaining({
-        status: persistStatus.error,
-        error
+        noteHash,
+        notary: {
+          status: notaryStatus.error,
+          error
+        }
       })
     );
   });
 
   it('saves the timestamp after 12 confirmations', async () => {
-    const hash = web3.utils.sha3('The doctor is in!');
+    store.dispatch(notarizeAndSaveNoteToVault(note));
 
-    store.dispatch(persistHash(hash));
-
+    hashNotary.methods.save._mockSendEmitter.emit('transactionHash', txHash);
     // Simulate 24 confirmations
     new Array(24).fill('').forEach((val, index) => {
       hashNotary.methods.save._mockSendEmitter.emit('confirmation', index + 1);
@@ -106,14 +118,43 @@ describe('Meat Grinder reducer', () => {
 
     // Skip a tick for callbacks to pop off
     await promisify(setImmediate)();
+    const vaultRecord = selectCurrentVaultRecord(store.getState(), {
+      vaultRecord: noteHash
+    });
 
-    const hashes = selectHashes(store.getState());
-
-    expect(hashes[hash]).toEqual(
+    expect(vaultRecord).toEqual(
       expect.objectContaining({
-        timestamp: expectedTimestamp,
-        status: persistStatus.confirmed
+        noteId: note.id,
+        noteHash,
+        notary: {
+          status: notaryStatus.confirmed,
+          txHash,
+          timestamp: expectedTimestamp
+        }
       })
+    );
+  });
+
+  it('can update an existing note', () => {
+    const params = {
+      navigation: {
+        getParam: () => note.id
+      }
+    };
+
+    const updatedNote = {
+      ...note,
+      title: note.title + ' ' + note.title
+    };
+
+    store.dispatch(noteChanged(note));
+    expect(selectCurrentNote(store.getState(), params)).toEqual(
+      expect.objectContaining(note)
+    );
+
+    store.dispatch(noteChanged(updatedNote));
+    expect(selectCurrentNote(store.getState(), params)).toEqual(
+      expect.objectContaining(updatedNote)
     );
   });
 });

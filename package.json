@@ -38,6 +38,7 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "solidity-coverage": "^0.5.11",
+    "uuid": "^3.3.2",
     "web3": "^1.0.0-beta.36",
     "whatwg-url": "^7.0.0"
   },
