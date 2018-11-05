@@ -1,0 +1,3420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The theme should be a theme 1`] = `
+Object {
+  "NativeBase.Badge": Object {
+    ".danger": Object {
+      "backgroundColor": "#d9534f",
+    },
+    ".info": Object {
+      "backgroundColor": "#62B1F6",
+    },
+    ".primary": Object {
+      "backgroundColor": "#007aff",
+    },
+    ".success": Object {
+      "backgroundColor": "#5cb85c",
+    },
+    ".warning": Object {
+      "backgroundColor": "#f0ad4e",
+    },
+    "NativeBase.Text": Object {
+      "color": "#fff",
+      "fontSize": 15,
+      "lineHeight": 19,
+      "paddingHorizontal": 3,
+      "textAlign": "center",
+    },
+    "alignSelf": "flex-start",
+    "backgroundColor": "#ED1727",
+    "borderRadius": 13.5,
+    "height": 27,
+    "justifyContent": "center",
+    "padding": 3,
+    "paddingHorizontal": 6,
+  },
+  "NativeBase.Body": Object {
+    "alignItems": "center",
+    "alignSelf": "center",
+    "flex": 1,
+  },
+  "NativeBase.Button": Object {
+    ".block": Object {
+      "alignSelf": "stretch",
+      "justifyContent": "center",
+    },
+    ".bordered": Object {
+      ".danger": Object {
+        "NativeBase.Icon": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.Text": Object {
+          "color": "#d9534f",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#d9534f",
+        "borderWidth": 1,
+      },
+      ".dark": Object {
+        "NativeBase.Icon": Object {
+          "color": "#000",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#000",
+        },
+        "NativeBase.Text": Object {
+          "color": "#000",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#000",
+        "borderWidth": 1,
+      },
+      ".disabled": Object {
+        "NativeBase.Text": Object {
+          "color": "#b5b5b5",
+        },
+        "backgroundColor": null,
+        "borderColor": "#b5b5b5",
+        "borderWidth": 1,
+      },
+      ".info": Object {
+        "NativeBase.Icon": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.Text": Object {
+          "color": "#62B1F6",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#62B1F6",
+        "borderWidth": 1,
+      },
+      ".light": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f4f4f4",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#f4f4f4",
+        "borderWidth": 1,
+      },
+      ".primary": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#007aff",
+        "borderWidth": 1,
+      },
+      ".success": Object {
+        "NativeBase.Icon": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.Text": Object {
+          "color": "#5cb85c",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#5cb85c",
+        "borderWidth": 1,
+      },
+      ".warning": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f0ad4e",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#f0ad4e",
+        "borderWidth": 1,
+      },
+      "NativeBase.Icon": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+      },
+      "backgroundColor": "transparent",
+      "borderWidth": 1,
+      "elevation": null,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    ".capitalize": Object {},
+    ".danger": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.Text": Object {
+          "color": "#d9534f",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#d9534f",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.Text": Object {
+          "color": "#d9534f",
+        },
+        "backgroundColor": null,
+      },
+      "backgroundColor": "#d9534f",
+    },
+    ".dark": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#000",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#000",
+        },
+        "NativeBase.Text": Object {
+          "color": "#000",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#000",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#000",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#000",
+        },
+        "NativeBase.Text": Object {
+          "color": "#000",
+        },
+        "backgroundColor": null,
+      },
+      "backgroundColor": "#000",
+    },
+    ".disabled": Object {
+      ".bordered": Object {
+        "NativeBase.Text": Object {
+          "color": "#b5b5b5",
+        },
+        "backgroundColor": null,
+        "borderColor": "#b5b5b5",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#b5b5b5",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#b5b5b5",
+        },
+        "NativeBase.Text": Object {
+          "color": "#b5b5b5",
+        },
+        "backgroundColor": null,
+      },
+      "NativeBase.Icon": Object {
+        "color": "#f4f4f4",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#f4f4f4",
+      },
+      "backgroundColor": "#b5b5b5",
+    },
+    ".full": Object {
+      "alignSelf": "stretch",
+      "borderRadius": 0,
+      "justifyContent": "center",
+    },
+    ".iconLeft": Object {
+      "NativeBase.Icon": Object {
+        "marginLeft": 16,
+        "marginRight": 0,
+      },
+      "NativeBase.IconNB": Object {
+        "marginLeft": 16,
+        "marginRight": 0,
+      },
+      "NativeBase.Text": Object {
+        "marginLeft": 0,
+      },
+    },
+    ".iconRight": Object {
+      "NativeBase.Icon": Object {
+        "marginLeft": 0,
+        "marginRight": 16,
+      },
+      "NativeBase.IconNB": Object {
+        "marginLeft": 0,
+        "marginRight": 16,
+      },
+      "NativeBase.Text": Object {
+        "marginRight": 0,
+      },
+    },
+    ".info": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.Text": Object {
+          "color": "#62B1F6",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#62B1F6",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.Text": Object {
+          "color": "#62B1F6",
+        },
+        "backgroundColor": null,
+      },
+      "backgroundColor": "#62B1F6",
+    },
+    ".large": Object {
+      "NativeBase.Text": Object {
+        "fontSize": 22,
+      },
+      "height": 60,
+    },
+    ".light": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f4f4f4",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#f4f4f4",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f4f4f4",
+        },
+        "backgroundColor": null,
+      },
+      "NativeBase.Icon": Object {
+        "color": "#000",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#000",
+      },
+      "NativeBase.Text": Object {
+        "color": "#000",
+      },
+      "backgroundColor": "#f4f4f4",
+    },
+    ".picker": Object {
+      "NativeBase.Text": Object {
+        ".note": Object {
+          "fontSize": 16,
+          "lineHeight": null,
+        },
+      },
+    },
+    ".primary": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#007aff",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+        "backgroundColor": null,
+      },
+      "backgroundColor": "#007aff",
+    },
+    ".rounded": Object {
+      "borderRadius": 57,
+    },
+    ".small": Object {
+      "NativeBase.Icon": Object {
+        "fontSize": 20,
+        "paddingTop": 0,
+      },
+      "NativeBase.IconNB": Object {
+        "fontSize": 20,
+        "paddingTop": 0,
+      },
+      "NativeBase.Text": Object {
+        "fontSize": 14,
+      },
+      "height": 30,
+    },
+    ".success": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.Text": Object {
+          "color": "#5cb85c",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#5cb85c",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.Text": Object {
+          "color": "#5cb85c",
+        },
+        "backgroundColor": null,
+      },
+      "backgroundColor": "#5cb85c",
+    },
+    ".transparent": Object {
+      ".danger": Object {
+        "NativeBase.Icon": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#d9534f",
+        },
+        "NativeBase.Text": Object {
+          "color": "#d9534f",
+        },
+        "backgroundColor": null,
+      },
+      ".dark": Object {
+        "NativeBase.Icon": Object {
+          "color": "#000",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#000",
+        },
+        "NativeBase.Text": Object {
+          "color": "#000",
+        },
+        "backgroundColor": null,
+      },
+      ".disabled": Object {
+        "NativeBase.Icon": Object {
+          "color": "#b5b5b5",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#b5b5b5",
+        },
+        "NativeBase.Text": Object {
+          "color": "#b5b5b5",
+        },
+        "backgroundColor": null,
+      },
+      ".info": Object {
+        "NativeBase.Icon": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#62B1F6",
+        },
+        "NativeBase.Text": Object {
+          "color": "#62B1F6",
+        },
+        "backgroundColor": null,
+      },
+      ".light": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f4f4f4",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f4f4f4",
+        },
+        "backgroundColor": null,
+      },
+      ".primary": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+        "backgroundColor": null,
+      },
+      ".success": Object {
+        "NativeBase.Icon": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#5cb85c",
+        },
+        "NativeBase.Text": Object {
+          "color": "#5cb85c",
+        },
+        "backgroundColor": null,
+      },
+      ".warning": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f0ad4e",
+        },
+        "backgroundColor": null,
+      },
+      "NativeBase.Icon": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+      },
+      "backgroundColor": "transparent",
+      "elevation": 0,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    ".vertical": Object {
+      "flexDirection": "column",
+      "height": null,
+    },
+    ".warning": Object {
+      ".bordered": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f0ad4e",
+        },
+        "backgroundColor": "transparent",
+        "borderColor": "#f0ad4e",
+        "borderWidth": 1,
+      },
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#f0ad4e",
+        },
+        "NativeBase.Text": Object {
+          "color": "#f0ad4e",
+        },
+        "backgroundColor": null,
+      },
+      "backgroundColor": "#f0ad4e",
+    },
+    "NativeBase.Icon": Object {
+      "color": "#fff",
+      "fontSize": 24,
+      "marginHorizontal": 16,
+      "paddingTop": 2,
+    },
+    "NativeBase.IconNB": Object {
+      "color": "#fff",
+      "fontSize": 24,
+      "marginHorizontal": 16,
+      "paddingTop": 2,
+    },
+    "NativeBase.Text": Object {
+      "backgroundColor": "transparent",
+      "color": "#fff",
+      "fontFamily": "Nunito-SemiBold",
+      "fontSize": 16.5,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "paddingHorizontal": 16,
+    },
+    "alignItems": "center",
+    "alignSelf": "flex-start",
+    "backgroundColor": "#007aff",
+    "borderColor": "#007aff",
+    "borderRadius": 5,
+    "borderWidth": null,
+    "elevation": 2,
+    "flexDirection": "row",
+    "height": 45,
+    "justifyContent": "space-between",
+    "paddingVertical": 6,
+    "shadowColor": undefined,
+    "shadowOffset": undefined,
+    "shadowOpacity": undefined,
+    "shadowRadius": undefined,
+  },
+  "NativeBase.Card": Object {
+    ".noShadow": Object {
+      "elevation": null,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+    },
+    ".transparent": Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "elevation": null,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    "backgroundColor": "#fff",
+    "borderColor": "#ccc",
+    "borderRadius": 2,
+    "borderWidth": 0.5,
+    "elevation": 3,
+    "flexWrap": "nowrap",
+    "marginHorizontal": 2,
+    "marginVertical": 5,
+    "shadowColor": "#000",
+    "shadowOffset": Object {
+      "height": 2,
+      "width": 0,
+    },
+    "shadowOpacity": 0.1,
+    "shadowRadius": 1.5,
+  },
+  "NativeBase.CardItem": Object {
+    ".bordered": Object {
+      ".footer": Object {
+        "NativeBase.Text": Object {
+          "color": "#C84F0E",
+          "fontWeight": "600",
+        },
+        "borderTopWidth": 0.5,
+      },
+      ".header": Object {
+        "NativeBase.Text": Object {
+          "color": "#C84F0E",
+          "fontWeight": "600",
+        },
+        "borderBottomWidth": 0.5,
+      },
+      "borderBottomWidth": 0.5,
+      "borderColor": "#ccc",
+    },
+    ".cardBody": Object {
+      "NativeBase.Text": Object {
+        "marginTop": 5,
+      },
+      "padding": -5,
+    },
+    ".content": Object {
+      "NativeBase.Text": Object {
+        "color": "#555",
+        "fontSize": 14,
+      },
+    },
+    ".first": Object {
+      "borderTopLeftRadius": 2,
+      "borderTopRightRadius": 2,
+    },
+    ".footer": Object {
+      ".bordered": Object {
+        "NativeBase.Text": Object {
+          "color": "#C84F0E",
+          "fontWeight": "600",
+        },
+        "borderTopWidth": 0.5,
+      },
+      "NativeBase.Text": Object {
+        "fontSize": 16,
+        "fontWeight": "600",
+      },
+      "borderBottomWidth": null,
+    },
+    ".header": Object {
+      ".bordered": Object {
+        "NativeBase.Text": Object {
+          "color": "#C84F0E",
+          "fontWeight": "600",
+        },
+        "borderBottomWidth": 0.5,
+      },
+      "NativeBase.Text": Object {
+        "fontSize": 16,
+        "fontWeight": "600",
+      },
+      "borderBottomWidth": null,
+      "paddingVertical": 15,
+    },
+    ".last": Object {
+      "borderBottomLeftRadius": 2,
+      "borderBottomRightRadius": 2,
+    },
+    "NativeBase.Body": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#007aff",
+            "fontSize": 20,
+            "marginHorizontal": null,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#007aff",
+            "fontSize": 20,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 13,
+          },
+          "alignSelf": "stretch",
+          "paddingHorizontal": null,
+          "paddingRight": 15,
+          "paddingVertical": null,
+        },
+      },
+      "NativeBase.Text": Object {
+        ".note": Object {
+          "color": "#757575",
+          "fontWeight": "200",
+          "marginRight": 20,
+        },
+      },
+      "alignItems": "flex-start",
+      "alignSelf": "stretch",
+      "flex": 1,
+    },
+    "NativeBase.Icon": Object {
+      "fontSize": 28,
+      "width": 35,
+    },
+    "NativeBase.IconNB": Object {
+      "fontSize": 28,
+      "width": 35,
+    },
+    "NativeBase.Left": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          ".note": Object {
+            "color": "#757575",
+            "fontWeight": "400",
+            "marginRight": 20,
+          },
+        },
+        "alignItems": null,
+        "flex": 1,
+        "marginLeft": 10,
+      },
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#007aff",
+            "fontSize": 20,
+            "marginHorizontal": null,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#007aff",
+            "fontSize": 20,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 13,
+          },
+          "paddingHorizontal": null,
+          "paddingRight": 15,
+          "paddingVertical": null,
+        },
+      },
+      "NativeBase.Icon": Object {
+        "fontSize": 30,
+      },
+      "NativeBase.IconNB": Object {
+        "fontSize": 30,
+      },
+      "NativeBase.Text": Object {
+        "alignSelf": "center",
+        "marginLeft": 10,
+      },
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+    },
+    "NativeBase.Right": Object {
+      "NativeBase.Badge": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#007aff",
+            "fontSize": 20,
+            "marginHorizontal": null,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#007aff",
+            "fontSize": 20,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 13,
+          },
+          "paddingHorizontal": null,
+          "paddingVertical": null,
+        },
+        "alignSelf": null,
+      },
+      "NativeBase.Checkbox": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Icon": Object {
+        "alignSelf": null,
+        "color": "#ccc",
+        "fontSize": 22,
+      },
+      "NativeBase.IconNB": Object {
+        "alignSelf": null,
+        "color": "#ccc",
+        "fontSize": 22,
+      },
+      "NativeBase.Image": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Radio": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Switch": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Text": Object {
+        "alignSelf": null,
+        "fontSize": 15,
+      },
+      "NativeBase.Thumbnail": Object {
+        "alignSelf": null,
+      },
+      "flex": 0.8,
+    },
+    "NativeBase.Text": Object {
+      ".note": Object {
+        "color": "#757575",
+        "fontWeight": "200",
+      },
+    },
+    "alignItems": "center",
+    "backgroundColor": "#fff",
+    "borderRadius": 2,
+    "flexDirection": "row",
+    "padding": 15,
+    "paddingVertical": 10,
+  },
+  "NativeBase.CheckBox": Object {
+    ".checked": Object {
+      "NativeBase.Icon": Object {
+        "color": "#fff",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#fff",
+      },
+    },
+    "NativeBase.Icon": Object {
+      "color": "transparent",
+      "fontSize": 25.555555555555554,
+      "lineHeight": 21,
+      "marginTop": undefined,
+    },
+    "NativeBase.IconNB": Object {
+      "color": "transparent",
+      "fontSize": 25.555555555555554,
+      "lineHeight": 21,
+      "marginTop": undefined,
+    },
+    "borderRadius": 13,
+    "borderWidth": 1,
+    "height": 20,
+    "left": 10,
+    "overflow": "hidden",
+    "paddingBottom": 0,
+    "paddingLeft": 3,
+    "width": 20,
+  },
+  "NativeBase.Container": Object {
+    "backgroundColor": "#FAFAFA",
+    "flex": 1,
+    "height": 1334,
+  },
+  "NativeBase.Content": Object {
+    "NativeBase.Segment": Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+    },
+    "backgroundColor": "transparent",
+    "flex": 1,
+  },
+  "NativeBase.Fab": Object {
+    "NativeBase.Button": Object {
+      "NativeBase.Icon": Object {
+        "alignSelf": "center",
+        "fontSize": 20,
+        "marginLeft": 0,
+        "marginRight": 0,
+      },
+      "NativeBase.IconNB": Object {
+        "alignSelf": "center",
+        "fontSize": 20,
+        "marginLeft": 0,
+        "marginRight": 0,
+      },
+      "alignItems": "center",
+      "justifyContent": "center",
+      "padding": null,
+    },
+  },
+  "NativeBase.Footer": Object {
+    "NativeBase.Body": Object {
+      "NativeBase.Button": Object {
+        ".full": Object {
+          "flex": 1,
+          "height": 55,
+          "paddingBottom": 0,
+        },
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#2874F0",
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#2874F0",
+          },
+          "NativeBase.Text": Object {
+            "color": "#2874F0",
+          },
+          "backgroundColor": "transparent",
+          "borderColor": null,
+          "elevation": 0,
+          "shadowColor": null,
+          "shadowOffset": null,
+          "shadowOpacity": null,
+          "shadowRadius": null,
+        },
+        "NativeBase.Icon": Object {
+          "color": "#2874F0",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#2874F0",
+        },
+        "alignSelf": "center",
+      },
+      "alignItems": "center",
+      "alignSelf": "center",
+      "flex": 1,
+      "flexDirection": "row",
+    },
+    "NativeBase.Left": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#2874F0",
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#2874F0",
+          },
+          "NativeBase.Text": Object {
+            "color": "#2874F0",
+          },
+          "backgroundColor": "transparent",
+          "borderColor": null,
+          "elevation": 0,
+          "shadowColor": null,
+          "shadowOffset": null,
+          "shadowOpacity": null,
+          "shadowRadius": null,
+        },
+        "NativeBase.Icon": Object {
+          "color": "#2874F0",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#2874F0",
+        },
+        "alignSelf": null,
+      },
+      "alignItems": "flex-start",
+      "alignSelf": "center",
+      "flex": 1,
+    },
+    "NativeBase.Right": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#2874F0",
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#2874F0",
+          },
+          "NativeBase.Text": Object {
+            "color": "#2874F0",
+          },
+          "backgroundColor": "transparent",
+          "borderColor": null,
+          "elevation": 0,
+          "shadowColor": null,
+          "shadowOffset": null,
+          "shadowOpacity": null,
+          "shadowRadius": null,
+        },
+        "NativeBase.Icon": Object {
+          "color": "#2874F0",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#2874F0",
+        },
+        "alignSelf": null,
+      },
+      "alignItems": "flex-end",
+      "alignSelf": "center",
+      "flex": 1,
+    },
+    "backgroundColor": "#F8F8F8",
+    "borderColor": "#cbcbcb",
+    "borderTopWidth": 0.5,
+    "elevation": 3,
+    "flexDirection": "row",
+    "height": 55,
+    "justifyContent": "center",
+    "left": 0,
+    "paddingBottom": 0,
+    "right": 0,
+  },
+  "NativeBase.FooterTab": Object {
+    "NativeBase.Button": Object {
+      ".active": Object {
+        "NativeBase.Icon": Object {
+          "color": "#2874F0",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#2874F0",
+        },
+        "NativeBase.Text": Object {
+          "color": "#2874F0",
+          "fontSize": 14,
+          "lineHeight": 16,
+        },
+        "backgroundColor": "#cde1f9",
+      },
+      ".badge": Object {
+        "NativeBase.Badge": Object {
+          "NativeBase.Text": Object {
+            "fontSize": 11,
+            "fontWeight": "600",
+            "lineHeight": 14,
+          },
+          "alignSelf": "center",
+          "height": 18,
+          "left": 10,
+          "padding": 1.7,
+          "paddingHorizontal": 3,
+          "top": -3,
+          "zIndex": 99,
+        },
+        "NativeBase.Icon": Object {
+          "marginTop": -18,
+        },
+      },
+      "NativeBase.Icon": Object {
+        "color": "#737373",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#737373",
+      },
+      "NativeBase.Text": Object {
+        "color": "#737373",
+        "fontSize": 14,
+        "lineHeight": 16,
+      },
+      "alignSelf": "center",
+      "backgroundColor": "transparent",
+      "borderColor": null,
+      "elevation": 0,
+      "flex": 1,
+      "flexDirection": null,
+      "height": 55,
+      "justifyContent": "center",
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    "alignSelf": "stretch",
+    "backgroundColor": undefined,
+    "flex": 1,
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+  },
+  "NativeBase.Form": Object {
+    "NativeBase.Item": Object {
+      ".fixedLabel": Object {
+        "NativeBase.Label": Object {
+          "paddingLeft": null,
+        },
+        "marginLeft": 15,
+      },
+      ".floatingLabel": Object {
+        "NativeBase.Icon": Object {
+          "top": 6,
+        },
+        "NativeBase.Input": Object {
+          "marginLeft": null,
+          "paddingLeft": null,
+          "top": 10,
+        },
+        "NativeBase.Label": Object {
+          "left": 0,
+          "top": 6,
+        },
+        "marginLeft": 15,
+        "marginTop": 15,
+      },
+      ".inlineLabel": Object {
+        "NativeBase.Label": Object {
+          "paddingLeft": null,
+        },
+        "marginLeft": 15,
+      },
+      ".last": Object {
+        "marginLeft": 0,
+        "paddingLeft": 15,
+      },
+      ".placeholderLabel": Object {
+        "NativeBase.Input": Object {},
+      },
+      ".regular": Object {
+        "NativeBase.Label": Object {
+          "left": 0,
+        },
+        "marginLeft": 0,
+      },
+      ".rounded": Object {
+        "NativeBase.Label": Object {
+          "left": 0,
+        },
+        "marginLeft": 0,
+      },
+      ".stackedLabel": Object {
+        "NativeBase.Icon": Object {
+          "marginTop": 36,
+        },
+        "NativeBase.Input": Object {
+          "marginLeft": null,
+          "paddingLeft": null,
+        },
+        "NativeBase.Label": Object {
+          "paddingLeft": null,
+          "top": 5,
+        },
+        "marginLeft": 15,
+      },
+      ".underline": Object {
+        "NativeBase.Input": Object {
+          "left": -15,
+        },
+        "NativeBase.Label": Object {
+          "left": 0,
+          "position": "relative",
+          "top": 0,
+        },
+        "marginLeft": 15,
+      },
+      "NativeBase.Label": Object {
+        "paddingRight": 5,
+      },
+      "marginLeft": 15,
+    },
+  },
+  "NativeBase.H1": Object {
+    "color": "#000",
+    "fontSize": 27,
+    "lineHeight": 32,
+  },
+  "NativeBase.H2": Object {
+    "color": "#000",
+    "fontSize": 24,
+    "lineHeight": 27,
+  },
+  "NativeBase.H3": Object {
+    "color": "#000",
+    "fontSize": 21,
+    "lineHeight": 22,
+  },
+  "NativeBase.Header": Object {
+    ".hasSegment": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Segment": Object {
+          "NativeBase.Button": Object {
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+          "alignSelf": "center",
+          "marginRight": 0,
+        },
+        "flex": 1,
+      },
+      "NativeBase.Left": Object {
+        "flex": 0.3,
+      },
+      "NativeBase.Right": Object {
+        "flex": 0.3,
+      },
+      "borderBottomWidth": null,
+      "elevation": 0,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    ".hasSubtitle": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Subtitle": Object {
+          "color": "#000",
+          "fontFamily": "Nunito-SemiBold",
+          "fontSize": 11,
+          "textAlign": "center",
+        },
+        "NativeBase.Title": Object {
+          "fontFamily": "Nunito-SemiBold",
+          "fontSize": 15,
+          "fontWeight": "500",
+          "paddingBottom": 3,
+          "textAlign": "center",
+        },
+      },
+    },
+    ".hasTabs": Object {
+      "borderBottomWidth": null,
+      "elevation": 0,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    ".noLeft": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Subtitle": Object {
+          "paddingLeft": undefined,
+        },
+        "NativeBase.Title": Object {
+          "paddingLeft": undefined,
+        },
+      },
+      "NativeBase.Left": Object {
+        "flex": 1,
+        "width": undefined,
+      },
+    },
+    ".noShadow": Object {
+      "elevation": 0,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    ".rounded": Object {
+      "NativeBase.Item": Object {
+        "borderRadius": 25,
+      },
+    },
+    ".searchBar": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Text": Object {
+            "fontWeight": "500",
+          },
+          "paddingHorizontal": null,
+          "paddingLeft": 10,
+        },
+        "height": undefined,
+        "paddingHorizontal": undefined,
+        "width": undefined,
+      },
+      "NativeBase.Item": Object {
+        "NativeBase.Icon": Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "color": "#414142",
+          "fontSize": 20,
+          "marginTop": 2,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+        },
+        "NativeBase.IconNB": Object {
+          "alignSelf": "center",
+          "backgroundColor": "transparent",
+          "color": null,
+        },
+        "NativeBase.Input": Object {
+          "alignSelf": "center",
+          "height": 30,
+          "lineHeight": null,
+        },
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#CECDD2",
+        "borderColor": "transparent",
+        "flex": 1,
+        "height": 30,
+        "justifyContent": "flex-start",
+      },
+    },
+    ".span": Object {
+      "NativeBase.Body": Object {
+        "alignItems": "flex-start",
+        "alignSelf": "flex-end",
+        "justifyContent": "center",
+        "paddingBottom": 26,
+      },
+      "NativeBase.Left": Object {
+        "alignSelf": "flex-start",
+      },
+      "NativeBase.Right": Object {
+        "alignSelf": "flex-start",
+      },
+      "height": 128,
+    },
+    ".transparent": Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "transparent",
+      "elevation": 0,
+      "height": 64,
+      "paddingTop": undefined,
+      "shadowColor": null,
+      "shadowOffset": null,
+      "shadowOpacity": null,
+      "shadowRadius": null,
+    },
+    "NativeBase.Body": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "backgroundColor": "transparent",
+        },
+        "NativeBase.Icon": Object {
+          "color": "#C84F0E",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#C84F0E",
+        },
+        "NativeBase.Text": Object {
+          "backgroundColor": "transparent",
+          "color": "#fff",
+        },
+        "alignSelf": "center",
+      },
+      "NativeBase.Segment": Object {
+        "alignSelf": "flex-end",
+        "borderWidth": 0,
+        "marginRight": -40,
+      },
+      "alignItems": "center",
+      "alignSelf": "center",
+      "flex": 1,
+    },
+    "NativeBase.Button": Object {
+      ".transparent": Object {
+        "NativeBase.Icon": Object {
+          "color": "#C84F0E",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#C84F0E",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+          "fontWeight": "600",
+        },
+        "paddingHorizontal": 6,
+      },
+      "alignItems": "center",
+      "alignSelf": "center",
+      "justifyContent": "center",
+      "paddingHorizontal": 15,
+    },
+    "NativeBase.Left": Object {
+      "NativeBase.Button": Object {
+        ".hasText": Object {
+          "NativeBase.Icon": Object {
+            "color": "#C84F0E",
+            "fontSize": 33,
+            "marginLeft": 2,
+            "marginRight": 5,
+            "marginTop": 2,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#C84F0E",
+            "fontSize": 33,
+            "marginLeft": 2,
+            "marginRight": 5,
+            "marginTop": 2,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 17,
+            "lineHeight": 19.5,
+            "marginLeft": 7,
+          },
+          "height": 30,
+          "marginLeft": -10,
+        },
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#C84F0E",
+            "fontSize": 34,
+            "marginLeft": 1,
+            "marginRight": 2,
+            "marginTop": 0,
+            "paddingTop": 1,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#C84F0E",
+            "fontSize": 34,
+            "marginLeft": 1,
+            "marginRight": 2,
+            "marginTop": 0,
+            "paddingTop": 1,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 17,
+            "paddingLeft": 2,
+            "paddingRight": undefined,
+            "top": 1,
+          },
+          "backgroundColor": "transparent",
+          "borderColor": null,
+          "elevation": 0,
+          "marginLeft": -3,
+          "shadowColor": null,
+          "shadowOffset": null,
+          "shadowOpacity": null,
+          "shadowRadius": null,
+        },
+        "NativeBase.Icon": Object {
+          "color": "#C84F0E",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#C84F0E",
+        },
+        "alignSelf": null,
+        "paddingLeft": 4,
+        "paddingRight": 6,
+      },
+      "alignItems": "flex-start",
+      "alignSelf": "center",
+      "flex": 1,
+    },
+    "NativeBase.Right": Object {
+      "NativeBase.Button": Object {
+        ".hasText": Object {
+          "NativeBase.Icon": Object {
+            "color": "#C84F0E",
+            "fontSize": 31,
+            "marginLeft": 5,
+            "marginRight": 2,
+            "marginTop": 2,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#C84F0E",
+            "fontSize": 31,
+            "marginLeft": 5,
+            "marginRight": 2,
+            "marginTop": 2,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 17,
+            "lineHeight": 19.5,
+          },
+          "height": 30,
+        },
+        ".transparent": Object {
+          "NativeBase.Icon": Object {
+            "color": "#C84F0E",
+            "fontSize": 31,
+            "marginLeft": 2,
+            "marginRight": 0,
+            "marginTop": 0,
+          },
+          "NativeBase.IconNB": Object {
+            "color": "#C84F0E",
+            "fontSize": 31,
+            "marginLeft": 2,
+            "marginRight": 0,
+            "marginTop": 0,
+          },
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+            "fontSize": 17,
+            "paddingRight": 0,
+            "top": 1,
+          },
+          "backgroundColor": "transparent",
+          "borderColor": null,
+          "borderRadius": 50,
+          "elevation": 0,
+          "marginRight": -9,
+          "paddingHorizontal": 15,
+          "paddingLeft": 15,
+          "paddingRight": 12,
+          "shadowColor": null,
+          "shadowOffset": null,
+          "shadowOpacity": null,
+          "shadowRadius": null,
+        },
+        "NativeBase.Icon": Object {
+          "color": "#C84F0E",
+        },
+        "NativeBase.IconNB": Object {
+          "color": "#C84F0E",
+        },
+        "alignSelf": null,
+        "paddingHorizontal": 6,
+      },
+      "alignItems": "flex-end",
+      "alignSelf": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "justifyContent": "flex-end",
+    },
+    "backgroundColor": "#fff",
+    "borderBottomColor": "#a7a6ab",
+    "borderBottomWidth": 0.5,
+    "elevation": 3,
+    "flexDirection": "row",
+    "height": 64,
+    "justifyContent": "center",
+    "left": 0,
+    "paddingLeft": 6,
+    "paddingRight": 10,
+    "paddingTop": 18,
+    "right": 0,
+    "shadowColor": undefined,
+    "shadowOffset": undefined,
+    "shadowOpacity": undefined,
+    "shadowRadius": undefined,
+    "top": 0,
+  },
+  "NativeBase.Icon": Object {
+    "color": "#000",
+    "fontSize": 30,
+  },
+  "NativeBase.IconNB": Object {
+    "color": "#000",
+    "fontSize": 30,
+  },
+  "NativeBase.Input": Object {
+    ".multiline": Object {
+      "height": null,
+    },
+    "color": "#000",
+    "flex": 1,
+    "fontSize": 17,
+    "height": 50,
+    "paddingLeft": 5,
+    "paddingRight": 5,
+  },
+  "NativeBase.InputGroup": Object {
+    ".disabled": Object {
+      "NativeBase.Icon": Object {
+        "color": "#384850",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#384850",
+      },
+    },
+    ".error": Object {
+      ".regular": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".rounded": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".underline": Object {
+        "borderColor": "#ed2f2f",
+      },
+      "NativeBase.Icon": Object {
+        "color": "#ed2f2f",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#ed2f2f",
+      },
+      "borderColor": "#ed2f2f",
+    },
+    ".regular": Object {
+      ".error": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".success": Object {
+        "borderColor": "#2b8339",
+      },
+      "borderColor": "#D9D5DC",
+      "borderWidth": 0.5,
+      "paddingLeft": 5,
+    },
+    ".rounded": Object {
+      ".error": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".success": Object {
+        "borderColor": "#2b8339",
+      },
+      "borderColor": "#D9D5DC",
+      "borderRadius": 30,
+      "borderWidth": 0.5,
+      "paddingLeft": 5,
+    },
+    ".success": Object {
+      ".regular": Object {
+        "borderColor": "#2b8339",
+      },
+      ".rounded": Object {
+        "borderColor": "#2b8339",
+      },
+      ".underline": Object {
+        "borderColor": "#2b8339",
+      },
+      "NativeBase.Icon": Object {
+        "color": "#2b8339",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#2b8339",
+      },
+      "borderColor": "#2b8339",
+    },
+    ".underline": Object {
+      ".error": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".success": Object {
+        "borderColor": "#2b8339",
+      },
+      "borderColor": "#D9D5DC",
+      "borderLeftWidth": 0,
+      "borderRightWidth": 0,
+      "borderTopWidth": 0,
+      "borderWidth": 0.5,
+      "paddingLeft": 5,
+    },
+    "NativeBase.Icon": Object {
+      "color": "#007aff",
+      "fontSize": 24,
+      "paddingHorizontal": 5,
+    },
+    "NativeBase.IconNB": Object {
+      "color": "#007aff",
+      "fontSize": 24,
+      "paddingHorizontal": 5,
+    },
+    "NativeBase.Input": Object {
+      "color": "#000",
+      "flex": 1,
+      "fontSize": 17,
+      "height": 50,
+      "lineHeight": 24,
+      "paddingLeft": 5,
+      "paddingRight": 5,
+    },
+    "alignItems": "center",
+    "backgroundColor": "transparent",
+    "borderColor": "#D9D5DC",
+    "borderLeftWidth": 0,
+    "borderRightWidth": 0,
+    "borderTopWidth": 0,
+    "borderWidth": 0.5,
+    "flexDirection": "row",
+    "paddingLeft": 5,
+  },
+  "NativeBase.Item": Object {
+    ".disabled": Object {
+      "NativeBase.Icon": Object {
+        "color": "#384850",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#384850",
+      },
+    },
+    ".error": Object {
+      ".regular": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".rounded": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".underline": Object {
+        "borderColor": "#ed2f2f",
+      },
+      "NativeBase.Icon": Object {
+        "color": "#ed2f2f",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#ed2f2f",
+      },
+      "borderColor": "#ed2f2f",
+    },
+    ".fixedLabel": Object {
+      "NativeBase.Input": Object {
+        "flex": 2,
+        "fontSize": 17,
+      },
+      "NativeBase.Label": Object {
+        "flex": 1,
+        "fontSize": 17,
+        "height": null,
+        "left": null,
+        "position": null,
+        "right": null,
+        "top": null,
+        "width": null,
+      },
+    },
+    ".floatingLabel": Object {
+      "NativeBase.Icon": Object {
+        "paddingTop": 8,
+        "top": 6,
+      },
+      "NativeBase.IconNB": Object {
+        "paddingTop": 8,
+        "top": 6,
+      },
+      "NativeBase.Input": Object {
+        ".multiline": Object {
+          "minHeight": 50,
+          "paddingBottom": 14,
+          "paddingTop": 10,
+        },
+        "height": 50,
+        "paddingBottom": 7,
+        "paddingTop": 3,
+        "top": 8,
+      },
+      "NativeBase.Label": Object {
+        "paddingTop": 5,
+      },
+    },
+    ".inlineLabel": Object {
+      "NativeBase.Input": Object {
+        "fontSize": 17,
+        "paddingLeft": 5,
+      },
+      "NativeBase.Label": Object {
+        "fontSize": 17,
+        "height": null,
+        "left": null,
+        "paddingRight": 20,
+        "position": null,
+        "right": null,
+        "top": null,
+        "width": null,
+      },
+      "flexDirection": "row",
+    },
+    ".picker": Object {
+      "marginLeft": 0,
+    },
+    ".regular": Object {
+      ".error": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".success": Object {
+        "borderColor": "#2b8339",
+      },
+      "NativeBase.Icon": Object {
+        "paddingLeft": 10,
+      },
+      "NativeBase.Input": Object {
+        "paddingLeft": 8,
+      },
+      "borderColor": "#D9D5DC",
+      "borderWidth": 1,
+    },
+    ".rounded": Object {
+      ".error": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".success": Object {
+        "borderColor": "#2b8339",
+      },
+      "NativeBase.Icon": Object {
+        "paddingLeft": 10,
+      },
+      "NativeBase.Input": Object {
+        "paddingLeft": 8,
+      },
+      "borderColor": "#D9D5DC",
+      "borderRadius": 30,
+      "borderWidth": 1,
+    },
+    ".stackedLabel": Object {
+      "NativeBase.Icon": Object {
+        "marginTop": 36,
+      },
+      "NativeBase.Input": Object {
+        ".multiline": Object {
+          "paddingBottom": 9,
+          "paddingTop": 9,
+        },
+        ".secureTextEntry": Object {
+          "fontSize": 13,
+        },
+        "alignSelf": "stretch",
+        "flex": 1,
+        "fontSize": 17,
+        "lineHeight": 18,
+        "width": null,
+      },
+      "NativeBase.Label": Object {
+        "alignSelf": "flex-start",
+        "fontSize": 15,
+        "left": null,
+        "paddingTop": 5,
+        "position": null,
+        "right": null,
+        "top": null,
+      },
+      "flexDirection": null,
+      "minHeight": 65,
+    },
+    ".success": Object {
+      ".regular": Object {
+        "borderColor": "#2b8339",
+      },
+      ".rounded": Object {
+        "borderColor": "#2b8339",
+      },
+      ".underline": Object {
+        "borderColor": "#2b8339",
+      },
+      "NativeBase.Icon": Object {
+        "color": "#2b8339",
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#2b8339",
+      },
+      "borderColor": "#2b8339",
+    },
+    ".underline": Object {
+      ".error": Object {
+        "borderColor": "#ed2f2f",
+      },
+      ".success": Object {
+        "borderColor": "#2b8339",
+      },
+      "NativeBase.Input": Object {
+        "paddingLeft": 15,
+      },
+      "borderColor": "#D9D5DC",
+      "borderLeftWidth": 0,
+      "borderRightWidth": 0,
+      "borderTopWidth": 0,
+      "borderWidth": 1,
+    },
+    "NativeBase.Icon": Object {
+      "fontSize": 24,
+      "paddingRight": 8,
+    },
+    "NativeBase.IconNB": Object {
+      "fontSize": 24,
+      "paddingRight": 8,
+    },
+    "NativeBase.Input": Object {
+      ".multiline": Object {
+        "height": null,
+      },
+      "color": "#000",
+      "flex": 1,
+      "fontSize": 17,
+      "height": 50,
+      "top": 1.5,
+    },
+    "NativeBase.Label": Object {
+      "color": "#575757",
+      "fontSize": 17,
+      "paddingRight": 5,
+    },
+    "alignItems": "center",
+    "backgroundColor": "transparent",
+    "borderColor": "#D9D5DC",
+    "borderLeftWidth": 0,
+    "borderRightWidth": 0,
+    "borderTopWidth": 0,
+    "borderWidth": 1,
+    "flexDirection": "row",
+    "marginLeft": 2,
+  },
+  "NativeBase.Label": Object {
+    ".focused": Object {
+      "width": 0,
+    },
+    "fontSize": 17,
+  },
+  "NativeBase.Left": Object {
+    "alignItems": "flex-start",
+    "alignSelf": "center",
+    "flex": 1,
+  },
+  "NativeBase.ListItem": Object {
+    ".avatar": Object {
+      ".noBorder": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          "marginLeft": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 1,
+        "marginLeft": 15,
+        "paddingVertical": 10,
+      },
+      "NativeBase.Left": Object {
+        "alignSelf": "flex-start",
+        "flex": 0,
+        "paddingTop": 14,
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Text": Object {
+          ".note": Object {
+            "fontSize": 12,
+          },
+        },
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 0,
+        "paddingRight": 15,
+        "paddingVertical": 10,
+      },
+      "borderBottomWidth": null,
+      "paddingRight": null,
+      "paddingVertical": null,
+    },
+    ".first": Object {
+      ".itemHeader": Object {
+        "paddingTop": 13,
+      },
+    },
+    ".icon": Object {
+      ".last": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+      },
+      ".noBorder": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          "fontSize": 17,
+          "marginLeft": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 1,
+        "height": 44,
+        "justifyContent": "center",
+      },
+      "NativeBase.Left": Object {
+        "NativeBase.Button": Object {
+          "NativeBase.Icon": Object {
+            "fontSize": 22,
+            "marginHorizontal": null,
+          },
+          "NativeBase.IconNB": Object {
+            "fontSize": 25,
+            "marginHorizontal": null,
+          },
+          "alignItems": "center",
+          "alignSelf": "center",
+          "borderRadius": 6,
+          "height": 29,
+          "justifyContent": "center",
+          "paddingHorizontal": null,
+          "paddingVertical": null,
+          "width": 29,
+        },
+        "NativeBase.Icon": Object {
+          "fontSize": 28,
+          "width": 25,
+        },
+        "NativeBase.IconNB": Object {
+          "fontSize": 28,
+          "width": 25,
+        },
+        "alignItems": "center",
+        "flex": 0,
+        "height": 44,
+        "justifyContent": "center",
+        "paddingRight": 15,
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Icon": Object {
+          "alignSelf": "center",
+          "color": "#C8C7CC",
+          "fontSize": 20,
+          "paddingLeft": 10,
+          "paddingTop": 3,
+        },
+        "NativeBase.IconNB": Object {
+          "alignSelf": "center",
+          "color": "#C8C7CC",
+          "fontSize": 20,
+          "paddingLeft": 10,
+          "paddingTop": 3,
+        },
+        "NativeBase.PickerNB": Object {},
+        "NativeBase.Switch": Object {
+          "alignSelf": null,
+          "marginRight": undefined,
+        },
+        "NativeBase.Text": Object {
+          "color": "#8F8E95",
+          "fontSize": 17,
+          "textAlign": "center",
+        },
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 0,
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "flex-end",
+        "paddingRight": 15,
+      },
+      "borderBottomWidth": null,
+      "height": 44,
+      "justifyContent": "center",
+      "paddingRight": null,
+      "paddingVertical": null,
+    },
+    ".itemDivider": Object {
+      "backgroundColor": "#f4f4f4",
+      "borderBottomWidth": null,
+      "borderColor": "#c9c9c9",
+      "flexDirection": "row",
+      "marginLeft": null,
+      "padding": 10,
+      "paddingLeft": 15,
+    },
+    ".itemHeader": Object {
+      ".first": Object {
+        "paddingTop": 13,
+      },
+      "NativeBase.Text": Object {
+        "color": undefined,
+        "fontSize": 14,
+      },
+      "borderBottomWidth": 0.5,
+      "borderColor": "#c9c9c9",
+      "flexDirection": "row",
+      "marginLeft": null,
+      "padding": 10,
+      "paddingBottom": undefined,
+      "paddingLeft": 15,
+      "paddingTop": 35,
+    },
+    ".last": Object {
+      ".icon": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+      },
+      "marginLeft": -15,
+      "paddingLeft": 30,
+      "top": 1,
+    },
+    ".noBorder": Object {
+      ".avatar": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      ".icon": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      ".thumbnail": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "borderBottomWidth": null,
+    },
+    ".noIndent": Object {
+      "marginLeft": null,
+      "padding": 10,
+      "paddingLeft": 16,
+    },
+    ".searchBar": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Text": Object {
+            "fontWeight": "500",
+          },
+          "paddingHorizontal": null,
+          "paddingLeft": 10,
+        },
+        "height": undefined,
+        "paddingHorizontal": undefined,
+        "width": undefined,
+      },
+      "NativeBase.Item": Object {
+        "NativeBase.Icon": Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "color": "#414142",
+          "fontSize": 20,
+          "marginTop": 2,
+          "paddingRight": 8,
+        },
+        "NativeBase.IconNB": Object {
+          "alignSelf": "center",
+          "backgroundColor": "transparent",
+          "color": null,
+        },
+        "NativeBase.Input": Object {
+          "alignSelf": "center",
+        },
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderColor": "transparent",
+        "borderRadius": 5,
+        "flex": 1,
+        "height": 30,
+        "justifyContent": "flex-start",
+      },
+      "backgroundColor": "#CECDD2",
+      "marginLeft": null,
+      "padding": 10,
+    },
+    ".selected": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+      },
+      "NativeBase.Icon": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.Left": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+      },
+    },
+    ".thumbnail": Object {
+      ".noBorder": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          "marginLeft": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 1,
+        "marginLeft": 15,
+        "paddingVertical": 15,
+      },
+      "NativeBase.Left": Object {
+        "flex": 0,
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Button": Object {
+          ".transparent": Object {
+            "NativeBase.Text": Object {
+              "color": "#007aff",
+              "fontSize": 10,
+            },
+          },
+          "height": null,
+        },
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 0,
+        "justifyContent": "center",
+        "paddingRight": 15,
+        "paddingVertical": 15,
+      },
+      "borderBottomWidth": null,
+      "paddingRight": null,
+      "paddingVertical": null,
+    },
+    "NativeBase.Body": Object {
+      "NativeBase.Text": Object {
+        ".note": Object {
+          "color": "#757575",
+          "fontWeight": "200",
+        },
+        "marginHorizontal": 10,
+      },
+      "alignItems": null,
+      "alignSelf": null,
+    },
+    "NativeBase.CheckBox": Object {
+      "marginLeft": -10,
+      "marginRight": 10,
+    },
+    "NativeBase.InputGroup": Object {
+      "NativeBase.Icon": Object {
+        "paddingRight": 5,
+      },
+      "NativeBase.IconNB": Object {
+        "paddingRight": 5,
+      },
+      "NativeBase.Input": Object {
+        "paddingHorizontal": 5,
+      },
+      "borderBottomColor": "transparent",
+      "borderWidth": null,
+      "flex": 1,
+      "margin": -10,
+    },
+    "NativeBase.Left": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          ".note": Object {
+            "color": "#757575",
+            "fontWeight": "200",
+          },
+          "fontWeight": "600",
+        },
+        "alignItems": null,
+        "alignSelf": null,
+        "marginLeft": 10,
+      },
+      "NativeBase.Icon": Object {
+        "fontSize": 20,
+        "width": 20,
+      },
+      "NativeBase.IconNB": Object {
+        "fontSize": 20,
+        "width": 20,
+      },
+      "NativeBase.Text": Object {
+        "alignSelf": "center",
+      },
+      "flexDirection": "row",
+    },
+    "NativeBase.Right": Object {
+      "NativeBase.Badge": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+          },
+        },
+        "alignSelf": null,
+      },
+      "NativeBase.Checkbox": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Icon": Object {
+        "alignSelf": null,
+        "color": "#c9c8cd",
+        "fontSize": 22,
+      },
+      "NativeBase.IconNB": Object {
+        "alignSelf": null,
+        "color": "#c9c8cd",
+        "fontSize": 22,
+      },
+      "NativeBase.Image": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.PickerNB": Object {
+        "NativeBase.Button": Object {
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+          },
+          "marginRight": -15,
+        },
+      },
+      "NativeBase.Radio": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Switch": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Text": Object {
+        ".note": Object {
+          "color": "#757575",
+          "fontWeight": "200",
+        },
+        "alignSelf": null,
+      },
+      "NativeBase.Thumbnail": Object {
+        "alignSelf": null,
+      },
+      "flex": 0.28,
+      "padding": null,
+    },
+    "NativeBase.Text": Object {
+      ".note": Object {
+        "color": "#757575",
+        "fontWeight": "200",
+      },
+      "alignSelf": "center",
+    },
+    "alignItems": "center",
+    "backgroundColor": "transparent",
+    "borderBottomWidth": 0.5,
+    "borderColor": "#c9c9c9",
+    "flexDirection": "row",
+    "marginLeft": 16,
+    "paddingRight": 16,
+    "paddingVertical": 13,
+  },
+  "NativeBase.ListItem1": Object {
+    ".avatar": Object {
+      ".noBorder": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          "marginLeft": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 1,
+        "marginLeft": 15,
+        "paddingVertical": 10,
+      },
+      "NativeBase.Left": Object {
+        "alignSelf": "flex-start",
+        "flex": 0,
+        "paddingTop": 14,
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Text": Object {
+          ".note": Object {
+            "fontSize": 12,
+          },
+        },
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 0,
+        "paddingRight": 15,
+        "paddingVertical": 10,
+      },
+      "borderBottomWidth": null,
+      "paddingRight": null,
+      "paddingVertical": null,
+    },
+    ".first": Object {
+      ".itemHeader": Object {
+        "paddingTop": 13,
+      },
+    },
+    ".icon": Object {
+      ".last": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+      },
+      ".noBorder": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          "fontSize": 17,
+          "marginLeft": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 1,
+        "height": 44,
+        "justifyContent": "center",
+      },
+      "NativeBase.Left": Object {
+        "NativeBase.Button": Object {
+          "NativeBase.Icon": Object {
+            "fontSize": 22,
+            "marginHorizontal": null,
+          },
+          "NativeBase.IconNB": Object {
+            "fontSize": 25,
+            "marginHorizontal": null,
+          },
+          "alignItems": "center",
+          "alignSelf": "center",
+          "borderRadius": 6,
+          "height": 29,
+          "justifyContent": "center",
+          "paddingHorizontal": null,
+          "paddingVertical": null,
+          "width": 29,
+        },
+        "NativeBase.Icon": Object {
+          "fontSize": 28,
+          "width": 25,
+        },
+        "NativeBase.IconNB": Object {
+          "fontSize": 28,
+          "width": 25,
+        },
+        "alignItems": "center",
+        "flex": 0,
+        "height": 44,
+        "justifyContent": "center",
+        "paddingRight": 15,
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Icon": Object {
+          "alignSelf": "center",
+          "color": "#C8C7CC",
+          "fontSize": 20,
+          "paddingLeft": 10,
+          "paddingTop": 3,
+        },
+        "NativeBase.IconNB": Object {
+          "alignSelf": "center",
+          "color": "#C8C7CC",
+          "fontSize": 20,
+          "paddingLeft": 10,
+          "paddingTop": 3,
+        },
+        "NativeBase.PickerNB": Object {},
+        "NativeBase.Switch": Object {
+          "alignSelf": null,
+          "marginRight": undefined,
+        },
+        "NativeBase.Text": Object {
+          "color": "#8F8E95",
+          "fontSize": 17,
+          "textAlign": "center",
+        },
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 0,
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "flex-end",
+        "paddingRight": 15,
+      },
+      "borderBottomWidth": null,
+      "height": 44,
+      "justifyContent": "center",
+      "paddingRight": null,
+      "paddingVertical": null,
+    },
+    ".itemDivider": Object {
+      "backgroundColor": "#f4f4f4",
+      "borderBottomWidth": null,
+      "borderColor": "#c9c9c9",
+      "flexDirection": "row",
+      "marginLeft": null,
+      "padding": 10,
+      "paddingLeft": 15,
+    },
+    ".itemHeader": Object {
+      ".first": Object {
+        "paddingTop": 13,
+      },
+      "NativeBase.Text": Object {
+        "color": undefined,
+        "fontSize": 14,
+      },
+      "borderBottomWidth": 0.5,
+      "borderColor": "#c9c9c9",
+      "flexDirection": "row",
+      "marginLeft": null,
+      "padding": 10,
+      "paddingBottom": undefined,
+      "paddingLeft": 15,
+      "paddingTop": 35,
+    },
+    ".last": Object {
+      ".icon": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+      },
+      "marginLeft": -15,
+      "paddingLeft": 30,
+      "top": 1,
+    },
+    ".noBorder": Object {
+      ".avatar": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      ".icon": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      ".thumbnail": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "borderBottomWidth": null,
+    },
+    ".noIndent": Object {
+      "marginLeft": null,
+      "padding": 10,
+      "paddingLeft": 16,
+    },
+    ".searchBar": Object {
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Text": Object {
+            "fontWeight": "500",
+          },
+          "paddingHorizontal": null,
+          "paddingLeft": 10,
+        },
+        "height": undefined,
+        "paddingHorizontal": undefined,
+        "width": undefined,
+      },
+      "NativeBase.Item": Object {
+        "NativeBase.Icon": Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "color": "#414142",
+          "fontSize": 20,
+          "marginTop": 2,
+          "paddingRight": 8,
+        },
+        "NativeBase.IconNB": Object {
+          "alignSelf": "center",
+          "backgroundColor": "transparent",
+          "color": null,
+        },
+        "NativeBase.Input": Object {
+          "alignSelf": "center",
+        },
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderColor": "transparent",
+        "borderRadius": 5,
+        "flex": 1,
+        "height": 30,
+        "justifyContent": "flex-start",
+      },
+      "backgroundColor": "#CECDD2",
+      "marginLeft": null,
+      "padding": 10,
+    },
+    ".selected": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+      },
+      "NativeBase.Icon": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.Left": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Icon": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+        },
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+      },
+    },
+    ".thumbnail": Object {
+      ".noBorder": Object {
+        "NativeBase.Body": Object {
+          "borderBottomWidth": null,
+        },
+        "NativeBase.Right": Object {
+          "borderBottomWidth": null,
+        },
+      },
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          "marginLeft": null,
+        },
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 1,
+        "marginLeft": 15,
+        "paddingVertical": 15,
+      },
+      "NativeBase.Left": Object {
+        "flex": 0,
+      },
+      "NativeBase.Right": Object {
+        "NativeBase.Button": Object {
+          ".transparent": Object {
+            "NativeBase.Text": Object {
+              "color": "#007aff",
+              "fontSize": 10,
+            },
+          },
+          "height": null,
+        },
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#c9c9c9",
+        "flex": 0,
+        "justifyContent": "center",
+        "paddingRight": 15,
+        "paddingVertical": 15,
+      },
+      "borderBottomWidth": null,
+      "paddingRight": null,
+      "paddingVertical": null,
+    },
+    "NativeBase.Body": Object {
+      "NativeBase.Text": Object {
+        ".note": Object {
+          "color": "#757575",
+          "fontWeight": "200",
+        },
+        "marginHorizontal": 10,
+      },
+      "alignItems": null,
+      "alignSelf": null,
+    },
+    "NativeBase.CheckBox": Object {
+      "marginLeft": -10,
+      "marginRight": 10,
+    },
+    "NativeBase.InputGroup": Object {
+      "NativeBase.Icon": Object {
+        "paddingRight": 5,
+      },
+      "NativeBase.IconNB": Object {
+        "paddingRight": 5,
+      },
+      "NativeBase.Input": Object {
+        "paddingHorizontal": 5,
+      },
+      "borderBottomColor": "transparent",
+      "borderWidth": null,
+      "flex": 1,
+      "margin": -10,
+    },
+    "NativeBase.Left": Object {
+      "NativeBase.Body": Object {
+        "NativeBase.Text": Object {
+          ".note": Object {
+            "color": "#757575",
+            "fontWeight": "200",
+          },
+          "fontWeight": "600",
+        },
+        "alignItems": null,
+        "alignSelf": null,
+        "marginLeft": 10,
+      },
+      "NativeBase.Icon": Object {
+        "fontSize": 20,
+        "width": 20,
+      },
+      "NativeBase.IconNB": Object {
+        "fontSize": 20,
+        "width": 20,
+      },
+      "NativeBase.Text": Object {
+        "alignSelf": "center",
+      },
+      "flexDirection": "row",
+    },
+    "NativeBase.Right": Object {
+      "NativeBase.Badge": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Button": Object {
+        ".transparent": Object {
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+          },
+        },
+        "alignSelf": null,
+      },
+      "NativeBase.Checkbox": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Icon": Object {
+        "alignSelf": null,
+        "color": "#c9c8cd",
+        "fontSize": 22,
+      },
+      "NativeBase.IconNB": Object {
+        "alignSelf": null,
+        "color": "#c9c8cd",
+        "fontSize": 22,
+      },
+      "NativeBase.Image": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.PickerNB": Object {
+        "NativeBase.Button": Object {
+          "NativeBase.Text": Object {
+            "color": "#007aff",
+          },
+          "marginRight": -15,
+        },
+      },
+      "NativeBase.Radio": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Switch": Object {
+        "alignSelf": null,
+      },
+      "NativeBase.Text": Object {
+        ".note": Object {
+          "color": "#757575",
+          "fontWeight": "200",
+        },
+        "alignSelf": null,
+      },
+      "NativeBase.Thumbnail": Object {
+        "alignSelf": null,
+      },
+      "flex": 0.28,
+      "padding": null,
+    },
+    "NativeBase.Text": Object {
+      ".note": Object {
+        "color": "#757575",
+        "fontWeight": "200",
+      },
+      "alignSelf": "center",
+    },
+    "alignItems": "center",
+    "backgroundColor": "transparent",
+    "borderBottomWidth": 0.5,
+    "borderColor": "#c9c9c9",
+    "flexDirection": "row",
+    "marginLeft": 16,
+    "paddingRight": 16,
+    "paddingVertical": 13,
+  },
+  "NativeBase.PickerNB": Object {
+    "NativeBase.Button": Object {
+      "NativeBase.Text": Object {},
+    },
+  },
+  "NativeBase.Radio": Object {
+    ".selected": Object {
+      "NativeBase.IconNB": Object {
+        "color": "#007aff",
+        "height": 20,
+        "lineHeight": 25,
+      },
+    },
+    "NativeBase.IconNB": Object {
+      "color": "transparent",
+      "fontSize": undefined,
+      "lineHeight": undefined,
+    },
+  },
+  "NativeBase.Right": Object {
+    "NativeBase.Button": Object {
+      "alignSelf": null,
+    },
+    "alignItems": "flex-end",
+    "alignSelf": "center",
+    "flex": 1,
+  },
+  "NativeBase.Segment": Object {
+    "NativeBase.Button": Object {
+      ".active": Object {
+        "NativeBase.Icon": Object {
+          "color": "#fff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#fff",
+        },
+        "backgroundColor": "#007aff",
+      },
+      ".first": Object {
+        "borderBottomLeftRadius": 5,
+        "borderLeftWidth": 1,
+        "borderTopLeftRadius": 5,
+      },
+      ".last": Object {
+        "borderBottomRightRadius": 5,
+        "borderTopRightRadius": 5,
+      },
+      "NativeBase.Icon": Object {
+        "color": "#007aff",
+        "fontSize": 22,
+        "paddingTop": 0,
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+        "fontSize": 14,
+      },
+      "alignSelf": "center",
+      "backgroundColor": "transparent",
+      "borderColor": "#007aff",
+      "borderLeftWidth": 0,
+      "borderRadius": 0,
+      "borderWidth": 1,
+      "elevation": 0,
+      "height": 30,
+      "paddingBottom": 3,
+      "paddingTop": 3,
+    },
+    "backgroundColor": "#F8F8F8",
+    "borderColor": "#a7a6ab",
+    "flexDirection": "row",
+    "height": 45,
+    "justifyContent": "center",
+  },
+  "NativeBase.Separator": Object {
+    ".bordered": Object {
+      ".group": Object {
+        "height": 50,
+        "paddingTop": 22,
+        "paddingVertical": 2,
+      },
+      ".noBottomBorder": Object {
+        "borderBottomWidth": 0,
+      },
+      ".noTopBorder": Object {
+        "borderTopWidth": 0,
+      },
+      "borderBottomWidth": 0.5,
+      "borderColor": "#c9c9c9",
+      "borderTopWidth": 0.5,
+      "height": 35,
+      "paddingBottom": 10,
+      "paddingTop": 12,
+    },
+    ".group": Object {
+      ".bordered": Object {
+        "height": 50,
+        "paddingTop": 22,
+        "paddingVertical": 2,
+      },
+      "height": 50,
+      "paddingTop": 22,
+      "paddingVertical": 2,
+    },
+    ".noBottomBorder": Object {
+      ".bordered": Object {
+        "borderBottomWidth": 0,
+      },
+      "borderBottomWidth": 0,
+    },
+    ".noTopBorder": Object {
+      ".bordered": Object {
+        "borderTopWidth": 0,
+      },
+      "borderTopWidth": 0,
+    },
+    "NativeBase.Text": Object {
+      "color": "#777",
+      "fontSize": 12,
+    },
+    "backgroundColor": "#F0EFF5",
+    "flex": 1,
+    "height": 38,
+    "justifyContent": "center",
+    "paddingLeft": 15,
+  },
+  "NativeBase.Spinner": Object {
+    "height": 80,
+  },
+  "NativeBase.Subtitle": Object {
+    "color": "#000",
+    "fontFamily": "Nunito-SemiBold",
+    "fontSize": 11,
+    "marginLeft": undefined,
+    "paddingLeft": 4,
+    "textAlign": "center",
+  },
+  "NativeBase.SwipeRow": Object {
+    "NativeBase.Button": Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "borderRadius": 0,
+      "flex": 1,
+      "height": null,
+      "justifyContent": "center",
+    },
+    "NativeBase.Left": Object {
+      "NativeBase.Button": Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "borderRadius": 0,
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      "alignItems": null,
+      "alignSelf": null,
+      "flex": 0,
+    },
+    "NativeBase.ListItem": Object {
+      ".list": Object {
+        "backgroundColor": "#FFF",
+      },
+      "marginLeft": 0,
+    },
+    "NativeBase.Right": Object {
+      "NativeBase.Button": Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "borderRadius": 0,
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      "alignItems": null,
+      "alignSelf": null,
+      "flex": 0,
+    },
+  },
+  "NativeBase.Switch": Object {
+    "marginVertical": -5,
+  },
+  "NativeBase.Tab": Object {
+    "backgroundColor": "#FFF",
+    "flex": 1,
+  },
+  "NativeBase.TabBar": Object {
+    ".tabIcon": Object {
+      "height": undefined,
+    },
+    ".vertical": Object {
+      "height": 60,
+    },
+    "NativeBase.Button": Object {
+      ".isTabActive": Object {
+        "NativeBase.Text": Object {
+          "fontWeight": "900",
+        },
+      },
+      ".transparent": Object {
+        "NativeBase.IconNB": Object {
+          "color": "#007aff",
+        },
+        "NativeBase.Text": Object {
+          "color": "#007aff",
+          "fontSize": 15,
+          "fontWeight": "400",
+        },
+      },
+      "NativeBase.IconNB": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+        "fontSize": 15,
+        "fontWeight": "400",
+      },
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "backgroundColor": "#F8F8F8",
+      "borderBottomColor": "transparent",
+      "borderRadius": null,
+      "flex": 1,
+      "justifyContent": "center",
+    },
+    "backgroundColor": "#F8F8F8",
+    "borderBottomColor": "#ccc",
+    "borderLeftWidth": 0,
+    "borderRightWidth": 0,
+    "borderTopWidth": 0,
+    "borderWidth": 1,
+    "flexDirection": "row",
+    "height": 45,
+    "justifyContent": "space-around",
+  },
+  "NativeBase.TabContainer": Object {
+    "borderBottomWidth": 0.5,
+    "borderColor": "#a7a6ab",
+    "elevation": 3,
+    "flexDirection": "row",
+    "height": 50,
+    "justifyContent": "space-around",
+    "shadowColor": undefined,
+    "shadowOffset": undefined,
+    "shadowOpacity": undefined,
+    "shadowRadius": undefined,
+  },
+  "NativeBase.TabHeading": Object {
+    ".active": Object {
+      "NativeBase.Icon": Object {
+        "color": "#007aff",
+      },
+      "NativeBase.Text": Object {
+        "color": "#007aff",
+        "fontWeight": "600",
+      },
+    },
+    ".scrollable": Object {
+      "flex": 1,
+      "minWidth": 60,
+      "paddingHorizontal": 20,
+    },
+    "NativeBase.Icon": Object {
+      "color": "#6b6b6b",
+      "fontSize": 26,
+    },
+    "NativeBase.Text": Object {
+      "color": "#6b6b6b",
+      "marginHorizontal": 7,
+    },
+    "alignItems": "center",
+    "backgroundColor": "#F8F8F8",
+    "flex": 1,
+    "flexDirection": "row",
+    "justifyContent": "center",
+  },
+  "NativeBase.Tabs": Object {
+    "flex": 1,
+  },
+  "NativeBase.Text": Object {
+    ".note": Object {
+      "color": "#a7a7a7",
+      "fontSize": 14,
+    },
+    "color": "#000",
+    "fontFamily": "Nunito-Regular",
+    "fontSize": 16,
+  },
+  "NativeBase.Textarea": Object {
+    ".bordered": Object {
+      "borderColor": "#D9D5DC",
+      "borderWidth": 1,
+      "marginTop": 5,
+    },
+    ".underline": Object {
+      "borderBottomWidth": 0.5,
+      "borderColor": "#D9D5DC",
+      "marginTop": 5,
+    },
+    "color": "#000",
+    "fontSize": 15,
+    "paddingLeft": 10,
+    "paddingRight": 5,
+    "textAlignVertical": "top",
+  },
+  "NativeBase.Thumbnail": Object {
+    ".large": Object {
+      ".square": Object {
+        "borderRadius": 0,
+        "height": 80,
+        "width": 80,
+      },
+      "borderRadius": 40,
+      "height": 80,
+      "width": 80,
+    },
+    ".small": Object {
+      ".square": Object {
+        "borderRadius": 0,
+        "height": 36,
+        "width": 36,
+      },
+      "borderRadius": 18,
+      "height": 36,
+      "width": 36,
+    },
+    ".square": Object {
+      ".large": Object {
+        "borderRadius": 0,
+        "height": 80,
+        "width": 80,
+      },
+      ".small": Object {
+        "borderRadius": 0,
+        "height": 36,
+        "width": 36,
+      },
+      "borderRadius": 0,
+    },
+    "borderRadius": 28,
+    "height": 56,
+    "width": 56,
+  },
+  "NativeBase.Title": Object {
+    "color": "#C84F0E",
+    "fontFamily": "Nunito-SemiBold",
+    "fontSize": 17,
+    "fontWeight": undefined,
+    "marginLeft": undefined,
+    "paddingLeft": 4,
+    "paddingTop": 1,
+    "textAlign": "center",
+  },
+  "NativeBase.Toast": Object {
+    ".danger": Object {
+      "backgroundColor": "#d9534f",
+    },
+    ".success": Object {
+      "backgroundColor": "#5cb85c",
+    },
+    ".warning": Object {
+      "backgroundColor": "#f0ad4e",
+    },
+    "NativeBase.Button": Object {
+      "NativeBase.Text": Object {
+        "fontSize": 14,
+      },
+      "backgroundColor": "transparent",
+      "elevation": 0,
+      "height": 30,
+    },
+    "NativeBase.Text": Object {
+      "color": "#fff",
+      "flex": 1,
+    },
+    "alignItems": "center",
+    "backgroundColor": "rgba(0,0,0,0.8)",
+    "borderRadius": 5,
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+    "minHeight": 50,
+    "padding": 10,
+  },
+  "NativeBase.ViewNB": Object {
+    ".padder": Object {
+      "padding": 10,
+    },
+  },
+  "variables": Object {
+    "CheckboxBorderWidth": 1,
+    "CheckboxFontSize": 25.555555555555554,
+    "CheckboxIconMarginTop": undefined,
+    "CheckboxIconSize": 21,
+    "CheckboxPaddingBottom": 0,
+    "CheckboxPaddingLeft": 4,
+    "CheckboxRadius": 13,
+    "DefaultFontSize": 16,
+    "Inset": Object {
+      "landscape": Object {
+        "bottomInset": 21,
+        "leftInset": 44,
+        "rightInset": 44,
+        "topInset": 0,
+      },
+      "portrait": Object {
+        "bottomInset": 34,
+        "leftInset": 0,
+        "rightInset": 0,
+        "topInset": 24,
+      },
+    },
+    "accordionBorderColor": "#d3d3d3",
+    "activeTab": "#007aff",
+    "androidRipple": true,
+    "androidRippleColor": "rgba(256, 256, 256, 0.3)",
+    "androidRippleColorDark": "rgba(0, 0, 0, 0.15)",
+    "badgeBg": "#ED1727",
+    "badgeColor": "#fff",
+    "badgePadding": 3,
+    "borderRadiusBase": 5,
+    "borderRadiusLarge": 57,
+    "borderWidth": 0.5,
+    "brandDanger": "#d9534f",
+    "brandDark": "#000",
+    "brandInfo": "#62B1F6",
+    "brandLight": "#f4f4f4",
+    "brandPrimary": "#C84F0E",
+    "brandSuccess": "#5cb85c",
+    "brandWarning": "#f0ad4e",
+    "btnDangerBg": "#d9534f",
+    "btnDangerColor": "#fff",
+    "btnDisabledBg": "#b5b5b5",
+    "btnFontFamily": "Nunito-SemiBold",
+    "btnInfoBg": "#62B1F6",
+    "btnInfoColor": "#fff",
+    "btnLineHeight": 19,
+    "btnPrimaryBg": "#007aff",
+    "btnPrimaryColor": "#fff",
+    "btnSuccessBg": "#5cb85c",
+    "btnSuccessColor": "#fff",
+    "btnTextSize": 16.5,
+    "btnTextSizeLarge": 22.5,
+    "btnTextSizeSmall": 12,
+    "btnUppercaseAndroidText": true,
+    "btnWarningBg": "#f0ad4e",
+    "btnWarningColor": "#fff",
+    "buttonPadding": 6,
+    "cardBorderColor": "#ccc",
+    "cardBorderRadius": 2,
+    "cardDefaultBg": "#fff",
+    "cardItemPadding": 10,
+    "checkboxBgColor": "#039BE5",
+    "checkboxSize": 20,
+    "checkboxTickColor": "#fff",
+    "containerBgColor": "#FAFAFA",
+    "contentPadding": 10,
+    "contentStyle": "#f5f4f5",
+    "darkenHeader": "#F1F1F1",
+    "datePickerBg": "transparent",
+    "datePickerTextColor": "#000",
+    "defaultProgressColor": "#E4202D",
+    "defaultSpinnerColor": "#45D56E",
+    "defaultTextColor": "#000",
+    "deviceHeight": 1334,
+    "deviceWidth": 750,
+    "dropdownLinkColor": "#414142",
+    "expandedIconStyle": "#000",
+    "fontFamily": "Nunito-Regular",
+    "fontSizeBase": 15,
+    "fontSizeH1": 27,
+    "fontSizeH2": 24,
+    "fontSizeH3": 21,
+    "footerDefaultBg": "#F8F8F8",
+    "footerHeight": 55,
+    "footerPaddingBottom": 0,
+    "headerStyle": "#edebed",
+    "iconFamily": "MaterialCommunityIcons",
+    "iconFontSize": 30,
+    "iconHeaderSize": 33,
+    "iconSizeLarge": 45,
+    "iconSizeSmall": 18,
+    "iconStyle": "#000",
+    "inputBorderColor": "#D9D5DC",
+    "inputColor": "#000",
+    "inputColorPlaceholder": "#575757",
+    "inputErrorBorderColor": "#ed2f2f",
+    "inputFontSize": 17,
+    "inputGroupRoundedBorderRadius": 30,
+    "inputHeightBase": 50,
+    "inputLineHeight": 24,
+    "inputSuccessBorderColor": "#2b8339",
+    "inverseProgressColor": "#1A191B",
+    "inverseSpinnerColor": "#1A191B",
+    "inverseTextColor": "#fff",
+    "iosStatusbar": "dark-content",
+    "isIphoneX": undefined,
+    "lineHeight": 20,
+    "lineHeightH1": 32,
+    "lineHeightH2": 27,
+    "lineHeightH3": 22,
+    "listBg": "transparent",
+    "listBorderColor": "#c9c9c9",
+    "listBtnUnderlayColor": "#DDD",
+    "listDividerBg": "#f4f4f4",
+    "listItemPadding": 10,
+    "listItemSelected": "#007aff",
+    "listNoteColor": "#757575",
+    "listNoteSize": 10,
+    "noteFontSize": 14,
+    "platform": "ios",
+    "platformStyle": undefined,
+    "radioBtnLineHeight": 29,
+    "radioBtnSize": 25,
+    "radioColor": "#007aff",
+    "radioSelectedColorAndroid": "#3F51B5",
+    "sTabBarActiveTextColor": "#007aff",
+    "searchBarHeight": 30,
+    "searchBarInputHeight": 30,
+    "segmentActiveBackgroundColor": "#007aff",
+    "segmentActiveTextColor": "#fff",
+    "segmentBackgroundColor": "#F8F8F8",
+    "segmentBorderColor": "#007aff",
+    "segmentBorderColorMain": "#a7a6ab",
+    "segmentTextColor": "#007aff",
+    "statusBarColor": "#C6C6C6",
+    "subTitleFontSize": 11,
+    "subtitleColor": "#000",
+    "tabActiveBgColor": "#cde1f9",
+    "tabBarActiveTextColor": "#2874F0",
+    "tabBarTextColor": "#737373",
+    "tabBarTextSize": 14,
+    "tabBgColor": "#F8F8F8",
+    "tabDefaultBg": "#F8F8F8",
+    "tabFontSize": 15,
+    "textColor": "#000",
+    "titleFontColor": "#C84F0E",
+    "titleFontSize": 17,
+    "titleFontfamily": "Nunito-SemiBold",
+    "toolbarBtnColor": "#C84F0E",
+    "toolbarBtnTextColor": "#007aff",
+    "toolbarDefaultBg": "#fff",
+    "toolbarDefaultBorder": "#a7a6ab",
+    "toolbarHeight": 64,
+    "toolbarInputColor": "#CECDD2",
+    "toolbarSearchIconSize": 20,
+    "topTabBarActiveBorderColor": "#007aff",
+    "topTabBarActiveTextColor": "#007aff",
+    "topTabBarBorderColor": "#a7a6ab",
+    "topTabBarTextColor": "#6b6b6b",
+  },
+}
+`;
