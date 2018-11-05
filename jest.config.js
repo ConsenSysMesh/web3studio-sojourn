@@ -14,10 +14,10 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.js', '!src/setupJest.js'],
   coverageThreshold: {
     global: {
-      statements: 55,
+      statements: 60,
       branches: 40,
       functions: 65,
-      lines: 50
+      lines: 60
     }
   }
 };

@@ -4,6 +4,15 @@ import merge from 'deepmerge';
 
 const brandPrimary = '#C84F0E';
 
+const gray = {
+  900: '#000',
+  600: '#444F6C',
+  300: '#888FA1',
+  100: '#ECECEC',
+  50: '#FAFAFA',
+  0: '#fff'
+};
+
 export default merge(material, {
   brandPrimary,
   fontFamily: 'Nunito-Regular',
@@ -14,19 +23,24 @@ export default merge(material, {
   titleFontColor: brandPrimary,
 
   // Header
-  toolbarBtnColor: brandPrimary,
-  toolbarDefaultBg: '#fff',
-
-  // List
-  listNoteColor: '#757575',
-  listNoteSize: 10,
+  toolbarBtnColor: gray[600],
+  toolbarBtnTextColor: gray[600],
+  toolbarDefaultBg: gray[0],
 
   //Container
-  containerBgColor: '#FAFAFA',
+  containerBgColor: gray[50],
+
+  // List
+  listNoteColor: gray[300],
+  listNoteSize: 10,
 
   // Button
   btnFontFamily: 'Nunito-SemiBold',
 
+  // InputGroup
+  inputBorderColor: gray[300],
+  inputColorPlaceholder: gray[300],
+
   // Other
-  isIphoneX: DeviceInfo.hasNotch
+  isIphoneX: DeviceInfo.hasNotch()
 });

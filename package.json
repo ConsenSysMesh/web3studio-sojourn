@@ -66,6 +66,7 @@
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
     "prop-types": "^15.6.2",
+    "react-native-mock-render": "^0.1.2",
     "react-test-renderer": "16.5.0",
     "truffle": "^5.0.0-next.12",
     "truffle-hdwallet-provider": "^1.0.0-web3one.0",
