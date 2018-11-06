@@ -7,12 +7,9 @@ import moment from 'moment';
  * @param {Object} state - Redux state
  * @returns {Object} - meat grinder state
  */
-const selectMeatGrinder = state => state.meatGrinder;
+const selectnotes = state => state.notes;
 
-export const selectHashes = createSelector(
-  selectMeatGrinder,
-  meatGrinder => meatGrinder.hashes
-);
+export const selectHashes = createSelector(selectnotes, notes => notes.hashes);
 
 export const selectHashDisplayList = createSelector(selectHashes, hashes =>
   Object.keys(hashes).map(hash => {

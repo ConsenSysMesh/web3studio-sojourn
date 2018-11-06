@@ -7,7 +7,7 @@
     "start:react-native": "react-native start",
     "start:ganache": "yarn ganache-cli -i 42 -b 1 -d",
     "start:migrate": "yarn truffle migrate --reset",
-    "migrate:rinkeby": "yarn truffle migrate --network rinkeby --contracts_build_directory=./src/contracts",
+    "migrate:rinkeby": "yarn truffle migrate --network rinkeby --contracts_build_directory=$(pwd)/src/contracts",
     "ios": "react-native run-ios --simulator \"iPhone XS\"",
     "lint": "eslint .",
     "prettier": "prettier \"**/*.{js,json,css,md}\" --write",

@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 /**
 * @title A persistor of hashes per user with timestamps
 */
-contract HashPersistor {
+contract HashNotary {
   /**
   * @notice Storage of hashes. Stored as Sender => (Hash => Timestamp)
   */

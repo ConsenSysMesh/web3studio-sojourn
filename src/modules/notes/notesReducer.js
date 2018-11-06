@@ -1,11 +1,10 @@
-import hashPersistor from './hashPersistor';
+import hashPersistor from './hashNotary';
 import { selectAddress } from '../signIn/signInSelectors';
 
-export const HASH_PERSISTOR_START = 'sojourn/meatGrinder/HASH_PERSISTOR_START';
+export const HASH_PERSISTOR_START = 'sojourn/notes/HASH_PERSISTOR_START';
 export const HASH_PERSISTOR_SUCCESSFUL =
-  'sojourn/meatGrinder/HASH_PERSISTOR_SUCCESSFUL';
-export const HASH_PERSISTOR_FAILURE =
-  'sojourn/meatGrinder/HASH_PERSISTOR_FAILURE';
+  'sojourn/notes/HASH_PERSISTOR_SUCCESSFUL';
+export const HASH_PERSISTOR_FAILURE = 'sojourn/notes/HASH_PERSISTOR_FAILURE';
 
 const CONFIRMATION_WAIT = 12;
 

@@ -14,8 +14,8 @@ import {
 } from 'native-base';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { persistHash } from '../modules/meatGrinder/meatGrinderReducer';
-import { selectHashDisplayList } from '../modules/meatGrinder/meatGrinderSelectors';
+import { persistHash } from '../modules/notes/notesReducer';
+import { selectHashDisplayList } from '../modules/notes/notesSelectors';
 import theme from '../theme/variables';
 
 /**

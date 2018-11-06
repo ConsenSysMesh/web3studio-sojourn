@@ -1,4 +1,4 @@
-import { selectHashes, selectHashDisplayList } from './meatGrinderSelectors';
+import { selectHashes, selectHashDisplayList } from './notesSelectors';
 
 describe('Meat Grinder selectors', () => {
   let hashes;
@@ -11,11 +11,11 @@ describe('Meat Grinder selectors', () => {
   });
 
   it('should select hashes', () => {
-    expect(selectHashes({ meatGrinder: { hashes } })).toBe(hashes);
+    expect(selectHashes({ notes: { hashes } })).toBe(hashes);
   });
 
   it('should add nice timestamps to hash list', () => {
-    const hashList = selectHashDisplayList({ meatGrinder: { hashes } });
+    const hashList = selectHashDisplayList({ notes: { hashes } });
     expect(hashList).toHaveLength(1);
     expect(hashList[0]).toEqual(
       expect.objectContaining({

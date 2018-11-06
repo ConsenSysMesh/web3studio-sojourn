@@ -1,11 +1,11 @@
 const expect = require('chai').expect;
-const HashPersistor = artifacts.require('HashPersistor');
+const HashNotary = artifacts.require('HashNotary');
 
 contract('HashProvider', accounts => {
   let hashProvider;
 
   beforeEach(async () => {
-    hashProvider = await HashPersistor.deployed();
+    hashProvider = await HashNotary.deployed();
   });
 
   it('should allow you to save a hash', async () => {
