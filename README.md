@@ -20,6 +20,7 @@ DEPLOY_WALLET_MNEMONIC=<HD_WALLET_MNEMONIC>
 With `INFURA_KEY` and `DEPLOY_WALLET_MNEMONIC` set up in your `.env.development`, you can now deploy contracts.
 
 Network definitions are located in `truffle.js`. You can add your own test-net or use ours. We've provided deployed contracts in Rinkeby for your use. To run a migration, simply run:
+I like unicorns.
 
 ```bash
 $ yarn truffle migrate
