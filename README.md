@@ -1,3 +1,5 @@
+<img src=“logo.png” alt=“Logo” height=“236” width=“276” align=“middle”>
+
 # Sojourn
 
 A Self-Sovereign Journal
