@@ -7,6 +7,7 @@ import {
   Body,
   Icon,
   Title,
+  H3,
   Text,
   Fab,
   Card,
@@ -14,17 +15,17 @@ import {
 } from 'native-base';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { persistHash } from '../modules/notes/notesReducer';
-import { selectHashDisplayList } from '../modules/notes/notesSelectors';
+import { selectNotesDisplayList } from '../modules/notes/notesSelectors';
 import theme from '../theme/variables';
+import { Note } from '../modules/propTypes';
 
 /**
  * Notes List screen
  */
 export class Notes extends PureComponent {
   static propTypes = {
-    hashes: PropTypes.array,
-    navigation: PropTypes.object
+    navigation: PropTypes.object,
+    notes: PropTypes.arrayOf(Note)
   };
 
   /**
@@ -40,7 +41,7 @@ export class Notes extends PureComponent {
    * @returns {React.Element} Element to render.
    */
   render() {
-    const { hashes } = this.props;
+    const { notes } = this.props;
 
     return (
       <Container>
@@ -51,16 +52,17 @@ export class Notes extends PureComponent {
         </Header>
         <ScrollView>
           <Content padder contentContainerStyle={styles.container}>
-            {hashes.map(hash => (
-              <Card icon key={hash.hash}>
+            {notes.map(note => (
+              <Card key={note.id}>
                 <CardItem>
-                  <Icon
-                    active
-                    name={hash.status === 'confirmed' ? 'lock' : 'lock-open'}
-                  />
                   <Body>
-                    {hash.timestamp && <Text note>{hash.timestamp}</Text>}
-                    <Text numberOfLines={1}>{hash.hash}</Text>
+                    <Text note>{note.calendarLastModified}</Text>
+                    {note.title ? (
+                      <H3 numberOfLines={1}>{note.title}</H3>
+                    ) : null}
+                    {note.body ? (
+                      <Text numberOfLines={2}>{note.body}</Text>
+                    ) : null}
                   </Body>
                 </CardItem>
               </Card>
@@ -91,12 +93,7 @@ const styles = StyleSheet.create({
  * @returns {{hashes}} - Mapped props
  */
 const mapStateToProps = state => ({
-  hashes: selectHashDisplayList(state)
+  notes: selectNotesDisplayList(state)
 });
 
-const mapDispatchToProps = { persistHash };
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Notes);
+export default connect(mapStateToProps)(Notes);

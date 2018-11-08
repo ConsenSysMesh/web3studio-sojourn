@@ -8,7 +8,7 @@ describe('Notes Screen', () => {
   it('Renders without error', () => {
     const rendered = render.create(
       <StyleProvider style={theme}>
-        <Notes hashes={[]} />
+        <Notes notes={[]} />
       </StyleProvider>
     );
 
