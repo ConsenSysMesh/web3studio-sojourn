@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  The Self-Sovereign Journal That Journalists Trust to Keep Their Secrets Secret
+  A React Native DevKit with code for a Web3 Decentralized Data Storage Pattern.
 </h4>
 
 <p align="center">
@@ -16,9 +16,10 @@
 
 ## Getting Started
 
-Sojourn is a [React Native](https://facebook.github.io/react-native/) app built
-with a focus on iOS. It uses [uPort](https://www.uport.me/) for authentication
-and Ethereum interactions. To get up and running you need to:
+This DevKit includes a [React Native](https://facebook.github.io/react-native/) app built
+with a focus on iOS. To demonstrate the pattern, we're using [uPort](https://www.uport.me/)
+for authentication and Ethereum interactions. Developers are encouraged to use
+other providers where it makes sense. To get up and running you need to:
 
 Clone the repo and install dependencies:
 
@@ -28,8 +29,8 @@ $ cd imagineering-sojourn
 $ yarn install
 ```
 
-Register a [uPort App](https://appmanager.uport.me/) and fill in the details in file named
-`.env.development`.
+Register a [uPort App](https://appmanager.uport.me/) and fill in the details
+in file named `.env.development`.
 
 ```env
 # .env.development
@@ -61,7 +62,9 @@ $ yarn start
 
 ### Deploying your own Smart Contracts
 
-We've provided deployed smart contracts for Rinkeby. If you'd like to deploy your own, or on a different network, create an [infura.io](https://infura.io/dashboard) api key and setup an HD wallet like metamask and add them to your `.env.development` file.
+We've provided deployed smart contracts for Rinkeby. If you'd like to deploy
+your own, or on a different network, create an [infura.io](https://infura.io/dashboard)
+api key and setup an HD wallet like metamask and add them to your `.env.development` file.
 
 ```env
 # .env.development
@@ -72,7 +75,8 @@ INFURA_KEY=<INFURA_API_KEY>
 DEPLOY_WALLET_MNEMONIC=<HD_WALLET_MNEMONIC>
 ```
 
-Network definitions are located in `truffle.js`. You can add your own test-net or use ours. To do a migration, run:
+Network definitions are located in `truffle.js`. You can add your own test-net
+or use ours. To do a migration, run:
 
 ```bash
 $ yarn truffle migrate --network YOUR_NETWORK_ID
