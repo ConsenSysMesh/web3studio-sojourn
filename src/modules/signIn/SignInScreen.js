@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Button, H2, Text, Container, Content } from 'native-base';
 import { connect } from 'react-redux';
 import { signInWithUPort } from './signInReducer';
 import { isSignedIn } from './signInSelectors';
@@ -55,30 +56,29 @@ export class SignInScreen extends Component {
    */
   render() {
     return (
-      <View testID="sign-in-screen" style={styles.container}>
-        <Text style={styles.welcome}>Sojourn</Text>
-        <Button title={'Continue with uPort'} onPress={this.uPortLogin} />
-      </View>
+      <Container testID="sign-in-screen">
+        <Content contentContainerStyle={styles.content}>
+          <H2 style={styles.welcome}>Sojourn</H2>
+          <Button style={styles.button} onPress={this.uPortLogin}>
+            <Text>Continue with uPort</Text>
+          </Button>
+        </Content>
+      </Container>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  content: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#fff'
   },
-  welcome: {
-    fontSize: 20,
+  button: {
     textAlign: 'center',
-    margin: 10
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
+    alignSelf: 'center',
+    marginTop: 40
   }
 });
 

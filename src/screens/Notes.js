@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 import {
   Container,
   Header,
@@ -29,10 +29,20 @@ export class Notes extends PureComponent {
   };
 
   /**
-   * Navigates to the Edit Note screen
+   * Navigates to the Edit Note screen, new note
    */
   createNewNote = () => {
     this.props.navigation.navigate('EditNote');
+  };
+
+  /**
+   * Navigates to the Edit Note screen, existing note
+   *
+   * @param {string} noteId - an existing note id
+   * @returns {Function} - An onPress handler
+   */
+  handleNotePressed = noteId => () => {
+    this.props.navigation.navigate('EditNote', { noteId });
   };
 
   /**
@@ -54,15 +64,23 @@ export class Notes extends PureComponent {
           <Content padder contentContainerStyle={styles.container}>
             {notes.map(note => (
               <Card key={note.id}>
-                <CardItem>
+                <CardItem button onPress={this.handleNotePressed(note.id)}>
                   <Body>
-                    <Text note>{note.calendarLastModified}</Text>
-                    {note.title ? (
-                      <H3 numberOfLines={1}>{note.title}</H3>
-                    ) : null}
-                    {note.body ? (
-                      <Text numberOfLines={2}>{note.body}</Text>
-                    ) : null}
+                    <Text style={styles.caption} note>
+                      {note.calendarLastModified}
+                    </Text>
+                    <View style={styles.notesContainer}>
+                      {note.title ? (
+                        <H3 style={styles.title} numberOfLines={1}>
+                          {note.title}
+                        </H3>
+                      ) : null}
+                      {note.body ? (
+                        <Text style={styles.body} numberOfLines={2}>
+                          {note.body}
+                        </Text>
+                      ) : null}
+                    </View>
                   </Body>
                 </CardItem>
               </Card>
@@ -83,6 +101,9 @@ const styles = StyleSheet.create({
   },
   fab: {
     backgroundColor: theme.brandPrimary
+  },
+  notesContainer: {
+    marginTop: 10
   }
 });
 
