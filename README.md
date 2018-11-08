@@ -1,38 +1,93 @@
-# Sojourn
+<h1 align="center">
+  Sojourn
+</h1>
 
-A Self-Sovereign Journal
+<h4 align="center">
+  A React Native DevKit with code for a Web3 Decentralized Data Storage Pattern.
+</h4>
 
-## Contributing
+<p align="center">
+  <a href="#getting-started">Getting Started</a> ∙
+  <a href="#license">License</a> ∙
+  <a href="#devkit">DevKit</a> ∙
+  <a href="#description">Description</a> ∙
+  <a href="#consensys-web3-studio---durham">ConsenSys Web3 Studio - Durham</a>
+</p>
 
-You'll need to set up a [uPort App](https://appmanager.uport.me/). Once you have one,
-create a file `.env.development` in the root of the directory and fill in the details like below.
+## Getting Started
 
+This DevKit includes a [React Native](https://facebook.github.io/react-native/) app built
+with a focus on iOS. To demonstrate the pattern, we're using [uPort](https://www.uport.me/)
+for authentication and Ethereum interactions. Developers are encouraged to use
+other providers where it makes sense. To get up and running you need to:
+
+Clone the repo and install dependencies:
+
+```bash
+$ git clone git@github.com:ConsenSys/imagineering-sojourn.git
+$ cd imagineering-sojourn
+$ yarn install
 ```
+
+Register a [uPort App](https://appmanager.uport.me/) and fill in the details
+in file named `.env.development`.
+
+```env
+# .env.development
+
 UPORT_APP_NAME=Sojourn
-UPORT_APP_ADDRESS=2onKAS55Vs9hGwDPsBT6DYHwAP1HJ3FsBXh
+UPORT_APP_ADDRESS=<YOUR_APP_ADDRESS>
 UPORT_PRIVATE_KEY=<YOUR_PRIVATE_KEY>
-INFURA_KEY=<INFURA_API_KEY>
-DEPLOY_WALLET_MNEMONIC=<HD_WALLET_MNEMONIC>
+```
+
+Run the development app to a simulator. (Uses [ganache-cli](https://github.com/trufflesuite/ganache-cli) for Ethereum interactions.)
+
+```bash
+# One time per simulator to install
+$ yarn ios
+
+# Every time to start the metro bundler and ganache cli
+$ yarn start
+```
+
+Run the development app on your device. (Uses uPort and requires an installed [uPort](https://itunes.apple.com/us/app/uport-id/id1123434510?mt=8) app on your phone).
+
+```bash
+# One time per device to install
+$ yarn react-native run-ios --device "<YOUR_DEVICE_NAME>"
+
+# Every time to start the metro bundler
+$ yarn start
 ```
 
 ### Deploying your own Smart Contracts
 
-With `INFURA_KEY` and `DEPLOY_WALLET_MNEMONIC` set up in your `.env.development`, you can now deploy contracts.
+We've provided deployed smart contracts for Rinkeby. If you'd like to deploy
+your own, or on a different network, create an [infura.io](https://infura.io/dashboard)
+api key and setup an HD wallet like metamask and add them to your `.env.development` file.
 
-Network definitions are located in `truffle.js`. You can add your own test-net or use ours. We've provided deployed contracts in Rinkeby for your use. To run a migration, simply run:
+```env
+# .env.development
+
+# ... Other environment variables
+
+INFURA_KEY=<INFURA_API_KEY>
+DEPLOY_WALLET_MNEMONIC=<HD_WALLET_MNEMONIC>
+```
+
+Network definitions are located in `truffle.js`. You can add your own test-net
+or use ours. To do a migration, run:
 
 ```bash
-$ yarn truffle migrate
+$ yarn truffle migrate --network YOUR_NETWORK_ID
 ```
 
 For more details see [Truffle's Documentation.](https://truffleframework.com/docs/truffle/getting-started/running-migrations)
 
-# Testing
+## License
 
-### End to End Tests
+## DevKit
 
-Run `yarn e2e` to run end to end tests. Because schemes other than debug and release are not trivial in react-native,
-and because javascript environment variables are not trivial to pass in react-native,
-there are two index files, index.ios.js which is the entry point for the regular app as it should be used in production,
-and index.e2e.js, an entry point which is used for e2e tests. This is a temporary measure, as a way to test native modules
-on the javascript side that are not yet integrated into the app (mainly for cryptography functions);
+## Description
+
+## ConsenSys Web3 Studio - Durham
