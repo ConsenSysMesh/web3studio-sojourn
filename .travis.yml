@@ -17,3 +17,12 @@ script: yarn ci
 branches:
   only:
     - master
+
+deploy:
+  provider: pages
+  local-dir: devkit/out
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
