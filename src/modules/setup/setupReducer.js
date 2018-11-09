@@ -1,33 +1,39 @@
 import { requestCredentials } from './uport';
 
-export const SIGN_IN_SUCCESSFUL = 'sojourn/sign-in/SIGN_IN_SUCCESSFUL';
-export const SIGN_IN_FAILURE = 'sojourn/sign-in/SIGN_IN_FAILURE';
+export const SETUP_UPORT_SUCCESSFUL = 'sojourn/sign-in/SETUP_UPORT_SUCCESSFUL';
+export const SETUP_UPORT_FAILURE = 'sojourn/sign-in/SETUP_UPORT_FAILURE';
 
 /**
- * Sign in success action generator
+ * Setup uPort success action generator
  *
  * @param {Object} payload - uPort Payload
  * @returns {Object} - redux action
  */
-export const signInSuccess = payload => ({ type: SIGN_IN_SUCCESSFUL, payload });
+export const uportSetupSuccess = payload => ({
+  type: SETUP_UPORT_SUCCESSFUL,
+  payload
+});
 
 /**
- * Sign in failure action generator
+ * Setup uPort failure action generator
  *
  * @param {Error} error - sign in error
  * @returns {Object} - redux action
  */
-export const signInFailure = error => ({ type: SIGN_IN_FAILURE, error });
+export const uportSetupFailure = error => ({
+  type: SETUP_UPORT_FAILURE,
+  error
+});
 
 /**
  * Sign in thunk. Uses uPort to Authenticate the user
  *
  * @returns {Function} - redux thunk
  */
-export const signInWithUPort = () => dispatch =>
+export const setupUport = () => dispatch =>
   requestCredentials()
-    .then(payload => dispatch(signInSuccess(payload)))
-    .catch(error => dispatch(signInFailure(error)));
+    .then(payload => dispatch(uportSetupSuccess(payload)))
+    .catch(error => dispatch(uportSetupFailure(error)));
 
 export const INITIAL_STATE = {
   uport: {}
@@ -42,7 +48,7 @@ export const INITIAL_STATE = {
  */
 export const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SIGN_IN_SUCCESSFUL:
+    case SETUP_UPORT_SUCCESSFUL:
       return {
         ...state,
         uport: {
@@ -50,7 +56,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
         }
       };
 
-    case SIGN_IN_FAILURE:
+    case SETUP_UPORT_FAILURE:
       return {
         ...state,
         uport: INITIAL_STATE.uport,

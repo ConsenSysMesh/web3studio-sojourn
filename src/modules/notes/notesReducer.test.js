@@ -7,8 +7,8 @@ import {
 } from './notesReducer';
 import hashNotary from './hashNotary';
 import configureStore from '../../store/configureStore';
-import { web3 } from '../signIn/uport';
-import { signInSuccess } from '../signIn/signInReducer';
+import { web3 } from '../setup/uport';
+import { uportSetupSuccess } from '../setup/setupReducer';
 import { selectCurrentVaultRecord, selectCurrentNote } from './notesSelectors';
 
 jest.mock('./hashNotary');
@@ -47,7 +47,7 @@ describe('Notes reducer', () => {
 
     // Mock a log in with uport
     store.dispatch(
-      signInSuccess({
+      uportSetupSuccess({
         networkAddress: '2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX'
       })
     );

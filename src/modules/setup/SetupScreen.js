@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import { StyleSheet } from 'react-native';
 import { Button, H2, Text, Container, Content } from 'native-base';
 import { connect } from 'react-redux';
-import { signInWithUPort } from './signInReducer';
-import { isSignedIn } from './signInSelectors';
+import { setupUport } from './setupReducer';
+import { hasSetupUport } from './setupSelectors';
 
 /**
  * Sign in screen. Allows users to log in with uPort.
  */
-export class SignInScreen extends Component {
+export class SetupScreen extends Component {
   static propTypes = {
     navigation: PropTypes.object,
-    isSignedIn: PropTypes.bool
+    hasSetupUport: PropTypes.bool
   };
 
   /**
@@ -33,9 +33,9 @@ export class SignInScreen extends Component {
    * Navigates to Application router when signed in
    */
   navigateOnSignIn = () => {
-    const { navigation, isSignedIn } = this.props;
+    const { navigation, hasSetupUport } = this.props;
 
-    if (isSignedIn) {
+    if (hasSetupUport) {
       navigation.navigate('App');
     }
   };
@@ -44,9 +44,9 @@ export class SignInScreen extends Component {
    * Dispatches sign in redux action
    */
   uPortLogin = async () => {
-    const { signInWithUPort } = this.props;
+    const { setupUport } = this.props;
 
-    signInWithUPort();
+    setupUport();
   };
 
   /**
@@ -56,9 +56,13 @@ export class SignInScreen extends Component {
    */
   render() {
     return (
-      <Container testID="sign-in-screen">
+      <Container testID="setup-screen">
         <Content contentContainerStyle={styles.content}>
           <H2 style={styles.welcome}>Sojourn</H2>
+          <Text style={styles.welcome}>
+            Sojourn uses uPort to make your notes tamper-resistant. Add or
+            create your uPort Identity.
+          </Text>
           <Button style={styles.button} onPress={this.uPortLogin}>
             <Text>Continue with uPort</Text>
           </Button>
@@ -75,6 +79,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff'
   },
+  welcome: {
+    textAlign: 'center',
+    marginTop: 20
+  },
   button: {
     textAlign: 'center',
     alignSelf: 'center',
@@ -89,14 +97,14 @@ const styles = StyleSheet.create({
  * @returns {{isSignedIn}} - injected props
  */
 const mapStateToProps = state => ({
-  isSignedIn: isSignedIn(state)
+  hasSetupUport: hasSetupUport(state)
 });
 
 const mapDispatchToProps = {
-  signInWithUPort
+  setupUport
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignInScreen);
+)(SetupScreen);

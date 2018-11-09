@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { isSignedIn } from '../modules/signIn/signInSelectors';
+import { hasSetupUport } from '../modules/setup/setupSelectors';
 import { Container, Content } from 'native-base';
 
 /**
@@ -10,7 +10,7 @@ import { Container, Content } from 'native-base';
  */
 export class Loading extends Component {
   static propTypes = {
-    isSignedIn: PropTypes.bool,
+    hasSetupUport: PropTypes.bool,
     navigation: PropTypes.object
   };
 
@@ -18,14 +18,14 @@ export class Loading extends Component {
    * Redirects to correct screen.
    */
   componentDidMount() {
-    const { navigation, isSignedIn } = this.props;
+    const { navigation, hasSetupUport } = this.props;
 
     if (!navigation) {
       // Still waiting on state to load
       return;
     }
 
-    navigation.navigate(isSignedIn ? 'App' : 'Auth');
+    navigation.navigate(hasSetupUport ? 'App' : 'Setup');
   }
 
   /**
@@ -35,7 +35,7 @@ export class Loading extends Component {
    */
   render() {
     return (
-      <Container testID="sign-in-screen">
+      <Container>
         <Content contentContainerStyle={styles.content} />
       </Container>
     );
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
  * @returns {{isSignedIn}} - injected props
  */
 const mapStateToProps = state => ({
-  isSignedIn: isSignedIn(state)
+  hasSetupUport: hasSetupUport(state)
 });
 
 export default connect(mapStateToProps)(Loading);
