@@ -63,3 +63,7 @@ buck-out/
 ./index.js
 # env
 .env.*
+
+# nextjs
+devkit/.next
+devkit/out
