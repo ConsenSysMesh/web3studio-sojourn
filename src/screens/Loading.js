@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { isSignedIn } from '../modules/signIn/signInSelectors';
+import { Container, Content } from 'native-base';
 
 /**
  * App loading screen. Handles routing to authentication flow.
@@ -34,9 +35,9 @@ export class Loading extends Component {
    */
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Sojourn</Text>
-      </View>
+      <Container testID="sign-in-screen">
+        <Content contentContainerStyle={styles.content} />
+      </Container>
     );
   }
 }
@@ -46,12 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
+    backgroundColor: '#fff'
   }
 });
 

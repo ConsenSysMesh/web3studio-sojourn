@@ -83,6 +83,8 @@ export class EditNoteScreen extends PureComponent {
    * @returns {React.element} - Element to render
    */
   render() {
+    const { note } = this.props;
+
     return (
       <Container>
         <Header>
@@ -108,6 +110,7 @@ export class EditNoteScreen extends PureComponent {
               placeholderTextColor={theme.inputColorPlaceholder}
               onChangeText={this.handleTitleTextChange}
               placeholder="Title"
+              defaultValue={note.title}
               multiline
               autoCapitalize="sentences"
               returnKeyType="go"
@@ -119,6 +122,7 @@ export class EditNoteScreen extends PureComponent {
               style={styles.textArea}
               onChangeText={this.handleBodyTextChange}
               placeholder="Start writing"
+              defaultValue={note.body}
               autoFocus
               placeholderTextColor={theme.inputColorPlaceholder}
               multiline
@@ -148,7 +152,6 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     fontFamily: theme.fontfamily,
     fontSize: theme.fontSizeBase,
-    lineHeight: 10,
     paddingTop: 10
   }
 });

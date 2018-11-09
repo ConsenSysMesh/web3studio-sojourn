@@ -78,7 +78,7 @@ export const selectNotesDisplayList = createSelector(selectNotes, notes =>
     .map(note => ({
       ...note,
       body: note.body && note.body.trim(),
-      calendarLastModified: moment(note.lastModified).calendar()
+      calendarLastModified: moment(note.lastModified).fromNow(true)
     }))
     .sort((noteA, noteB) => noteB.lastModified - noteA.lastModified)
 );

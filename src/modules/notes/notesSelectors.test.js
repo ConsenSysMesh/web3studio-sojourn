@@ -57,6 +57,21 @@ describe('Notes selectors', () => {
     expect(selectCurrentNote(state, { navigation })).toBe(pinkieNote);
   });
 
+  it('should provide a default note with a new id if none provided', () => {
+    const defaultNote = selectCurrentNote(state, {
+      navigation: { getParam: () => null }
+    });
+
+    expect(defaultNote).toEqual(
+      expect.objectContaining({
+        title: null,
+        body: null
+      })
+    );
+
+    expect(defaultNote.id).toMatch(/(\w+-){4}\w+/);
+  });
+
   it('should select the current vault record by param', () => {
     expect(
       selectCurrentVaultRecord(state, { vaultRecord: pinkieNoteHash })
@@ -71,7 +86,7 @@ describe('Notes selectors', () => {
 
     noteDisplayList.forEach((note, index) => {
       expect(note.calendarLastModified).toEqual(
-        expect.stringContaining('Today')
+        expect.stringContaining('seconds')
       );
 
       if (index > 0) {
