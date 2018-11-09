@@ -1,7 +1,7 @@
 import hashNotary from './hashNotary';
 import vault from './vault';
-import { selectAddress } from '../signIn/signInSelectors';
-import { web3 } from '../signIn/uport';
+import { selectAddress } from '../setup/setupSelectors';
+import { web3 } from '../setup/uport';
 
 export const NOTE_CHANGED = 'sojourn/notes/NOTE_CHANGED';
 

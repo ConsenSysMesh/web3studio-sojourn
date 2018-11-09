@@ -1,4 +1,4 @@
-import { web3, networkId } from '../signIn/uport';
+import { web3, networkId } from '../setup/uport';
 import DeviceInfo from 'react-native-device-info';
 
 let HashNotaryContract = require('../../contracts/HashNotary.json');

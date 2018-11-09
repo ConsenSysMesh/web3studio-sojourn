@@ -3,7 +3,7 @@ import {
   selectCurrentVaultRecord,
   selectCurrentNote
 } from './notesSelectors';
-import { web3 } from '../signIn/uport';
+import { web3 } from '../setup/uport';
 
 describe('Notes selectors', () => {
   let state;

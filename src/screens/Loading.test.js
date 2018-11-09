@@ -10,13 +10,13 @@ describe('Loading Screen', () => {
   });
 
   it('redirects to auth if not signed in', () => {
-    renderer.create(<Loading isSignedIn={false} navigation={navigation} />);
+    renderer.create(<Loading hasSetupUport={false} navigation={navigation} />);
 
-    expect(navigation.navigate).toHaveBeenCalledWith('Auth');
+    expect(navigation.navigate).toHaveBeenCalledWith('Setup');
   });
 
   it('redirects to the app if signed in', () => {
-    renderer.create(<Loading isSignedIn={true} navigation={navigation} />);
+    renderer.create(<Loading hasSetupUport={true} navigation={navigation} />);
 
     expect(navigation.navigate).toHaveBeenCalledWith('App');
   });

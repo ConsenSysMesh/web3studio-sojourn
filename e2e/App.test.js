@@ -4,6 +4,6 @@ describe('The App', () => {
   });
 
   it('should initial direct to the sign in screen', async () => {
-    await expect(element(by.id('sign-in-screen'))).toBeVisible();
+    await expect(element(by.id('setup-screen'))).toBeVisible();
   });
 });

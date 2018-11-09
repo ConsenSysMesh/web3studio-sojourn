@@ -1,13 +1,13 @@
 import { createSwitchNavigator } from 'react-navigation';
 import LoadingScreen from '../screens/Loading';
-import SignInScreen from '../modules/signIn/SignInScreen';
+import SetupScreen from '../modules/setup/SetupScreen';
 import AppNavigator from './AppNavigator';
 
 export default createSwitchNavigator(
   {
     Loading: LoadingScreen,
     App: AppNavigator,
-    Auth: SignInScreen
+    Setup: SetupScreen
   },
   {
     initialRouteName: 'Loading',

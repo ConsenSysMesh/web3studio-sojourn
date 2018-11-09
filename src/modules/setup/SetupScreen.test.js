@@ -1,10 +1,10 @@
 import React from 'react';
-import { SignInScreen } from './SignInScreen';
+import { SetupScreen } from './SetupScreen';
 import { StyleProvider } from 'native-base';
 import render from 'react-test-renderer';
 import theme from '../../theme';
 
-describe('Edit Note Screen', () => {
+describe('Setup Screen', () => {
   let navigation;
 
   beforeEach(() => {
@@ -14,7 +14,7 @@ describe('Edit Note Screen', () => {
   it('Does not redirect if not logged in', () => {
     render.create(
       <StyleProvider style={theme}>
-        <SignInScreen navigation={navigation} isSignedIn={false} />
+        <SetupScreen navigation={navigation} hasSetupUport={false} />
       </StyleProvider>
     );
 
@@ -24,7 +24,7 @@ describe('Edit Note Screen', () => {
   it('Redirects if user is logged in', () => {
     render.create(
       <StyleProvider style={theme}>
-        <SignInScreen navigation={navigation} isSignedIn={true} />
+        <SetupScreen navigation={navigation} hasSetupUport={true} />
       </StyleProvider>
     );
 
