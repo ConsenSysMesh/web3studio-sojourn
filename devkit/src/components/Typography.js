@@ -12,4 +12,4 @@ export const H2 = variantFactory('h2');
 export const H3 = variantFactory('h3');
 export const H4 = variantFactory('h4');
 export const H6 = variantFactory('h6');
-export const P = variantFactory('body2');
+export const P = variantFactory('body1');

@@ -9,7 +9,7 @@ const IconBlob = ({ title, body, icon, theme }) => (
       color: theme.palette.primary.main,
       size: theme.spacing.unit * 6
     })}
-    <Typography variant="h6" gutterBottom>
+    <Typography variant="button" gutterBottom>
       {title.toUpperCase()}
     </Typography>
     <Typography variant="body1">{body}</Typography>

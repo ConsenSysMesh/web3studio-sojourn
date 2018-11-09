@@ -1,28 +1,36 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import HeartIcon from 'react-feather/dist/icons/heart';
 import EyeIcon from 'react-feather/dist/icons/eye';
 import LockIcon from 'react-feather/dist/icons/lock';
 import SunIcon from 'react-feather/dist/icons/sun';
+import GithubIcon from 'react-feather/dist/icons/github';
 import Band from '../src/components/Band';
+import ImageBand from '../src/components/ImageBand';
 import AppExpose, {
   AppExposeColumn,
   AppExposeItem
 } from '../src/components/AppExpose';
-import TextBlock from '../src/components/TextBlock';
-import ImageBlock from '../src/components/ImageBlock';
+import CTACircle from '../src/components/CTACircle';
+import AsideText from '../src/components/AsideText';
+import InfoText from '../src/components/InfoText';
+import AsideImage from '../src/components/AsideImage';
 import IconBlob from '../src/components/IconBlob';
 import { H1, H2, H3, H4, P } from '../src/components/Typography';
 
+import CodeBlocks from '../src/components/images/CodeBlocks';
+import HamsterWorks from '../src/components/images/HamsterWorks';
+import SojournLogo from '../src/components/images/SojournLogo';
+
 const Index = () => (
   <article>
-    <Band dark alignItems="center" justify="center">
-      <TextBlock>
+    <Band dark stacked>
+      <SojournLogo />
+    </Band>
+    <Band dark alignItems="center" justify="space-between">
+      <AsideText size={7}>
         <H1 gutterBottom>What is this developer kit</H1>
-        <H3 variant="h3" gutterBottom>
-          and why are you giving it away for free?
-        </H3>
+        <H4 gutterBottom>and why are you giving it away for free?</H4>
         <P gutterBottom>
           The ConsenSys Web3 Studio in Durham, NC has a pretty sweet job. Our
           team of developers, designers and writers spend our days coming up
@@ -36,17 +44,28 @@ const Index = () => (
           Success for us is you taking the kit’s ideas and code and building
           your own web3 applications.
         </P>
-      </TextBlock>
+      </AsideText>
 
-      <Grid item xs={12} md={5}>
-        <H3 gutterBottom>Get Started!</H3>
-        <P gutterBottom>Start building your Web3 app</P>
-        <P gutterBottom>Get the Code</P>
+      <Grid item>
+        <CTACircle href="https://github.com/Consensys/imagineering-sojourn">
+          <GithubIcon size={64} />
+          <H4 gutterBottom color="inherit" align="center">
+            Get Started!
+          </H4>
+          <P gutterBottom color="inherit" align="center">
+            Start building your Web3 app
+          </P>
+          <P gutterBottom color="inherit" align="center">
+            Get the Code
+          </P>
+        </CTACircle>
       </Grid>
     </Band>
     <Band>
-      <ImageBlock />
-      <TextBlock>
+      <AsideImage>
+        <CodeBlocks />
+      </AsideImage>
+      <AsideText>
         <H2 gutterBottom>What is Sojourn</H2>
         <P gutterBottom>
           SoJourn is a really simple example of what you can do with an approach
@@ -64,11 +83,11 @@ const Index = () => (
           What makes SoJourn a Web3 note taker is the way it stores data,
           minimizing the need to trust institutions to keep it safe.
         </P>
-      </TextBlock>
+      </AsideText>
     </Band>
     <Band>
-      <TextBlock>
-        <H4 gutterBottom>How it Works</H4>
+      <AsideText>
+        <H3 gutterBottom>How it Works</H3>
         <P gutterBottom>
           SoJourn lets you write notes or edit existing notes. Then it:
         </P>
@@ -105,10 +124,14 @@ const Index = () => (
           doesn’t have to worry about a centralized cloud service keeping the
           data secure. [Insert video.]
         </P>
-      </TextBlock>
+      </AsideText>
+      <AsideImage>
+        <HamsterWorks />
+      </AsideImage>
     </Band>
+    <ImageBand src="/static/shamir.png" alt="" />
     <Band dark>
-      <TextBlock>
+      <InfoText>
         <H2 gutterBottom>Why do Web3 Data Storage This Way?</H2>
         <P gutterBottom>
           We thought of many practical uses of this kind of Web3 Storage
@@ -130,7 +153,7 @@ const Index = () => (
           thought the user, Zoe the journalist, made a good case for a
           professional need for the functionality.
         </P>
-      </TextBlock>
+      </InfoText>
     </Band>
     <Band>
       <AppExpose
@@ -168,9 +191,9 @@ const Index = () => (
       </AppExpose>
     </Band>
     <Band>
-      <ImageBlock />
-      <TextBlock>
-        <H2 gutterBottom>Restore from Vault</H2>
+      <AsideImage />
+      <AsideText>
+        <H3 gutterBottom>Restore from Vault</H3>
         <P gutterBottom>
           The Vault uses a Web3 approach to secure data storage, so that the
           user doesn’t have to worry about losing their device and their data
@@ -183,11 +206,11 @@ const Index = () => (
           Secret Sharing and IPFS, and approaches to modifying it for your
           project here.
         </P>
-      </TextBlock>
+      </AsideText>
     </Band>
     <Band>
-      <TextBlock>
-        <H2 gutterBottom>Left for you</H2>
+      <AsideText>
+        <H3 gutterBottom>Left for you</H3>
         <P gutterBottom>
           To be a complete note taking app, clearly it will want to allow the
           user to do all sorts of things, like formatting text, sorting the note
@@ -203,18 +226,18 @@ const Index = () => (
           version control as-is. There are many well-known ways to implement
           data to support versioning, so we leave that to you.
         </P>
-      </TextBlock>
-      <ImageBlock />
+      </AsideText>
+      <AsideImage />
     </Band>
     <Band>
-      <TextBlock size={6}>
-        <H2 gutterBottom>Other things you could use it for</H2>
+      <AsideText size={6}>
+        <H3 gutterBottom>Other things you could use it for</H3>
         <P gutterBottom>
           At half-past eight the door opened, the policeman appeared, and,
           requesting them to follow him, led the way to an adjoining hall. It
           was evidently.
         </P>
-      </TextBlock>
+      </AsideText>
       <Grid container item xs={12} md={6} spacing={24}>
         <IconBlob
           icon={<HeartIcon />}
@@ -242,13 +265,11 @@ const Index = () => (
     </Band>
 
     <Band justify="center">
-      <Typography align="center" variant="h2">
-        Key Modules
-      </Typography>
+      <H2 align="center">Key Modules</H2>
     </Band>
-    <Band justify="center">
-      <ImageBlock />
-      <TextBlock>
+    <Band>
+      <AsideImage />
+      <AsideText order="01">
         <H3 gutterBottom>The Basic Notes App - UI</H3>
         <P gutterBottom>
           The notes app is structured as you would expect for a redux based
@@ -262,11 +283,11 @@ const Index = () => (
           src/).
         </P>
         <P>[Figure out to format src]</P>
-      </TextBlock>
+      </AsideText>
     </Band>
 
-    <Band justify="center">
-      <TextBlock>
+    <Band>
+      <AsideText order="02">
         <H3 gutterBottom>The Vault</H3>
         <P gutterBottom>The repo for The Vault is.</P>
         <P gutterBottom>
@@ -283,12 +304,12 @@ const Index = () => (
           are a few.
         </P>
         <P>[Figure out to format src]</P>
-      </TextBlock>
-      <ImageBlock />
+      </AsideText>
+      <AsideImage />
     </Band>
 
     <Band dark>
-      <TextBlock>
+      <InfoText>
         <H2 gutterBottom>Alternative Approaches</H2>
         <P gutterBottom>
           We built the SoJourn devKit with an eye toward providing a clean, open
@@ -317,12 +338,12 @@ const Index = () => (
           encrypted location file that SoJourn needs to restore data to a new
           device
         </P>
-      </TextBlock>
+      </InfoText>
     </Band>
 
     <Band>
-      <ImageBlock />
-      <TextBlock>
+      <AsideImage />
+      <AsideText order="03">
         <H3 gutterBottom>The Notary</H3>
         <P gutterBottom>
           The Notary service handles the hashing of user notes onto a
@@ -343,11 +364,11 @@ const Index = () => (
           At the user’s request, we use Web3.js in the note app that calls the
           Notary function on the smart contract.
         </P>
-      </TextBlock>
+      </AsideText>
     </Band>
 
     <Band>
-      <TextBlock>
+      <AsideText order="04">
         <H3 gutterBottom>Authentication & Wallet</H3>
         <P>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -355,9 +376,8 @@ const Index = () => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip
         </P>
-      </TextBlock>
-
-      <ImageBlock />
+      </AsideText>
+      <AsideImage />
     </Band>
   </article>
 );

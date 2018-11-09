@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 const style = theme => {
   const verticalPad = theme.spacing.unit * 10;
   const horizPad = theme.spacing.unit * 4;
+  const pxToRem = theme.typography.pxToRem;
 
   return {
     dark: {
@@ -16,14 +17,23 @@ const style = theme => {
       width: '100%',
       marginLeft: 'auto',
       marginRight: 'auto',
-      padding: `${verticalPad}px ${horizPad}px`
+      padding: `${pxToRem(verticalPad)} ${pxToRem(horizPad)}`
+    },
+    stacked: {
+      paddingBottom: 0
     }
   };
 };
 
-const Band = ({ children, classes, dark, ...otherProps }) => (
+const Band = ({ children, classes, dark, stacked, ...otherProps }) => (
   <section className={classNames({ [classes.dark]: dark })}>
-    <Grid className={classes.content} container spacing={24} {...otherProps}>
+    <Grid
+      className={classNames(classes.content, { [classes.stacked]: stacked })}
+      container
+      spacing={24}
+      justify="space-between"
+      {...otherProps}
+    >
       {children}
     </Grid>
   </section>
