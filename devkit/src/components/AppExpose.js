@@ -8,13 +8,13 @@ export const AppExposeColumn = ({ children }) => (
   </Grid>
 );
 
-export const AppExposeItem = ({ title, body }) => (
+export const AppExposeItem = ({ title, children }) => (
   <Grid item>
     <Typography variant="button" align="center" color="primary" gutterBottom>
       {title.toUpperCase()}
     </Typography>
     <Typography variant="body1" align="center">
-      {body}
+      {children}
     </Typography>
   </Grid>
 );

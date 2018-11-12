@@ -5,8 +5,6 @@ import flush from 'styled-jsx/server';
 
 class MyDocument extends Document {
   render() {
-    const { pageContext } = this.props;
-
     return (
       <html lang="en" dir="ltr">
         <Head>
@@ -15,11 +13,6 @@ class MyDocument extends Document {
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-          />
-          {/* PWA primary color */}
-          <meta
-            name="theme-color"
-            content={pageContext.theme.palette.primary.main}
           />
         </Head>
         <body>
@@ -79,7 +72,7 @@ MyDocument.getInitialProps = ctx => {
           id="jss-server-side"
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
-            __html: pageContext.sheetsRegistry.toString()
+            __html: pageContext ? pageContext.sheetsRegistry.toString() : ''
           }}
         />
         {flush() || null}

@@ -1,10 +1,9 @@
-import Grid from '@material-ui/core/Grid/Grid';
+import React from 'react';
 import Typography from '@material-ui/core/Typography/Typography';
 import { withTheme } from '@material-ui/core/styles';
-import React from 'react';
 
-const IconBlob = ({ title, body, icon, theme }) => (
-  <Grid item xs={6}>
+const IconBlob = ({ title, children, icon, theme }) => (
+  <>
     {React.cloneElement(icon, {
       color: theme.palette.primary.main,
       size: theme.spacing.unit * 6
@@ -12,8 +11,8 @@ const IconBlob = ({ title, body, icon, theme }) => (
     <Typography variant="button" gutterBottom>
       {title.toUpperCase()}
     </Typography>
-    <Typography variant="body1">{body}</Typography>
-  </Grid>
+    {children}
+  </>
 );
 
 export default withTheme()(IconBlob);
