@@ -14,7 +14,10 @@ const styles = theme => ({
     justifyContent: 'center',
     height: 350,
     width: 350,
-    borderRadius: '50%'
+    borderRadius: '50%',
+    '&:hover': {
+      boxShadow: theme.shadows[5]
+    }
   }
 });
 
