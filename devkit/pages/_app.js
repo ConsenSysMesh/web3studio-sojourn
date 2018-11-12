@@ -25,7 +25,7 @@ class Devkit extends App {
     return (
       <Container>
         <Head>
-          <title>My page</title>
+          <title>Sojourn Devkit</title>
         </Head>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider
