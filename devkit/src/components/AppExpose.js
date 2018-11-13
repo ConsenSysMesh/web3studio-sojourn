@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography/Typography';
 import React from 'react';
 
 export const AppExposeColumn = ({ children }) => (
-  <Grid container item xs md={3} direction="column" spacing={24}>
+  <Grid container item xs md={4} direction="column" spacing={24}>
     {children}
   </Grid>
 );
