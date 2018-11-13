@@ -32,7 +32,7 @@ export const notaryStatus = {
  * @param {string} noteHash - hash of original note
  * @returns {Object} - Redux action
  */
-const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
+export const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
   type: VAULT_SAVED_SUCCESS,
   id,
   ipfsHashes,
@@ -45,8 +45,10 @@ const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
  * @param {Error} error - the error
  * @returns {Object} - Redux action
  */
-const vaultSaveFailure = error => ({
+const vaultSaveFailure = (id, noteHash, error) => ({
   type: VAULT_SAVED_FAILURE,
+  id,
+  noteHash,
   error
 });
 
@@ -158,13 +160,12 @@ export const notarizeAndSaveNoteToVault = note => async (
  * @param {string} noteHash - hash of the note string
  * @returns {Function} - Redux action generator
  */
-const saveNoteToVault = (id, noteString, noteHash) => async dispatch => {
-  const secret = 'TODO: get a stored secret';
-
+export const saveNoteToVault = (id, noteString, noteHash) => async dispatch => {
   try {
-    const ipfsHashes = await vault.save(noteString, secret);
+    const ipfsHashes = await vault.save(noteString);
     dispatch(vaultSaveSuccess(id, ipfsHashes, noteHash));
   } catch (err) {
+    console.log(err);
     dispatch(vaultSaveFailure(id, noteHash, err));
   }
 };
@@ -194,7 +195,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
     timestamp
   } = action;
   const vaultRecord = noteHash && (state.vaultRecords[noteHash] || {});
-
+  console.log(type);
   switch (type) {
     case NOTE_CHANGED: {
       return {
@@ -278,7 +279,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
             noteId: id,
             noteHash,
             ipfs: {
-              hashes: ipfsHashes
+              ...ipfsHashes
             }
           }
         }

@@ -137,6 +137,8 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-securerandom')
+    compile project(':react-native-aes-crypto')
     compile project(':react-native-secure-storage')
     compile project(':react-native-vector-icons')
     compile project(':react-native-device-info')
