@@ -20,14 +20,22 @@ import { Ol, Li } from '../src/components/Lists';
 import CodeBlocks from '../src/components/images/CodeBlocks';
 import HamsterWorks from '../src/components/images/HamsterWorks';
 import SojournLogo from '../src/components/images/SojournLogo';
+import ShamirWorkflow from '../src/components/images/ShamirWorkflow';
 
 const links = {
   web3Wiki: 'https://github.com/w3f/Web3-wiki/wiki',
   apacheLicense: 'https://www.apache.org/licenses/LICENSE-2.0',
-  githubRepo: 'https://github.com/Consensys/imagineering-sojourn',
+  githubRepo: 'https://github.com/Consensys/web3studio-sojourn',
   rnSSSAGithubRepo: 'https://github.com/ConsenSys/react-native-sssa',
+  aesGithubRepo: 'https://github.com/tectiv3/react-native-aes',
   shamirWiki: 'https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing',
+  rinkeby: 'https://www.rinkeby.io/',
   infura: 'https://infura.io/',
+  infuraReadDocs: 'https://infura.io/docs/ipfs/get/get',
+  ipfsGettingStarted:
+    'https://gateway.ipfs.io/ipfs/QmeYYwD4y4DgVVdAzhT7wW5vrvmbKPQj8wcV2pAzjbj886/docs/getting-started/',
+  storjUplinkDocs: 'https://github.com/storj/docs/blob/master/uplink-cli.md',
+  storjS3Docs: 'https://github.com/storj/docs/blob/master/s3-gateway.md',
   chainpoint: 'https://chainpoint.org/',
   smartContractEtherscan:
     'https://rinkeby.etherscan.io/address/0xb8e2748911ef2bea3f15fa49c68a9ffdce9e0096',
@@ -52,7 +60,7 @@ const Index = () => (
           with what we hope are novel, unexpected ways to use blockchain and{' '}
           <A href={links.web3Wiki}>Web3-related technologies.</A>
         </P>
-        <P>
+        <P gutterBottom>
           We publish stories about these uses in the form of “product reviews
           from the near future” on Medium. Then we build some of these stories
           into developer kits like this one. The kits are open source.
@@ -100,7 +108,7 @@ const Index = () => (
           them unique and useful in your own projects.
         </P>
         <P>
-          What makes SoJourn a Web3 note taker is the way it stores data,
+          What makes SoJourn “Web3” as note taker? The way it stores data,
           minimizing the need to trust institutions to keep it safe.
         </P>
       </AsideText>
@@ -123,9 +131,12 @@ const Index = () => (
           <Li>
             <P gutterBottom>
               “Notarizes” the data by storing a hash onto a public blockchain
-              (we’re using the Ethereum Rinkeby testnet to demonstrate), so that
-              a user can prove that the original note was saved on a particular
-              date and not changed since;
+              (we’re using the Ethereum{' '}
+              <A href={links.rinkeby} external>
+                Rinkeby testnet
+              </A>{' '}
+              to demonstrate), so that a user can prove that the original note
+              was saved on a particular date and not changed since;
             </P>
           </Li>
 
@@ -153,14 +164,16 @@ const Index = () => (
         <HamsterWorks />
       </AsideImage>
     </Band>
-    <ImageBand src="/static/shamir.png" alt="" />
+    <ImageBand>
+      <ShamirWorkflow />
+    </ImageBand>
     <Band dark>
       <InfoText>
         <H2 gutterBottom>Why do Web3 Data Storage This Way?</H2>
         <P gutterBottom>
           We thought of many practical uses of this kind of Web3 Storage
-          pattern, the simplest of which is a diary app that lets you record
-          things like your accounts of harassment, which you want to be sure
+          pattern. The simplest is a diary app that lets you record things, for
+          example, like an account of harassment, which you want to be sure
           can’t be hacked into but which you can also produce years later and
           prove that you didn’t just recently make the story up.
         </P>
@@ -168,6 +181,7 @@ const Index = () => (
           The whole point of our team is to give you a leg up on your own ideas,
           but we did publish one story that might give you ideas:
         </P>
+        {/* TODO: This would be a great place to add statistics */}
         <P>
           The{' '}
           <A href={links.sojournMedium} external>
@@ -225,13 +239,18 @@ const Index = () => (
     </Band>
     <Band>
       <AsideImage />
+      {/* TODO: should be part of the user experience as "5". TJ, change layout*/}
       <AsideText>
         <H3 gutterBottom>Restore from Vault</H3>
+        {/* TODO, link to vault section on page */}
         <P gutterBottom>
           The Vault uses a Web3 approach to secure data storage, so that the
           user doesn’t have to worry about losing their device and their data
           with it.
         </P>
+        {/* TODO Where is the code and are the comments in the file good
+        enough to explain how everything works. Vault.js should be
+        "The best commented thing in the repo" */}
         <P>
           We have not added the restore function in this UI, because it relies
           on decisions you will make about how to handle passing data to the new
@@ -247,19 +266,20 @@ const Index = () => (
       <AsideText>
         <H3 gutterBottom>Left for you</H3>
         <P gutterBottom>
-          To be a complete note taking app, clearly it will want to allow the
-          user to do all sorts of things, like formatting text, sorting the note
-          list, and searching. These are basics that can be done in any number
-          of ways and are usually where designers and app developers make their
-          mark, so we have left this to you. We hope that the clarity we tried
-          to achieve with the structure of the code and the docs make it easy
-          for you to add functionality.
+          To be a complete note taking app, clearly your project will want to
+          allow the user to do all sorts of things, like formatting text,
+          sorting the note list, and searching. These are basics that can be
+          done in any number of ways and are usually where designers and app
+          developers make their mark, so we have left this to you. We hope that
+          the clarity we tried to achieve with the structure of the code and the
+          docs make it easy for you to add functionality.
         </P>
         <P>
-          Special note: The Vault enables versioning, but we implemented storage
-          on device more simply, so the devKit doesn’t enable the UI to provide
-          version control as-is. There are many well-known ways to implement
-          data to support versioning, so we leave that to you.
+          Because IPFS stores files permanently, the Vault is capable of
+          versioning. We implemented storage on device more simply, so the
+          devKit doesn’t enable the UI to provide version control as-is. There
+          are many well-known ways to implement versioning, so we leave that to
+          you.
         </P>
       </AsideText>
       <AsideImage />
@@ -271,12 +291,10 @@ const Index = () => (
     <Band>
       <InfoText underlayText="01">
         <H3 gutterBottom>The Basic Notes App - UI</H3>
-
-        {/* TODO: Figure code block formatting for ticks */}
         <P gutterBottom>
           The notes app is structured as you would expect for a redux based
-          React app. For example, the screen to edit a note is in the Note
-          module directory `src/modules/notes/EditNotesScreen.js`. The same
+          React app. For example, the screen to edit a note is in the note{' '}
+          <A href={srcHref('src/modules/notes')}>module directory</A>. The same
           directory contains reducers and selectors providing the business logic
           for managing apps.
         </P>
@@ -311,12 +329,12 @@ const Index = () => (
         </P>
         {/* TODO: Link to vault code, where will it be? */}
 
-        <H4 gutterBottom>Vault Steps</H4>
+        <H4 gutterBottom>Vault Procedure</H4>
 
-        <H5>Encrypt the Notes</H5>
+        <H5 gutterBottom>Encrypt the Notes</H5>
         <P gutterBottom>
-          We use AES to encrypt the data during the Done function in the
-          application.
+          We use <A href={links.aesGithubRepo}>AES</A> to encrypt the data
+          during the Done function in the application.
         </P>
         {/* TODO: Fill in `here` and `examples` */}
         <P gutterBottom>
@@ -324,46 +342,46 @@ const Index = () => (
           demonstrates this by generating a private key [here]. Clearly you are
           going to want to modify this in one of several ways. [examples]
         </P>
+
         <P gutterBottom>
-          How you manage this is going to matter in the experience you provide
-          for the user to restore their data to a new device….so don’t only
-          store this key on the device.
+          How you handle private key sharing and storage is going to matter in
+          the experience you provide for the user to restore their data to a new
+          device… so don’t only keep it on one device.
         </P>
 
-        <H5>Grind the Notes into Little Bits</H5>
+        <H5 gutterBottom>Grind the Notes into Little Bits</H5>
         <P gutterBottom>
-          There’s a lot of history that you can learn about{' '}
-          <A href={links.shamirWiki}>
-            Adi Shamir and his secret sharing algorithm
-          </A>{' '}
-          (SSSA), which we decided to use for this pattern. But for the purposes
-          of this devKit, here are the essentials:
+          There’s a lot of history that you can learn about Adi Shamir and his{' '}
+          <A href={links.shamirWiki}>secret sharing algorithm</A> (SSSA), which
+          we decided to use for this pattern. But for the purposes of this
+          devKit, here are the essentials:
         </P>
         <P gutterBottom>
           We needed a way to split up a file in such a way that there is no way
           to gain any information about the original content from any single
           piece, even if decrypted. In fact, the pieces should be useless
           without all the necessary segments together. SSSA does this and turns
-          out to have other unexpectedly useful benefits that should give
-          developers a lot of options for cool user features.
+          out to have other unexpectedly useful benefits, like better redundency
+          and quicker file reassembly, and that should give developers a lot of
+          options for cool user features.
         </P>
         <P gutterBottom>
           The key terms you need to know to work with this module are:
         </P>
         <IconBlob title="secret" icon={<EyeIcon />}>
-          {/* TODO: Affordance for `mod opportunity */}
-          <P>
+          {/* TODO: link to code */}
+          <P gutterBottom>
             For SSSA, the Secret is simply any bit array, but we implemented the
             Secret specifically as a Base64-encoded string, so that SSSA can
-            process the AES Encrypted file that we are passing it. [Mod
-            opportunity:] You can modify the code here to enable the Vault to,
-            for example, take unencrypted files.
+            process the AES Encrypted file that we are passing it. You can
+            modify the code here to enable the Vault to, for example, take
+            unencrypted files.
           </P>
         </IconBlob>
 
         {/* TODO: Link generateShares and combine functions when exists */}
         <IconBlob title="shares" icon={<EyeIcon />}>
-          <P>
+          <P gutterBottom>
             We won’t get into polynomials and how SSSA does its magic. But you
             need to know that the generateShares() function returns a set of hex
             values which, through combine() allow you to reconstruct the
@@ -371,8 +389,9 @@ const Index = () => (
             function.
           </P>
         </IconBlob>
+
         <IconBlob title="Threshold" icon={<EyeIcon />}>
-          <P>
+          <P gutterBottom>
             Saving Shares to decentralized storage involves the risk that some
             of the storage locations may not be available at any given time. If
             your Threshold value is set to the same number as Shares, you will
@@ -386,47 +405,34 @@ const Index = () => (
           </P>
         </IconBlob>
 
-        <H5>Storing the Shares</H5>
-        <P>
+        <H5 gutterBottom>Storing the Shares</H5>
+        <P gutterBottom>
           Once you have the data sliced up in to the Shares, they need to be
           stored somewhere. On this implementation, we chose to use IPFS via the
           Infura Gateway.
         </P>
-        {/* TODO: Sidebar and mod opportunity thing*/}
+        {/* TODO: Make this an inset (maybe)?*/}
         <P gutterBottom>
-          [Sidebar] IPFS/Infura store data on many AWS instances distributed
-          globally. It should be noted that currently Infura is managing this in
-          a somewhat centralized way, but Infura plans to run IPFS fully
-          decentralized, so consider this a proof of concept...and it may be
-          good enough for many users’ privacy requirements.
-        </P>
-        <P gutterBottom>
-          [Mod opportunity: You could modify the code here to send some of the
-          Shares to gateway X and some to gateway Y. For example, a random
-          number of the Shares could be stored to IPFS via Infura and the
-          remainder could be stored to Storj or even traditional storage
-          options. If no party has a Threshold number of Shares, they have
-          nothing.]
+          Infura stores data on many AWS instances distributed globally. It
+          should be noted that currently Infura is managing this in a somewhat
+          centralized way, but Infura plans to run IPFS fully decentralized, so
+          consider this a proof of concept...and it may be good enough for many
+          users’ privacy requirements.
         </P>
         <P gutterBottom>
           IPFS stores data by hashing the content and using that hash as the
-          address to access the data. Infura combines the hash with the prefix
-          https://gateway.ipfs.io/ipfs/[hash] to enable any browser to pull up
-          the data at that location. In short, all IPFS locations are accessible
-          to the public. That sounds like the opposite of privacy, perhaps, but
-          thanks to the previous step of splitting the data into Shares, the
-          probability of an attacker finding the correct set of Shares to
-          reconstruct the file is astronomically small. Pretty cool, yeah?
+          address to access the data. You can then{' '}
+          <A href={links.ipfsGettingStarted}>use the hash</A> to enable any
+          browser to pull up the data at that location. In short, all IPFS
+          locations are accessible to the public. That sounds like the opposite
+          of privacy, perhaps, but thanks to the previous step of splitting the
+          data into Shares, the probability of an attacker finding the correct
+          set of Shares to reconstruct the file is astronomically small. Pretty
+          cool, yeah?
         </P>
 
-        {/* TODO: Add copy here*/}
+        <H5 gutterBottom>Storing the secret locations to find the Shares</H5>
         <P gutterBottom>
-          [The api for Infura is here. And to implement it, place your code
-          here.]
-        </P>
-
-        <H5>Storing the secret locations to find the Shares</H5>
-        <P>
           If the user can’t supply the locations of a Threshold number of Shares
           to their data, the data is as good as gone. They will never find it
           out there in IPFS. So it is critical that your app store the file
@@ -438,11 +444,11 @@ const Index = () => (
         </P>
         {/* TODO: Insert file repo location */}
         <P gutterBottom>
-          Infura returns a hash of each Share location serially, and the code in
-          [insert repo file location] will concatenate the hashes into an array,
-          which, depending on how your application manages this, you will use to
-          let the user restore their data (e.g., in the event of them losing
-          their phone).
+          IPFS returns a hash of each Share location, and the code in [insert
+          repo file location] will concatenate the hashes into an array, which,
+          depending on how your application manages this, you will use to let
+          the user restore their data (e.g., in the event of them losing their
+          phone).
         </P>
       </InfoText>
     </Band>
@@ -459,23 +465,30 @@ const Index = () => (
         <P gutterBottom>
           Until recently, there were no well-known ways to do Web3 storage in a
           way that we considered acceptable for very secret data. It’s one thing
-          to worry about a system admin at AWS, but I’ll take that over some guy
+          to worry about a system admin at AWS, but we’d take that over some guy
           somewhere with a hard disk on a public network storing my file, even
           if it is encrypted.
         </P>
-        {/* TODO: Add Storj content */}
         <P gutterBottom>
           However, there are new ways emerging of splitting up files, rendering
           them useless without also having many other slices, and storing them
-          on decentralized infrastructure emerging. One service is Storj’s
-          upcoming version 3. [Storj...add content here.]
+          on decentralized infrastructure. One service is Storj’s upcoming
+          version 3.
+        </P>
+        <P gutterBottom>
+          In order to add Storj as another location for the Shares, modify [your
+          LINK] for use with the Storj Uplink Client. If you don’t want to use
+          Shamir’s and want to simply replace the Vault with standard Storj,
+          check out Storj’s tutorials on GitHub for the{' '}
+          <A href={links.storjUplinkDocs}>uplink client</A> and{' '}
+          <A href={links.storjS3Docs}>S3 gateway.</A>
         </P>
         <P>
           In fact, you might want to consider modifying the Vault to not only
-          store shares on IPFS but also on Storj and other gateways, for an
-          additional assurance that no single gateway provider trafficked in
-          enough shares to reconstruct the file. All depends on how paranoid you
-          want to be. (Storj might also be a good choice for storing the
+          store shares on IPFS but also on Storj and other storage providers,
+          for an additional assurance that no single gateway provider trafficked
+          in enough shares to reconstruct the file. All depends on how paranoid
+          you want to be. (Storj might also be a good choice for storing the
           encrypted location file that SoJourn needs to restore data to a new
           device.)
         </P>
@@ -498,18 +511,20 @@ const Index = () => (
           </A>{' '}
           but here’s what we have:
         </P>
+
         <P gutterBottom>
           A <A href={srcHref('contracts/HashNotary.sol')}>Smart Contract</A> is
-          responsible for storing the note’s hash and timestamp. (We’ve provided
-          the address of the living contract that we wrote onto the Ethereum
-          Rinkeby testnet for demonstration).
+          responsible for storing the note’s hash and timestamp. We’ve provided
+          the address of the{' '}
+          <A href={links.smartContractEtherscan}>living contract</A> that we
+          deployed onto the Ethereum Rinkeby testnet for demonstration.
         </P>
         <P gutterBottom>
-          At the user’s request, we use Web3.js in{' '}
+          Then, at the user’s request, we use Web3.js in{' '}
           <A href={srcHref('src/modules/notes/notesReducer.js')}>
             the note app
           </A>{' '}
-          that calls the Notary function on the smart contract.
+          to use the Notary function on the smart contract.
         </P>
       </InfoText>
     </Band>
@@ -517,7 +532,7 @@ const Index = () => (
     <Band>
       <InfoText underlayText="04">
         <H3 gutterBottom>Authentication & Wallet</H3>
-        <P>
+        <P gutterBottom>
           The SoJourn devKit for demonstration uses iPhone Face ID for app
           authentication and to{' '}
           <A href={srcHref('src/store/secureStorage.js')}>
@@ -525,15 +540,12 @@ const Index = () => (
           </A>{' '}
           of the notes data.
         </P>
+
         <P>
-          The Notary module uses gas, because we implemented the Ethereum
-          Rinkeby testnet for demonstration. That means the app needs a wallet.
-          We{' '}
-          <A href={srcHref('src/modules/setup')}>
-            implemented the uPort wallet
-          </A>{' '}
-          for demonstration, which the user can set up when the app is first
-          loaded.
+          The Notary module uses gas. We made this choice to demonstrate using
+          the Ethereum Rinkeby testnet. That means the app needs a wallet and we{' '}
+          <A href={srcHref('src/modules/setup')}>implemented uPort’s</A> which
+          the user can set up when the app is first loaded.
         </P>
       </InfoText>
     </Band>
@@ -553,12 +565,16 @@ const Index = () => (
         <P gutterBottom>What do we want in return? Two things:</P>
         <Ol>
           <Li>
-            We never say no to tweets and other signs of thanks and comments;
+            <P>
+              We never say no to tweets and other signs of thanks and comments;
+            </P>
           </Li>
           {/* TODO: Fill in catchers mit*/}
           <Li>
-            We want to hear about what you are building, so send us updates to
-            [hmmmm...need a catcher’s mit];
+            <P>
+              We want to hear about what you are building, so send us updates to
+              [hmmmm...need a catcher’s mit];
+            </P>
           </Li>
         </Ol>
       </InfoText>
