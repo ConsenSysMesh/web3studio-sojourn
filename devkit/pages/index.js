@@ -108,8 +108,8 @@ const Index = () => (
           them unique and useful in your own projects.
         </P>
         <P>
-          What makes SoJourn “Web3” as note taker? The way it stores data,
-          minimizing the need to trust institutions to keep it safe.
+          What makes SoJourn a “Web3” note-taking application? The way it stores
+          data, minimizing the need to trust institutions to keep it safe.
         </P>
       </AsideText>
     </Band>
@@ -181,7 +181,8 @@ const Index = () => (
           The whole point of our team is to give you a leg up on your own ideas,
           but we did publish one story that might give you ideas:
         </P>
-        {/* TODO: This would be a great place to add statistics */}
+        {/* TODO: This would be a great place to add statistics
+        https://www.nytimes.com/2018/10/11/world/americas/journalists-killed.html */}
         <P>
           The{' '}
           <A href={links.sojournMedium} external>
@@ -361,7 +362,7 @@ const Index = () => (
           to gain any information about the original content from any single
           piece, even if decrypted. In fact, the pieces should be useless
           without all the necessary segments together. SSSA does this and turns
-          out to have other unexpectedly useful benefits, like better redundency
+          out to have other unexpectedly useful benefits, like better redundancy
           and quicker file reassembly, and that should give developers a lot of
           options for cool user features.
         </P>
