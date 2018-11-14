@@ -1,5 +1,5 @@
 {
-  "name": "imagineering-sojourn",
+  "name": "web3studio-sojourn",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -18,7 +18,7 @@
     "e2e": "yarn concurrently -k -s first \"yarn start\" \"yarn detox:build && yarn detox:test\"",
     "ci": "./scripts/travis-test.sh",
     "devkit": "next devkit",
-    "devkit:build": "NODE_ENV=production next build devkit && next export devkit"
+    "devkit:build": "cross-env-shell NODE_ENV=production next build devkit && next export devkit && touch devkit/out/.nojekyll"
   },
   "dependencies": {
     "Base64": "^1.0.1",
@@ -55,6 +55,7 @@
     "chai": "^4.2.0",
     "classnames": "^2.2.6",
     "concurrently": "^4.0.1",
+    "cross-env": "^5.2.0",
     "detox": "^9.0.4",
     "dotenv": "^6.1.0",
     "eslint": "^5.6.1",
