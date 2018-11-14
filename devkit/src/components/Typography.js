@@ -9,16 +9,28 @@ const styles = theme => ({
   }
 });
 
+const whiteSpacePattern = /\s/g;
+const removePattern = /[^\w-]/g;
+
 const variantFactory = variant =>
-  withStyles(styles)(({ children, lastInSection, classes, ...props }) => (
-    <Typography
-      className={classNames({ [classes.lastInSection]: lastInSection })}
-      variant={variant}
-      {...props}
-    >
-      {children}
-    </Typography>
-  ));
+  withStyles(styles)(({ children, lastInSection, classes, ...props }) => {
+    const id = React.Children.toArray(children)
+      .join('-')
+      .replace(whiteSpacePattern, '-')
+      .replace(removePattern, '')
+      .toLowerCase();
+
+    return (
+      <Typography
+        id={variant.startsWith('h') ? id : null}
+        className={classNames({ [classes.lastInSection]: lastInSection })}
+        variant={variant}
+        {...props}
+      >
+        {children}
+      </Typography>
+    );
+  });
 
 export const H1 = variantFactory('h1');
 export const H2 = variantFactory('h2');
