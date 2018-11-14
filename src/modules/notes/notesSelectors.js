@@ -72,13 +72,15 @@ export const selectCurrentNote = createSelector(
  * @param {Object} state - Redux state object
  * @returns {Array<Object>} - An array of note objects
  */
-export const selectNotesDisplayList = createSelector(selectNotes, notes =>
-  Object.keys(notes)
-    .map(id => notes[id])
-    .map(note => ({
-      ...note,
-      body: note.body && note.body.trim(),
-      calendarLastModified: moment(note.lastModified).fromNow(true)
-    }))
-    .sort((noteA, noteB) => noteB.lastModified - noteA.lastModified)
+export const selectNotesDisplayList = createSelector(
+  selectNotes,
+  notes =>
+    Object.keys(notes)
+      .map(id => notes[id])
+      .map(note => ({
+        ...note,
+        body: note.body && note.body.trim(),
+        calendarLastModified: moment(note.lastModified).fromNow(true)
+      }))
+      .sort((noteA, noteB) => noteB.lastModified - noteA.lastModified)
 );

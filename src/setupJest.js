@@ -1,14 +1,17 @@
-/**
- * Mock XMLHttpRequest.
- */
-
 import crypto from 'crypto';
 import { NativeModules } from 'react-native';
 import { promisify } from 'util';
 import { btoa, atob } from 'Base64';
+import FormData from 'react-native/Libraries/Network/FormData';
+
+/**
+ * Mock XMLHttpRequest.
+ */
 class XMLHttpRequest {}
 global.XMLHttpRequest = XMLHttpRequest;
+
 global.fetch = require('jest-fetch-mock');
+
 global.requestAnimationFrame = callback => {
   setTimeout(callback, 0);
 };
@@ -21,14 +24,12 @@ NativeModules.Aes = {
   pbkdf2: async function(text, salt, cost, length) {
     return promisify(crypto.pbkdf2)(text, salt, cost, length, null);
   },
-  encrypt: async function(text, key, iv) {
+  encrypt: async function(text) {
     return btoa(text);
   },
-  decrypt: async function(base64, key, iv) {
+  decrypt: async function(base64) {
     return atob(base64);
   }
 };
-function FormDataMock() {
-  this.append = jest.fn();
-}
-global.FormData = FormDataMock;
+
+global.FormData = FormData;

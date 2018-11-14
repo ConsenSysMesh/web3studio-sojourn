@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notes reducer notarizes after 12 confirmations and uploads to IPFS 1`] = `
+Array [
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "01100000000017b226964223a223130222c227469746c65223a2231302069732062657374222c22626f6479223a22576520616c6c206c6f7665204461766964227d",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0217e7e7e7e7f055c171a5c445c4f4e5c525c0a170a121b5c445c4f4e5e170d5e1c1b0d0a5c525c1c111a075c445c291b5e1f12125e1211081b5e3a1f08171a5c03",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0317e7e7e7e7f055c171a5c445c4f4e5c525c0a170a121b5c445c4f4e5e170d5e1c1b0d0a5c525c1c111a075c445c291b5e1f12125e1211081b5e3a1f08171a5c03",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "041f0f0f0f0f18bd29994d2cad2c1c0d2dcd28499849c95d2cad2c1c0d09983d092958384d2dcd2929f9489d2cad2a795d0919c9cd09c9f8695d0b491869994d28d",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "051f0f0f0f0f18bd29994d2cad2c1c0d2dcd28499849c95d2cad2c1c0d09983d092958384d2dcd2929f9489d2cad2a795d0919c9cd09c9f8695d0b491869994d28d",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "061adadadadacd68fc4c98f978f9c9d8f818fd9c4d9c1c88f978f9c9d8dc4de8dcfc8ded98f818fcfc2c9d48f978ffac88dccc1c18dc1c2dbc88de9ccdbc4c98fd0",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "071adadadadacd68fc4c98f978f9c9d8f818fd9c4d9c1c88f978f9c9d8dc4de8dcfc8ded98f818fcfc2c9d48f978ffac88dccc1c18dc1c2dbc88de9ccdbc4c98fd0",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "081b4b4b4b4b5cf96ddd0968e968584969896c0ddc0d8d1968e96858494ddc794d6d1c7c0969896d6dbd0cd968e96e3d194d5d8d894d8dbc2d194f0d5c2ddd096c9",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "091b4b4b4b4b5cf96ddd0968e968584969896c0ddc0d8d1968e96858494ddc794d6d1c7c0969896d6dbd0cd968e96e3d194d5d8d894d8dbc2d194f0d5c2ddd096c9",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0a10a0a0a0a0b7128636e2830283b3a2826287e637e666f2830283b3a2a63792a686f797e28262868656e732830285d6f2a6b66662a66657c6f2a4e6b7c636e2877",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0b10a0a0a0a0b7128636e2830283b3a2826287e637e666f2830283b3a2a63792a686f797e28262868656e732830285d6f2a6b66662a66657c6f2a4e6b7c636e2877",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0c17d7d7d7d7c065f14195f475f4c4d5f515f09140911185f475f4c4d5d140e5d1f180e095f515f1f1219045f475f2a185d1c11115d11120b185d391c0b14195f00",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "01100000000017b226964223a223130222c227469746c65223a2231302069732062657374222c22626f6479223a22576520616c6c206c6f7665204461766964227d",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0217e7e7e7e7f055c171a5c445c4f4e5c525c0a170a121b5c445c4f4e5e170d5e1c1b0d0a5c525c1c111a075c445c291b5e1f12125e1211081b5e3a1f08171a5c03",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0317e7e7e7e7f055c171a5c445c4f4e5c525c0a170a121b5c445c4f4e5e170d5e1c1b0d0a5c525c1c111a075c445c291b5e1f12125e1211081b5e3a1f08171a5c03",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "041f0f0f0f0f18bd29994d2cad2c1c0d2dcd28499849c95d2cad2c1c0d09983d092958384d2dcd2929f9489d2cad2a795d0919c9cd09c9f8695d0b491869994d28d",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "051f0f0f0f0f18bd29994d2cad2c1c0d2dcd28499849c95d2cad2c1c0d09983d092958384d2dcd2929f9489d2cad2a795d0919c9cd09c9f8695d0b491869994d28d",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "061adadadadacd68fc4c98f978f9c9d8f818fd9c4d9c1c88f978f9c9d8dc4de8dcfc8ded98f818fcfc2c9d48f978ffac88dccc1c18dc1c2dbc88de9ccdbc4c98fd0",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "071adadadadacd68fc4c98f978f9c9d8f818fd9c4d9c1c88f978f9c9d8dc4de8dcfc8ded98f818fcfc2c9d48f978ffac88dccc1c18dc1c2dbc88de9ccdbc4c98fd0",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "081b4b4b4b4b5cf96ddd0968e968584969896c0ddc0d8d1968e96858494ddc794d6d1c7c0969896d6dbd0cd968e96e3d194d5d8d894d8dbc2d194f0d5c2ddd096c9",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "091b4b4b4b4b5cf96ddd0968e968584969896c0ddc0d8d1968e96858494ddc794d6d1c7c0969896d6dbd0cd968e96e3d194d5d8d894d8dbc2d194f0d5c2ddd096c9",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0a10a0a0a0a0b7128636e2830283b3a2826287e637e666f2830283b3a2a63792a686f797e28262868656e732830285d6f2a6b66662a66657c6f2a4e6b7c636e2877",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0b10a0a0a0a0b7128636e2830283b3a2826287e637e666f2830283b3a2a63792a686f797e28262868656e732830285d6f2a6b66662a66657c6f2a4e6b7c636e2877",
+      ],
+    ],
+  },
+  FormData {
+    "_parts": Array [
+      Array [
+        "file1",
+        "0c17d7d7d7d7c065f14195f475f4c4d5f515f09140911185f475f4c4d5d140e5d1f180e095f515f1f1219045f475f2a185d1c11115d11120b185d391c0b14195f00",
+      ],
+    ],
+  },
+]
+`;

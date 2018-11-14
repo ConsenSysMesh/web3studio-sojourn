@@ -32,7 +32,7 @@ export const notaryStatus = {
  * @param {string} noteHash - hash of original note
  * @returns {Object} - Redux action
  */
-export const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
+const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
   type: VAULT_SAVED_SUCCESS,
   id,
   ipfsHashes,
@@ -42,6 +42,8 @@ export const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
 /**
  * Vault save erred
  *
+ * @param {string} id - note id
+ * @param {string} noteHash - hash of original note
  * @param {Error} error - the error
  * @returns {Object} - Redux action
  */
@@ -137,8 +139,8 @@ export const notarizeAndSaveNoteToVault = note => async (
     .send(txOptions)
     // Called when uport TX approved by user
     .on('transactionHash', txHash => {
-      dispatch(saveNoteToVault(id, noteString, hash));
       dispatch(hashNotaryStart(id, hash, txHash));
+      dispatch(saveNoteToVault(id, noteString, hash));
     })
     .on('confirmation', async confirmationNumber => {
       if (confirmationNumber === CONFIRMATION_WAIT) {
@@ -160,12 +162,12 @@ export const notarizeAndSaveNoteToVault = note => async (
  * @param {string} noteHash - hash of the note string
  * @returns {Function} - Redux action generator
  */
-export const saveNoteToVault = (id, noteString, noteHash) => async dispatch => {
+const saveNoteToVault = (id, noteString, noteHash) => async dispatch => {
   try {
     const ipfsHashes = await vault.save(noteString);
+
     dispatch(vaultSaveSuccess(id, ipfsHashes, noteHash));
   } catch (err) {
-    console.log(err);
     dispatch(vaultSaveFailure(id, noteHash, err));
   }
 };
@@ -195,7 +197,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
     timestamp
   } = action;
   const vaultRecord = noteHash && (state.vaultRecords[noteHash] || {});
-  console.log(type);
+
   switch (type) {
     case NOTE_CHANGED: {
       return {

@@ -1,8 +1,6 @@
 import { EventEmitter } from 'events';
 import { promisify } from 'util';
 import {
-  vaultSaveSuccess,
-  saveNoteToVault,
   notarizeAndSaveNoteToVault,
   notaryStatus,
   noteChanged
@@ -59,6 +57,7 @@ describe('Notes reducer', () => {
     hashNotary.methods.getTimestamp._mockCall.mockReturnValue(
       expectedTimestamp
     );
+
     fetch.mockResponse(JSON.stringify({ Key: 'QM1', Size: 99 }));
   });
 
@@ -93,7 +92,6 @@ describe('Notes reducer', () => {
 
     // Skip a tick for callbacks to pop off
     await promisify(setImmediate)();
-
     const vaultRecord = selectCurrentVaultRecord(store.getState(), {
       vaultRecord: noteHash
     });
@@ -108,36 +106,33 @@ describe('Notes reducer', () => {
       })
     );
   });
-  it('saves the content to IPFS and returns locations', async () => {
-    const dispatch = jest.fn();
-    await saveNoteToVault(note.id, noteString, noteHash)(dispatch);
 
-    expect(dispatch).toHaveBeenCalledWith(
-      vaultSaveSuccess(
-        note.id,
-        { hashes: new Array(7).fill('QM1'), iv: 'AQEBAQEBAQEBAQEBAQEBAQ==' },
-        noteHash
-      )
-    );
-  });
-  it('saves the timestamp after 12 confirmations', async () => {
+  // If this test case fails, it's likely due to a timeout on a slow machine
+  // Check that first to see if it needs increasing
+  it('notarizes after 12 confirmations and uploads to IPFS', async () => {
     store.dispatch(notarizeAndSaveNoteToVault(note));
 
     hashNotary.methods.save._mockSendEmitter.emit('transactionHash', txHash);
+
     // Simulate 24 confirmations
-    await Promise.all(
-      new Array(24).fill('').map(async (val, index) => {
-        hashNotary.methods.save._mockSendEmitter.emit(
-          'confirmation',
-          index + 1
-        );
-        await promisify(setImmediate)();
-      })
-    );
+    new Array(24).fill('').forEach((val, index) => {
+      hashNotary.methods.save._mockSendEmitter.emit('confirmation', index + 1);
+    });
+
+    // Mocks take about 61 ms, this should cover timeouts
+    await promisify(setTimeout)(300);
+
     const vaultRecord = selectCurrentVaultRecord(store.getState(), {
       vaultRecord: noteHash
     });
 
+    const fileContents = fetch.mock.calls.map(([url, request]) => {
+      expect(url).toEqual('https://ipfs.infura.io:5001/api/v0/block/put');
+
+      return request.body;
+    });
+
+    expect(fileContents).toMatchSnapshot();
     expect(vaultRecord).toEqual(
       expect.objectContaining({
         noteId: note.id,
@@ -146,6 +141,10 @@ describe('Notes reducer', () => {
           status: notaryStatus.confirmed,
           txHash,
           timestamp: expectedTimestamp
+        },
+        ipfs: {
+          hashes: new Array(12).fill('QM1'),
+          iv: 'AQEBAQEBAQEBAQEBAQEBAQ=='
         }
       })
     );

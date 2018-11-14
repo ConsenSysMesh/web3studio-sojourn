@@ -7,7 +7,10 @@ import { createSelector } from 'reselect';
  * @returns {Object} Sign in redux state
  */
 const selectSetup = state => state.setup;
-const selectUPort = createSelector(selectSetup, setup => setup.uport);
+const selectUPort = createSelector(
+  selectSetup,
+  setup => setup.uport
+);
 
 export const selectAddress = createSelector(
   selectUPort,
