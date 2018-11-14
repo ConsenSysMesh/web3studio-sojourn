@@ -1,5 +1,6 @@
 import { SheetsRegistry } from 'jss';
 import { createGenerateClassName } from '@material-ui/core/styles';
+import nextConfig from '../../next.config';
 import theme from './theme';
 
 function createPageContext() {
@@ -27,4 +28,8 @@ export default function getPageContext() {
   }
 
   return global.__INIT_MATERIAL_UI__;
+}
+
+export function staticAsset(path) {
+  return `${nextConfig.assetPrefix}/static/${path}`;
 }
