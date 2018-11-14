@@ -10,6 +10,9 @@ const styles = theme => {
     root: {
       position: 'relative',
       [theme.breakpoints.up('md')]: {
+        marginLeft: `${(100 / 12) * 1}%`
+      },
+      [theme.breakpoints.up('lg')]: {
         marginLeft: `${(100 / 12) * 2}%`
       }
     },
@@ -26,7 +29,7 @@ const styles = theme => {
 };
 
 const InfoText = ({ children, classes, underlayText }) => (
-  <Grid item xs={12} md={9} lg={7} className={classes.root}>
+  <Grid item xs={12} sm={12} md={9} lg={7} className={classes.root}>
     {underlayText && (
       <span className={classes.underlayText}>{underlayText}</span>
     )}
