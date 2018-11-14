@@ -1,5 +1,4 @@
 import { createMuiTheme } from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
 import green from '@material-ui/core/colors/green';
 import ModularScale from 'modular-scale';
 
@@ -11,9 +10,9 @@ export const ms = ModularScale({
 export default createMuiTheme({
   palette: {
     primary: {
-      light: red[400],
-      main: red[600],
-      dark: red[800]
+      light: '#eb5757',
+      main: '#E62D2D',
+      dark: '#a11f1f'
     },
     secondary: {
       light: green[300],
@@ -57,7 +56,8 @@ export default createMuiTheme({
       fontSize: `${ms(2)}em`
     },
     subtitle1: {
-      fontSize: `${ms(1)}em`
+      fontSize: `${ms(1)}em`,
+      fontWeight: 600
     },
     subtitle2: {
       fontSize: `${ms(-1)}em`
