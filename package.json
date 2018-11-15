@@ -34,7 +34,7 @@
     "react-native-dotenv": "^0.2.0",
     "react-native-secure-storage": "^0.1.1",
     "react-native-securerandom": "^0.3.0",
-    "react-native-sssa": "ConsenSys/react-native-sssa#develop",
+    "react-native-sssa": "^0.1.0",
     "react-native-uport-connect": "^0.1.3",
     "react-navigation": "^2.18.0",
     "react-redux": "^5.0.7",
