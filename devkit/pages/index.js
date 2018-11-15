@@ -147,7 +147,7 @@ const Index = () => (
           <Li>
             <P paragraph>
               Encrypts each note, divides it into parts (using{' '}
-              <A href={links.shamirWiki}>Shamir’s Secret Sharing algorithm</A>
+              <A href={sssaSrcHref}>Shamir’s Secret Sharing algorithm</A>
               ), and distributes each of them to different locations on IPFS.
               We’re using the{' '}
               <A href={links.infura} external>
