@@ -42,11 +42,15 @@ const vaultSaveSuccess = (id, ipfsHashes, noteHash) => ({
 /**
  * Vault save erred
  *
+ * @param {string} id - note id
+ * @param {string} noteHash - hash of original note
  * @param {Error} error - the error
  * @returns {Object} - Redux action
  */
-const vaultSaveFailure = error => ({
+const vaultSaveFailure = (id, noteHash, error) => ({
   type: VAULT_SAVED_FAILURE,
+  id,
+  noteHash,
   error
 });
 
@@ -135,8 +139,8 @@ export const notarizeAndSaveNoteToVault = note => async (
     .send(txOptions)
     // Called when uport TX approved by user
     .on('transactionHash', txHash => {
-      dispatch(saveNoteToVault(id, noteString, hash));
       dispatch(hashNotaryStart(id, hash, txHash));
+      dispatch(saveNoteToVault(id, noteString, hash));
     })
     .on('confirmation', async confirmationNumber => {
       if (confirmationNumber === CONFIRMATION_WAIT) {
@@ -159,10 +163,9 @@ export const notarizeAndSaveNoteToVault = note => async (
  * @returns {Function} - Redux action generator
  */
 const saveNoteToVault = (id, noteString, noteHash) => async dispatch => {
-  const secret = 'TODO: get a stored secret';
-
   try {
-    const ipfsHashes = await vault.save(noteString, secret);
+    const ipfsHashes = await vault.save(noteString);
+
     dispatch(vaultSaveSuccess(id, ipfsHashes, noteHash));
   } catch (err) {
     dispatch(vaultSaveFailure(id, noteHash, err));
@@ -278,7 +281,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
             noteId: id,
             noteHash,
             ipfs: {
-              hashes: ipfsHashes
+              ...ipfsHashes
             }
           }
         }

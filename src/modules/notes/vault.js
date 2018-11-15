@@ -1,20 +1,16 @@
+import { encryptSplitAndSpreadSecret } from 'react-native-sssa';
+
 export default {
-  save: async (contentString, secret) => {
-    // Warning to show to dev that it's executed, still need to fill in code
-    /* eslint-disable-next-line no-console */
-    console.warn(`Unimplemented function vault.save`, contentString, secret);
-    return [];
-  },
-  restore: async (ipfsHashes, secret, contentHash) => {
-    // Warning to show to dev that it's executed, still need to fill in code
-    /* eslint-disable-next-line no-console */
-    console.warn(
-      `Unimplemented function vault.restore`,
-      ipfsHashes,
-      secret,
-      contentHash
+  save: async contentString => {
+    const { iv, locations } = await encryptSplitAndSpreadSecret(
+      contentString,
+      12,
+      7
     );
 
-    return '';
+    return {
+      iv,
+      hashes: locations.map(loc => loc.Key)
+    };
   }
 };

@@ -3,6 +3,8 @@ package com.sojourn;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import net.rhogan.rnsecurerandom.RNSecureRandomPackage;
+import com.tectiv3.aes.RCTAesPackage;
 import li.yunqi.rnsecurestorage.RNSecureStoragePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
@@ -26,6 +28,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSecureRandomPackage(),
+            new RCTAesPackage(),
             new RNSecureStoragePackage(),
             new VectorIconsPackage(),
             new RNDeviceInfo()
