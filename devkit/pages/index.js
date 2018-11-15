@@ -341,7 +341,8 @@ const Index = () => (
         <P paragraph>
           AES requires an input of a 256 bit private key. The devKit
           demonstrates this by{' '}
-          <A href={sssaSrcHrf('index.js#L15-L21')}>generating</A> a private key.
+          <A href={sssaSrcHref('index.js#L15-L21')}>generating</A> a private
+          key.
         </P>
 
         <P lastInSection>
