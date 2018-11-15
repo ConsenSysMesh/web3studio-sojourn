@@ -5,6 +5,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../src/getPageContext';
+import analytics from '../src/analytics';
 
 class Devkit extends App {
   constructor(props) {
@@ -18,6 +19,9 @@ class Devkit extends App {
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
+
+    // eslint-disable-next-line no-console
+    analytics().catch(console.error);
   }
 
   render() {
