@@ -116,10 +116,23 @@ $ yarn truffle migrate --network YOUR_NETWORK_ID
 
 For more details see [Truffle's Documentation.](https://truffleframework.com/docs/truffle/getting-started/running-migrations)
 
-## License
-
 ## DevKit
 
-## Description
+[Go to the Devkit](https://consensys.github.io/web3studio-sojourn/)
 
-## ConsenSys Web3 Studio - Durham
+The ConsenSys Web3 Studio in Durham, NC has a pretty sweet job. Our team of
+developers, designers and writers spend our days coming up with what we hope
+are novel, unexpected ways to use blockchain and Web3-related technologies.
+
+We publish stories about these uses in the form of “product reviews from the
+near future” on [Medium](https://medium.com/web3studio). Then we build some of these stories into
+[developer kits](https://consensys.github.io/web3studio-sojourn/) like this
+one. The kits are open source.
+
+Success for us is you taking the kit’s ideas and open source code and building
+your own web3 applications.
+
+What do we want in return? Two things:
+
+1. We never say no to [tweets](https://twitter.com/web3studio) and other signs of thanks and comments;
+2. We want to hear about what you are building! [Tweet us](https://twitter.com/web3studio) and let us know.

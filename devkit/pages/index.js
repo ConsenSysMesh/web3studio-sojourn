@@ -4,6 +4,7 @@ import EyeIcon from 'react-feather/dist/icons/eye';
 import LockIcon from 'react-feather/dist/icons/lock';
 import ShieldIcon from 'react-feather/dist/icons/shield';
 import GithubIcon from 'react-feather/dist/icons/github';
+import YouTube from '../src/components/YouTube';
 import Band from '../src/components/Band';
 import ImageBand from '../src/components/ImageBand';
 import CTACircle from '../src/components/CTACircle';
@@ -36,9 +37,11 @@ const links = {
   chainpoint: 'https://chainpoint.org/',
   smartContractEtherscan:
     'https://rinkeby.etherscan.io/address/0xb8e2748911ef2bea3f15fa49c68a9ffdce9e0096',
+  web3StudioMedium: 'https://medium.com/web3studio',
   sojournMedium:
     'https://media.consensys.net/sojourn-the-journal-that-journalists-trust-to-keep-their-secrets-secret-e173bc658998',
-  twitter: 'https://twitter.com/web3studio'
+  twitter: 'https://twitter.com/web3studio',
+  youtubeChannel: 'https://www.youtube.com/channel/UCM1wUXmODZbVLoCocwrW7uQ'
 };
 
 const srcHref = srcPath => `${links.githubRepo}/tree/master/${srcPath}`;
@@ -60,8 +63,9 @@ const Index = () => (
         </P>
         <P paragraph>
           We publish stories about these uses in the form of “product reviews
-          from the near future” on Medium. Then we build some of these stories
-          into developer kits like this one. The kits are open source.
+          from the near future” on <a href={links.web3StudioMedium}>Medium</a>.
+          Then we build some of these stories into developer kits like this one.
+          The kits are open source.
         </P>
         <P>
           Success for us is you taking the kit’s ideas and{' '}
@@ -583,6 +587,25 @@ const Index = () => (
           </Li>
         </Ol>
       </InfoText>
+    </Band>
+    <Band>
+      <InfoText>
+        <H2 gutterBottom>The Making Of</H2>
+        <P lastInSection>
+          We want to give you a detailed look at our thinking around how we
+          built this devkit. Often when building things you run into challenges
+          and gain tribal knowledge that we want to share, with you. To see all
+          of our videos, check out our{' '}
+          <A href={links.youtubeChannel} external>
+            YouTube Channel.
+          </A>
+        </P>
+      </InfoText>
+      <Grid container spacing={24} justify="center">
+        <Grid item xs={12} md={8} lg={6}>
+          <YouTube videoId="AIASbss0LMw" />
+        </Grid>
+      </Grid>
     </Band>
   </article>
 );
