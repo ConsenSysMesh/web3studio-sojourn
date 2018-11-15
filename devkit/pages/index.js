@@ -4,6 +4,7 @@ import EyeIcon from 'react-feather/dist/icons/eye';
 import LockIcon from 'react-feather/dist/icons/lock';
 import ShieldIcon from 'react-feather/dist/icons/shield';
 import GithubIcon from 'react-feather/dist/icons/github';
+import YouTube from '../src/components/YouTube';
 import Band from '../src/components/Band';
 import ImageBand from '../src/components/ImageBand';
 import CTACircle from '../src/components/CTACircle';
@@ -19,6 +20,7 @@ import CodeBlocks from '../src/components/images/CodeBlocks';
 import HamsterWorks from '../src/components/images/HamsterWorks';
 import SojournLogo from '../src/components/images/SojournLogo';
 import ShamirWorkflow from '../src/components/images/ShamirWorkflow';
+
 const links = {
   web3Wiki: 'https://github.com/w3f/Web3-wiki/wiki',
   apacheLicense: 'https://www.apache.org/licenses/LICENSE-2.0',
@@ -36,9 +38,11 @@ const links = {
   chainpoint: 'https://chainpoint.org/',
   smartContractEtherscan:
     'https://rinkeby.etherscan.io/address/0xb8e2748911ef2bea3f15fa49c68a9ffdce9e0096',
+  web3StudioMedium: 'https://medium.com/web3studio',
   sojournMedium:
     'https://media.consensys.net/sojourn-the-journal-that-journalists-trust-to-keep-their-secrets-secret-e173bc658998',
-  twitter: 'https://twitter.com/web3studio'
+  twitter: 'https://twitter.com/web3studio',
+  youtubeChannel: 'https://www.youtube.com/channel/UCM1wUXmODZbVLoCocwrW7uQ'
 };
 
 const srcHref = srcPath => `${links.githubRepo}/tree/master/${srcPath}`;
@@ -61,8 +65,9 @@ const Index = () => (
         </P>
         <P paragraph>
           We publish stories about these uses in the form of “product reviews
-          from the near future” on Medium. Then we build some of these stories
-          into developer kits like this one. The kits are open source.
+          from the near future” on <a href={links.web3StudioMedium}>Medium</a>.
+          Then we build some of these stories into developer kits like this one.
+          The kits are open source.
         </P>
         <P>
           Success for us is you taking the kit’s ideas and{' '}
@@ -180,8 +185,6 @@ const Index = () => (
           The whole point of our team is to give you a leg up on your own ideas,
           but we did publish one story that might give you ideas:
         </P>
-        {/* TODO: This would be a great place to add statistics
-        https://www.nytimes.com/2018/10/11/world/americas/journalists-killed.html */}
         <P>
           The{' '}
           <A href={links.sojournMedium} external>
@@ -197,7 +200,7 @@ const Index = () => (
         </P>
       </InfoText>
     </Band>
-    <Band>
+    <Band alignItems="center">
       <AsideText>
         <H2 gutterBottom>The SoJourn User Experience</H2>
         <P lastInSection>
@@ -239,11 +242,10 @@ const Index = () => (
         </Grid>
 
         <H3 paragraph>Restore from Vault</H3>
-        {/* TODO, link to vault section on page */}
         <P paragraph>
-          The Vault uses a Web3 approach to secure data storage, so that the
-          user doesn’t have to worry about losing their device and their data
-          with it.
+          <A href={'#the-vault'}>The Vault</A> uses a Web3 approach to secure
+          data storage, so that the user doesn’t have to worry about losing
+          their device and their data with it.
         </P>
         {/* TODO Where is the code and are the comments in the file good
         enough to explain how everything works. Vault.js should be
@@ -259,8 +261,7 @@ const Index = () => (
         </P>
       </AsideText>
       <AsideImage>
-        {/* TODO: Placeholder for phone screen*/}
-        <HamsterWorks />
+        <img style={{ width: '100%' }} src="/static/iphone.png" alt="" />
       </AsideImage>
     </Band>
     <Band dark>
@@ -590,6 +591,25 @@ const Index = () => (
           </Li>
         </Ol>
       </InfoText>
+    </Band>
+    <Band>
+      <InfoText>
+        <H2 gutterBottom>The Making Of</H2>
+        <P lastInSection>
+          We want to give you a detailed look at our thinking around how we
+          built this devkit. Often when building things you run into challenges
+          and gain tribal knowledge that we want to share, with you. To see all
+          of our videos, check out our{' '}
+          <A href={links.youtubeChannel} external>
+            YouTube Channel.
+          </A>
+        </P>
+      </InfoText>
+      <Grid container spacing={24} justify="center">
+        <Grid item xs={12} md={8} lg={6}>
+          <YouTube videoId="AIASbss0LMw" />
+        </Grid>
+      </Grid>
     </Band>
   </article>
 );

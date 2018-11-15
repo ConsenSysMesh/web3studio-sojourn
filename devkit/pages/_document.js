@@ -45,6 +45,8 @@ class MyDocument extends Document {
             content={staticAsset('browserconfig.xml')}
           />
           <meta name="theme-color" content="#ffffff" />
+
+          <script async src="https://www.google-analytics.com/analytics.js" />
         </Head>
         <body>
           <Main />
