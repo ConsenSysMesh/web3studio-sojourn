@@ -26,7 +26,7 @@
   <br/>
   <a href='https://consensys.github.io/web3studio-sojourn/'><img 
       alt='' 
-      src="https://user-images.githubusercontent.com/5770007/48513922-295d0580-e82b-11e8-8474-5f9dd83ec062.png" /></a>
+      src="https://user-images.githubusercontent.com/5770007/48524945-3cce9780-e850-11e8-9f71-6c81b7b1525d.png" /></a>
   <br/>
   <br/>
 </p>
