@@ -15,6 +15,7 @@ import IconBlob from '../src/components/IconBlob';
 import { H1, H2, H3, H4, H5, P, Subtitle } from '../src/components/Typography';
 import A from '../src/components/Anchor';
 import { Ol, Li } from '../src/components/Lists';
+import { staticAsset } from '../src/getPageContext';
 
 import CodeBlocks from '../src/components/images/CodeBlocks';
 import HamsterWorks from '../src/components/images/HamsterWorks';
@@ -48,6 +49,7 @@ const links = {
 const srcHref = srcPath => `${links.githubRepo}/tree/master/${srcPath}`;
 const sssaSrcHref = srcPath =>
   `${links.rnSSSAGithubRepo}/tree/develop/${srcPath}`;
+
 const Index = () => (
   <article>
     <Band dark stacked>
@@ -65,9 +67,12 @@ const Index = () => (
         </P>
         <P paragraph>
           We publish stories about these uses in the form of “product reviews
-          from the near future” on <a href={links.web3StudioMedium}>Medium</a>.
-          Then we build some of these stories into developer kits like this one.
-          The kits are open source.
+          from the near future” on{' '}
+          <A href={links.web3StudioMedium} external>
+            Medium
+          </A>
+          . Then we build some of these stories into developer kits like this
+          one. The kits are open source.
         </P>
         <P>
           Success for us is you taking the kit’s ideas and{' '}
@@ -261,7 +266,7 @@ const Index = () => (
         </P>
       </AsideText>
       <AsideImage>
-        <img style={{ width: '100%' }} src="/static/iphone.png" alt="" />
+        <img style={{ width: '100%' }} src={staticAsset('iphone.png')} alt="" />
       </AsideImage>
     </Band>
     <Band dark>
