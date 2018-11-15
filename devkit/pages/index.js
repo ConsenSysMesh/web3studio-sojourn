@@ -42,7 +42,8 @@ const links = {
 };
 
 const srcHref = srcPath => `${links.githubRepo}/tree/master/${srcPath}`;
-
+const sssaSrcHref = srcPath =>
+  `${links.rnSSSAGithubRepo}/tree/develop/${srcPath}`;
 const Index = () => (
   <article>
     <Band dark stacked>
@@ -336,17 +337,28 @@ const Index = () => (
           We use <A href={links.aesGithubRepo}>AES</A> to encrypt the data
           during the Done function in the application.
         </P>
-        {/* TODO: Fill in `here` and `examples` */}
         <P paragraph>
           AES requires an input of a 256 bit private key. The devKit
-          demonstrates this by generating a private key [here]. Clearly you are
-          going to want to modify this in one of several ways. [examples]
+          demonstrates this by{' '}
+          <A href={sssaSrcHrf('index.js#L15-L21')}>generating</A> a private key.
         </P>
 
         <P lastInSection>
-          How you handle private key sharing and storage is going to matter in
-          the experience you provide for the user to restore their data to a new
-          device… so don’t only keep it on one device.
+          The entire purpose of the vault is to allow a user to access their
+          data from other devices. In order to do that, they need to be able to
+          share their private keys with other devices safetly. We did not
+          implement that in the dev kit, but there are a few options. Each one
+          effects the user experience in different ways. One way is to generate
+          the key using a menomonic. This would force a user to keep track of a
+          12 word phrase. The pros of this is that it is a simple solution, the
+          con is that uPort and other wallets use mnemonics, and it might be
+          hard to keep track of multiple. Another solution is to use{' '}
+          <A href="https://en.wikipedia.org/wiki/Integrated_Encryption_Scheme">
+            Integrated Encryption Scheme
+          </A>{' '}
+          , a variation on Diffie Hellman, to securely share a private key with
+          other devices. Yet another solution is to use a QR code to pass the
+          private key between devices.
         </P>
 
         <H5 gutterBottom>Grind the Notes into Little Bits</H5>
@@ -369,24 +381,21 @@ const Index = () => (
           The key terms you need to know to work with this module are:
         </P>
         <IconBlob title="secret" icon={<LockIcon />}>
-          {/* TODO: link to code */}
           <P paragraph>
             For SSSA, the Secret is simply any bit array, but we implemented the
             Secret specifically as a Base64-encoded string, so that SSSA can
-            process the AES Encrypted file that we are passing it. You can
-            modify the code here to enable the Vault to, for example, take
-            unencrypted files.
+            process the AES Encrypted file that we are passing it.
           </P>
         </IconBlob>
-
-        {/* TODO: Link generateShares and combine functions when exists */}
         <IconBlob title="shares" icon={<ShieldIcon />}>
           <P paragraph>
             We won’t get into polynomials and how SSSA does its magic. But you
-            need to know that the generateShares() function returns a set of hex
-            values which, through combine() allow you to reconstruct the
-            original data IF you have all the shares together to pass into that
-            function.
+            need to know that the{' '}
+            <A href={sssaSrcHref('lib/sssa.js#L252-L264')}>generateShares()</A>{' '}
+            function returns a set of hex values which, through{' '}
+            <A href={sssaSrcHref('lib/sssa.js#L75-L79')}>combine()</A> allow you
+            to reconstruct the original data IF you have all the shares together
+            to pass into that function.
           </P>
         </IconBlob>
 
@@ -411,7 +420,6 @@ const Index = () => (
           stored somewhere. On this implementation, we chose to use IPFS via the
           Infura Gateway.
         </P>
-        {/* TODO: Make this an inset (maybe)?*/}
         <P paragraph>
           Infura stores data on many AWS instances distributed globally. It
           should be noted that currently Infura is managing this in a somewhat
@@ -442,13 +450,12 @@ const Index = () => (
           two separate resources in order to both reconstruct and decrypt the
           file.
         </P>
-        {/* TODO: Insert file repo location */}
         <P>
-          IPFS returns a hash of each Share location, and the code in [insert
-          repo file location] will concatenate the hashes into an array, which,
-          depending on how your application manages this, you will use to let
-          the user restore their data (e.g., in the event of them losing their
-          phone).
+          IPFS returns a hash of each Share location, and the{' '}
+          <A href={sssaSrcHref('lib/remoteStorage.js')}>code</A> will
+          concatenate the hashes into an array, which, depending on how your
+          application manages this, you will use to let the user restore their
+          data (e.g., in the event of them losing their phone).
         </P>
       </InfoText>
     </Band>
