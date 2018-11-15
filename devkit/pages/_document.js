@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
+import { staticAsset } from '../src/getPageContext';
 import flush from 'styled-jsx/server';
 
 class MyDocument extends Document {
@@ -14,6 +15,36 @@ class MyDocument extends Document {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href={staticAsset('apple-touch-icon.png')}
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href={staticAsset('favicon-32x32.png')}
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href={staticAsset('favicon-16x16.png')}
+          />
+          <link rel="manifest" href={staticAsset('site.webmanifest')} />
+          <link
+            rel="mask-icon"
+            href={staticAsset('safari-pinned-tab.svg')}
+            color="#e62d2d"
+          />
+          <link rel="shortcut icon" href={staticAsset('favicon.ico')} />
+          <meta name="msapplication-TileColor" content="#e62d2d" />
+          <meta
+            name="msapplication-config"
+            content={staticAsset('browserconfig.xml')}
+          />
+          <meta name="theme-color" content="#ffffff" />
         </Head>
         <body>
           <Main />

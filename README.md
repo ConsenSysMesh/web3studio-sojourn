@@ -1,5 +1,12 @@
 <h1 align="center">
+  <br/>
+  <a href='https://consensys.github.io/web3studio-sojourn/'><img 
+      width='100px' 
+      alt='' 
+      src="https://user-images.githubusercontent.com/5770007/48513223-45f83e00-e829-11e8-97c4-72850d7b46d8.png" /></a>
+  <br/>
   Sojourn
+  <br/>
 </h1>
 
 <h4 align="center">
@@ -13,6 +20,31 @@
   <a href="#description">Description</a> ∙
   <a href="#consensys-web3-studio---durham">ConsenSys Web3 Studio - Durham</a>
 </p>
+
+<p align='center'>
+  <br/>
+  <br/>
+  <a href='https://consensys.github.io/web3studio-sojourn/'><img 
+      alt='' 
+      src="https://user-images.githubusercontent.com/5770007/48524945-3cce9780-e850-11e8-9f71-6c81b7b1525d.png" /></a>
+  <br/>
+  <br/>
+</p>
+
+Sojourn is a really simple example of what you can do with an approach to Web3
+storage that our team simplified for a React Native application.
+It’s a note taking application...or rather, it is a set of UI and back-end
+components that you can use to construct your own Web3 note taking application.
+
+<p align='center'>
+  <br/>
+  <br/>
+  <img 
+    alt='' 
+    src="https://user-images.githubusercontent.com/5770007/48513239-50b2d300-e829-11e8-9dd5-04c4fa009555.gif" />
+  <br/>
+  <br/>
+<p align='center'>
 
 ## Getting Started
 

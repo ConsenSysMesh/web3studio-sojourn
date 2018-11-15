@@ -1,19 +1,17 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import EyeIcon from 'react-feather/dist/icons/eye';
+import LockIcon from 'react-feather/dist/icons/lock';
+import ShieldIcon from 'react-feather/dist/icons/shield';
 import GithubIcon from 'react-feather/dist/icons/github';
 import Band from '../src/components/Band';
 import ImageBand from '../src/components/ImageBand';
-import AppExpose, {
-  AppExposeColumn,
-  AppExposeItem
-} from '../src/components/AppExpose';
 import CTACircle from '../src/components/CTACircle';
 import AsideText from '../src/components/AsideText';
 import InfoText from '../src/components/InfoText';
 import AsideImage from '../src/components/AsideImage';
 import IconBlob from '../src/components/IconBlob';
-import { H1, H2, H3, H4, H5, P } from '../src/components/Typography';
+import { H1, H2, H3, H4, H5, P, Subtitle } from '../src/components/Typography';
 import A from '../src/components/Anchor';
 import { Ol, Li } from '../src/components/Lists';
 
@@ -21,7 +19,6 @@ import CodeBlocks from '../src/components/images/CodeBlocks';
 import HamsterWorks from '../src/components/images/HamsterWorks';
 import SojournLogo from '../src/components/images/SojournLogo';
 import ShamirWorkflow from '../src/components/images/ShamirWorkflow';
-
 const links = {
   web3Wiki: 'https://github.com/w3f/Web3-wiki/wiki',
   apacheLicense: 'https://www.apache.org/licenses/LICENSE-2.0',
@@ -40,7 +37,8 @@ const links = {
   smartContractEtherscan:
     'https://rinkeby.etherscan.io/address/0xb8e2748911ef2bea3f15fa49c68a9ffdce9e0096',
   sojournMedium:
-    'https://media.consensys.net/sojourn-the-journal-that-journalists-trust-to-keep-their-secrets-secret-e173bc658998'
+    'https://media.consensys.net/sojourn-the-journal-that-journalists-trust-to-keep-their-secrets-secret-e173bc658998',
+  twitter: 'https://twitter.com/web3studio'
 };
 
 const srcHref = srcPath => `${links.githubRepo}/tree/master/${srcPath}`;
@@ -54,13 +52,13 @@ const Index = () => (
       <AsideText size={7}>
         <H1 gutterBottom>What is this developer kit</H1>
         <H4 gutterBottom>and why are you giving it away for free?</H4>
-        <P gutterBottom>
+        <P paragraph>
           The ConsenSys Web3 Studio in Durham, NC has a pretty sweet job. Our
           team of developers, designers and writers spend our days coming up
           with what we hope are novel, unexpected ways to use blockchain and{' '}
           <A href={links.web3Wiki}>Web3-related technologies.</A>
         </P>
-        <P gutterBottom>
+        <P paragraph>
           We publish stories about these uses in the form of “product reviews
           from the near future” on Medium. Then we build some of these stories
           into developer kits like this one. The kits are open source.
@@ -77,13 +75,13 @@ const Index = () => (
       <Grid item>
         <CTACircle href={links.githubRepo}>
           <GithubIcon size={64} />
-          <H4 gutterBottom color="inherit" align="center">
+          <H4 paragraph color="inherit" align="center">
             Get Started!
           </H4>
-          <P gutterBottom color="inherit" align="center">
+          <P paragraph color="inherit" align="center">
             Start building your Web3 app
           </P>
-          <P gutterBottom color="inherit" align="center">
+          <P paragraph color="inherit" align="center">
             Get the Code
           </P>
         </CTACircle>
@@ -94,15 +92,15 @@ const Index = () => (
         <CodeBlocks />
       </AsideImage>
       <AsideText>
-        <H2 gutterBottom>What is SoJourn?</H2>
-        <P gutterBottom>
+        <H2 paragraph>What is SoJourn?</H2>
+        <P paragraph>
           SoJourn is a really simple example of what you can do with an approach
           to Web3 storage that our team simplified for a React Native
           application. It’s a note taking application...or rather, it is a set
           of UI and back-end components that you can use to construct your own
           Web3 note taking application.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           Think of SoJourn like the picture on a box of Legos. The important
           thing is what you do with those pieces, and we hope you find a few of
           them unique and useful in your own projects.
@@ -115,13 +113,13 @@ const Index = () => (
     </Band>
     <Band>
       <AsideText>
-        <H3 gutterBottom>How it Works</H3>
-        <P gutterBottom>
+        <H3 paragraph>How it Works</H3>
+        <P paragraph>
           SoJourn lets you write notes or edit existing notes. Then it:
         </P>
         <Ol>
           <Li>
-            <P gutterBottom>
+            <P paragraph>
               Stores and encrypts the notes locally on an iPhone using the Apple
               keychain, so that all the notes are instantly available to the
               user;
@@ -129,7 +127,7 @@ const Index = () => (
           </Li>
 
           <Li>
-            <P gutterBottom>
+            <P paragraph>
               “Notarizes” the data by storing a hash onto a public blockchain
               (we’re using the Ethereum{' '}
               <A href={links.rinkeby} external>
@@ -141,7 +139,7 @@ const Index = () => (
           </Li>
 
           <Li>
-            <P gutterBottom>
+            <P paragraph>
               Encrypts each note, divides it into parts (using{' '}
               <A href={links.shamirWiki}>Shamir’s Secret Sharing algorithm</A>
               ), and distributes each of them to different locations on IPFS.
@@ -169,15 +167,15 @@ const Index = () => (
     </ImageBand>
     <Band dark>
       <InfoText>
-        <H2 gutterBottom>Why do Web3 Data Storage This Way?</H2>
-        <P gutterBottom>
+        <H2 paragraph>Why do Web3 Data Storage This Way?</H2>
+        <P paragraph>
           We thought of many practical uses of this kind of Web3 Storage
           pattern. The simplest is a diary app that lets you record things, for
           example, like an account of harassment, which you want to be sure
           can’t be hacked into but which you can also produce years later and
           prove that you didn’t just recently make the story up.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           The whole point of our team is to give you a leg up on your own ideas,
           but we did publish one story that might give you ideas:
         </P>
@@ -199,52 +197,49 @@ const Index = () => (
       </InfoText>
     </Band>
     <Band>
-      <AppExpose
-        title="The Sojourn User Experience"
-        subtitle={
-          'This open source note taking app is about as basic as you can ' +
-          'get, but it gives you a foundation for adding all your bells and ' +
-          'whistles.'
-        }
-      >
-        <AppExposeColumn>
-          <AppExposeItem title="Authorization">
-            Uses FaceID to{' '}
-            <A href={srcHref('src/store/secureStorage.js')}>secure data</A>, and
-            uPort to{' '}
-            <A href={srcHref('src/modules/setup/uport.js')}>
-              manage the wallet
-            </A>{' '}
-            to pay for Notary services.
-          </AppExposeItem>
-
-          <AppExposeItem title="Note List">
-            Scan through existing notes and select to open the contents.
-          </AppExposeItem>
-        </AppExposeColumn>
-        <AppExposeColumn>
-          <AppExposeItem title="[Image Here]" />
-        </AppExposeColumn>
-        <AppExposeColumn>
-          <AppExposeItem title="Create Note">
-            Create a note quickly with one tap.
-          </AppExposeItem>
-
-          {/* TODO: Add header anchors and link `the vault` to it*/}
-          <AppExposeItem title="Edit Note">
-            Write and update a note and then save, notarize and store the latest
-            version to the Vault.
-          </AppExposeItem>
-        </AppExposeColumn>
-      </AppExpose>
-    </Band>
-    <Band>
-      <AsideImage />
-      {/* TODO: should be part of the user experience as "5". TJ, change layout*/}
       <AsideText>
-        <H3 gutterBottom>Restore from Vault</H3>
+        <H2 gutterBottom>The SoJourn User Experience</H2>
+        <P lastInSection>
+          This open source note taking app is about as basic as you can get, but
+          it gives you a foundation for adding all your bells and whistles.
+        </P>
+
+        <Grid container spacing={24}>
+          <Grid item xs={6}>
+            <Subtitle paragraph>AUTHORIZATION</Subtitle>
+            <P paragraph>
+              Uses FaceID to{' '}
+              <A href={srcHref('src/store/secureStorage.js')}>secure data</A>,
+              and uPort to{' '}
+              <A href={srcHref('src/modules/setup/uport.js')}>
+                manage the wallet
+              </A>{' '}
+              to pay for Notary services.
+            </P>
+          </Grid>
+
+          <Grid item xs={6}>
+            <Subtitle paragraph>NOTE LIST</Subtitle>
+            <P paragraph>
+              Scan through existing notes and select to open the contents.
+            </P>
+          </Grid>
+          <Grid item xs={6}>
+            <Subtitle paragraph>CREATE NOTE</Subtitle>
+            <P lastInSection>Create a note quickly with one tap.</P>
+          </Grid>
+          <Grid item xs={6}>
+            <Subtitle paragraph>EDIT NOTE</Subtitle>
+            <P lastInSection>
+              Write and update a note and then save, notarize and store the
+              latest version to the Vault.
+            </P>
+          </Grid>
+        </Grid>
+
+        <H3 paragraph>Restore from Vault</H3>
         {/* TODO, link to vault section on page */}
-        <P gutterBottom>
+        <P paragraph>
           The Vault uses a Web3 approach to secure data storage, so that the
           user doesn’t have to worry about losing their device and their data
           with it.
@@ -262,11 +257,15 @@ const Index = () => (
           <A href={srcHref('src/modules/notes/vault.js')}>github repository.</A>
         </P>
       </AsideText>
+      <AsideImage>
+        {/* TODO: Placeholder for phone screen*/}
+        <HamsterWorks />
+      </AsideImage>
     </Band>
-    <Band>
-      <AsideText>
-        <H3 gutterBottom>Left for you</H3>
-        <P gutterBottom>
+    <Band dark>
+      <InfoText>
+        <H3 paragraph>Left for you</H3>
+        <P paragraph>
           To be a complete note taking app, clearly your project will want to
           allow the user to do all sorts of things, like formatting text,
           sorting the note list, and searching. These are basics that can be
@@ -282,7 +281,7 @@ const Index = () => (
           are many well-known ways to implement versioning, so we leave that to
           you.
         </P>
-      </AsideText>
+      </InfoText>
       <AsideImage />
     </Band>
 
@@ -291,8 +290,8 @@ const Index = () => (
     </Band>
     <Band>
       <InfoText underlayText="01">
-        <H3 gutterBottom>The Basic Notes App - UI</H3>
-        <P gutterBottom>
+        <H3 paragraph>The Basic Notes App - UI</H3>
+        <P paragraph>
           The notes app is structured as you would expect for a redux based
           React app. For example, the screen to edit a note is in the note{' '}
           <A href={srcHref('src/modules/notes')}>module directory</A>. The same
@@ -301,7 +300,7 @@ const Index = () => (
         </P>
 
         {/* TODO: Figure out how to lay out folder structure */}
-        {/*<P gutterBottom>*/}
+        {/*<P paragraph>*/}
         {/*For quick reference, the source code follows these patterns (under*/}
         {/*src/).*/}
         {/*</P>*/}
@@ -311,8 +310,8 @@ const Index = () => (
 
     <Band>
       <InfoText underlayText="02">
-        <H3 gutterBottom>The Vault</H3>
-        <P gutterBottom>
+        <H3 paragraph>The Vault</H3>
+        <P paragraph>
           What makes the SoJourn framework different from a typical cloud
           note-taking application is that the Vault, which uses Shamir’s Secret
           Sharing to save a series of values to many IPFS locations. This
@@ -321,7 +320,7 @@ const Index = () => (
           would have to know which IPFS addresses correspond to the user’s data,
           and would still need the user’s private key to decrypt the file.
         </P>
-        <P gutterBottom>
+        <P lastInSection>
           This is “belt-and-suspenders” security for users that are willing to
           trade some of the benefits of “Google Docs” style cloud apps for a
           high level of assurance that cloud storage will not result in the
@@ -330,34 +329,34 @@ const Index = () => (
         </P>
         {/* TODO: Link to vault code, where will it be? */}
 
-        <H4 gutterBottom>Vault Procedure</H4>
+        <H4 lastInSection>Vault Procedure</H4>
 
         <H5 gutterBottom>Encrypt the Notes</H5>
-        <P gutterBottom>
+        <P paragraph>
           We use <A href={links.aesGithubRepo}>AES</A> to encrypt the data
           during the Done function in the application.
         </P>
         {/* TODO: Fill in `here` and `examples` */}
-        <P gutterBottom>
+        <P paragraph>
           AES requires an input of a 256 bit private key. The devKit
           demonstrates this by generating a private key [here]. Clearly you are
           going to want to modify this in one of several ways. [examples]
         </P>
 
-        <P gutterBottom>
+        <P lastInSection>
           How you handle private key sharing and storage is going to matter in
           the experience you provide for the user to restore their data to a new
           device… so don’t only keep it on one device.
         </P>
 
         <H5 gutterBottom>Grind the Notes into Little Bits</H5>
-        <P gutterBottom>
+        <P paragraph>
           There’s a lot of history that you can learn about Adi Shamir and his{' '}
           <A href={links.shamirWiki}>secret sharing algorithm</A> (SSSA), which
           we decided to use for this pattern. But for the purposes of this
           devKit, here are the essentials:
         </P>
-        <P gutterBottom>
+        <P paragraph>
           We needed a way to split up a file in such a way that there is no way
           to gain any information about the original content from any single
           piece, even if decrypted. In fact, the pieces should be useless
@@ -366,12 +365,12 @@ const Index = () => (
           and quicker file reassembly, and that should give developers a lot of
           options for cool user features.
         </P>
-        <P gutterBottom>
+        <P lastInSection>
           The key terms you need to know to work with this module are:
         </P>
-        <IconBlob title="secret" icon={<EyeIcon />}>
+        <IconBlob title="secret" icon={<LockIcon />}>
           {/* TODO: link to code */}
-          <P gutterBottom>
+          <P paragraph>
             For SSSA, the Secret is simply any bit array, but we implemented the
             Secret specifically as a Base64-encoded string, so that SSSA can
             process the AES Encrypted file that we are passing it. You can
@@ -381,8 +380,8 @@ const Index = () => (
         </IconBlob>
 
         {/* TODO: Link generateShares and combine functions when exists */}
-        <IconBlob title="shares" icon={<EyeIcon />}>
-          <P gutterBottom>
+        <IconBlob title="shares" icon={<ShieldIcon />}>
+          <P paragraph>
             We won’t get into polynomials and how SSSA does its magic. But you
             need to know that the generateShares() function returns a set of hex
             values which, through combine() allow you to reconstruct the
@@ -392,7 +391,7 @@ const Index = () => (
         </IconBlob>
 
         <IconBlob title="Threshold" icon={<EyeIcon />}>
-          <P gutterBottom>
+          <P lastInSection>
             Saving Shares to decentralized storage involves the risk that some
             of the storage locations may not be available at any given time. If
             your Threshold value is set to the same number as Shares, you will
@@ -407,20 +406,20 @@ const Index = () => (
         </IconBlob>
 
         <H5 gutterBottom>Storing the Shares</H5>
-        <P gutterBottom>
+        <P paragraph>
           Once you have the data sliced up in to the Shares, they need to be
           stored somewhere. On this implementation, we chose to use IPFS via the
           Infura Gateway.
         </P>
         {/* TODO: Make this an inset (maybe)?*/}
-        <P gutterBottom>
+        <P paragraph>
           Infura stores data on many AWS instances distributed globally. It
           should be noted that currently Infura is managing this in a somewhat
           centralized way, but Infura plans to run IPFS fully decentralized, so
           consider this a proof of concept...and it may be good enough for many
           users’ privacy requirements.
         </P>
-        <P gutterBottom>
+        <P lastInSection>
           IPFS stores data by hashing the content and using that hash as the
           address to access the data. You can then{' '}
           <A href={links.ipfsGettingStarted}>use the hash</A> to enable any
@@ -433,7 +432,7 @@ const Index = () => (
         </P>
 
         <H5 gutterBottom>Storing the secret locations to find the Shares</H5>
-        <P gutterBottom>
+        <P paragraph>
           If the user can’t supply the locations of a Threshold number of Shares
           to their data, the data is as good as gone. They will never find it
           out there in IPFS. So it is critical that your app store the file
@@ -444,7 +443,7 @@ const Index = () => (
           file.
         </P>
         {/* TODO: Insert file repo location */}
-        <P gutterBottom>
+        <P>
           IPFS returns a hash of each Share location, and the code in [insert
           repo file location] will concatenate the hashes into an array, which,
           depending on how your application manages this, you will use to let
@@ -453,30 +452,29 @@ const Index = () => (
         </P>
       </InfoText>
     </Band>
-    <Band />
 
     <Band dark>
       <InfoText>
         <H2 gutterBottom>Alternative Approaches</H2>
-        <P gutterBottom>
+        <P paragraph>
           We built the SoJourn devKit with an eye toward providing a clean, open
           source Shamir’s Secret Sharing library that works for React Native
           apps. Mission accomplished.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           Until recently, there were no well-known ways to do Web3 storage in a
           way that we considered acceptable for very secret data. It’s one thing
           to worry about a system admin at AWS, but we’d take that over some guy
           somewhere with a hard disk on a public network storing my file, even
           if it is encrypted.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           However, there are new ways emerging of splitting up files, rendering
           them useless without also having many other slices, and storing them
           on decentralized infrastructure. One service is Storj’s upcoming
           version 3.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           In order to add Storj as another location for the Shares, modify [your
           LINK] for use with the Storj Uplink Client. If you don’t want to use
           Shamir’s and want to simply replace the Vault with standard Storj,
@@ -499,12 +497,12 @@ const Index = () => (
     <Band>
       <InfoText underlayText="03">
         <H3 gutterBottom>The Notary</H3>
-        <P gutterBottom>
+        <P paragraph>
           The Notary service handles the hashing of user notes onto a
           blockchain, preferably a mainnet like Ethereum’s, so that there is a
           solid chance of long-term continuity and strong tamper-resistance.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           If we were doing this all over again, we’d probably make the Notary
           library stand apart, or use something like{' '}
           <A href={links.chainpoint} external>
@@ -513,14 +511,14 @@ const Index = () => (
           but here’s what we have:
         </P>
 
-        <P gutterBottom>
+        <P paragraph>
           A <A href={srcHref('contracts/HashNotary.sol')}>Smart Contract</A> is
           responsible for storing the note’s hash and timestamp. We’ve provided
           the address of the{' '}
           <A href={links.smartContractEtherscan}>living contract</A> that we
           deployed onto the Ethereum Rinkeby testnet for demonstration.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           Then, at the user’s request, we use Web3.js in{' '}
           <A href={srcHref('src/modules/notes/notesReducer.js')}>
             the note app
@@ -533,7 +531,7 @@ const Index = () => (
     <Band>
       <InfoText underlayText="04">
         <H3 gutterBottom>Authentication & Wallet</H3>
-        <P gutterBottom>
+        <P paragraph>
           The SoJourn devKit for demonstration uses iPhone Face ID for app
           authentication and to{' '}
           <A href={srcHref('src/store/secureStorage.js')}>
@@ -560,21 +558,27 @@ const Index = () => (
           application, give you great ideas and a leg-up building your own
           awesome applications.
         </P>
-        <P gutterBottom>
+        <P paragraph>
           Remember, this is totally open source code on an Apache 2 license.
         </P>
-        <P gutterBottom>What do we want in return? Two things:</P>
+        <P paragraph>What do we want in return? Two things:</P>
         <Ol>
           <Li>
             <P>
-              We never say no to tweets and other signs of thanks and comments;
+              We never say no to{' '}
+              <A href={links.twitter} external>
+                tweets
+              </A>{' '}
+              and other signs of thanks and comments;
             </P>
           </Li>
-          {/* TODO: Fill in catchers mit*/}
           <Li>
             <P>
-              We want to hear about what you are building, so send us updates to
-              [hmmmm...need a catcher’s mit];
+              We want to hear about what you are building!{' '}
+              <A href={links.twitter} external>
+                Tweet us
+              </A>{' '}
+              and let us know.
             </P>
           </Li>
         </Ol>
