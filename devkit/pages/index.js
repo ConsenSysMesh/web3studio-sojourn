@@ -20,6 +20,7 @@ import CodeBlocks from '../src/components/images/CodeBlocks';
 import HamsterWorks from '../src/components/images/HamsterWorks';
 import SojournLogo from '../src/components/images/SojournLogo';
 import ShamirWorkflow from '../src/components/images/ShamirWorkflow';
+
 const links = {
   web3Wiki: 'https://github.com/w3f/Web3-wiki/wiki',
   apacheLicense: 'https://www.apache.org/licenses/LICENSE-2.0',
@@ -183,8 +184,6 @@ const Index = () => (
           The whole point of our team is to give you a leg up on your own ideas,
           but we did publish one story that might give you ideas:
         </P>
-        {/* TODO: This would be a great place to add statistics
-        https://www.nytimes.com/2018/10/11/world/americas/journalists-killed.html */}
         <P>
           The{' '}
           <A href={links.sojournMedium} external>
@@ -200,7 +199,7 @@ const Index = () => (
         </P>
       </InfoText>
     </Band>
-    <Band>
+    <Band alignItems="center">
       <AsideText>
         <H2 gutterBottom>The SoJourn User Experience</H2>
         <P lastInSection>
@@ -242,11 +241,10 @@ const Index = () => (
         </Grid>
 
         <H3 paragraph>Restore from Vault</H3>
-        {/* TODO, link to vault section on page */}
         <P paragraph>
-          The Vault uses a Web3 approach to secure data storage, so that the
-          user doesn’t have to worry about losing their device and their data
-          with it.
+          <A href={'#the-vault'}>The Vault</A> uses a Web3 approach to secure
+          data storage, so that the user doesn’t have to worry about losing
+          their device and their data with it.
         </P>
         {/* TODO Where is the code and are the comments in the file good
         enough to explain how everything works. Vault.js should be
@@ -262,8 +260,7 @@ const Index = () => (
         </P>
       </AsideText>
       <AsideImage>
-        {/* TODO: Placeholder for phone screen*/}
-        <HamsterWorks />
+        <img style={{ width: '100%' }} src="/static/iphone.png" alt="" />
       </AsideImage>
     </Band>
     <Band dark>
@@ -415,7 +412,6 @@ const Index = () => (
           stored somewhere. On this implementation, we chose to use IPFS via the
           Infura Gateway.
         </P>
-        {/* TODO: Make this an inset (maybe)?*/}
         <P paragraph>
           Infura stores data on many AWS instances distributed globally. It
           should be noted that currently Infura is managing this in a somewhat
