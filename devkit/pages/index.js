@@ -491,10 +491,10 @@ const Index = () => (
           version 3.
         </P>
         <P paragraph>
-          In order to add Storj as another location for the Shares, modify [your
-          LINK] for use with the Storj Uplink Client. If you don’t want to use
-          Shamir’s and want to simply replace the Vault with standard Storj,
-          check out Storj’s tutorials on GitHub for the{' '}
+          In order to add Storj as another location for the Shares, modify how
+          you upload shares for use with the Storj Uplink Client. If you don’t
+          want to use Shamir’s and want to simply replace the Vault with
+          standard Storj, check out Storj’s tutorials on GitHub for the{' '}
           <A href={links.storjUplinkDocs}>uplink client</A> and{' '}
           <A href={links.storjS3Docs}>S3 gateway.</A>
         </P>
