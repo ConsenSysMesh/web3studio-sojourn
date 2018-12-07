@@ -117,7 +117,7 @@ $ yarn truffle migrate --network YOUR_NETWORK_ID
 For more details see [Truffle's Documentation.](https://truffleframework.com/docs/truffle/getting-started/running-migrations)
 
 ##Storage
-Sojourn uses IPFS to securely store each document in a way where the user can access it from any device without compromising the security of their data. The way we do this is via Shamir's Secret Sharing Algorithm. Specifically, it encrypt each file with AES, splits it apart with Shamir's Secret Sharing Algorithm, and spreads the shards onto IPFS. Web3Studio created an open source project integrating this pipeline into React-Native, [`react-native-sssa`](https://github.com/ConsenSys/react-native-sssa). Pull request are welcome and encouraged.
+Sojourn uses IPFS to securely store each document in a way where the user can access it from any device without compromising the security of their data. The way we do this is via Shamir's Secret Sharing Algorithm. Specifically, it encrypts each file with AES, splits it apart with Shamir's Secret Sharing Algorithm, and spreads the shards onto IPFS. Web3Studio created an open source project integrating this pipeline into React-Native, [`react-native-sssa`](https://github.com/ConsenSys/react-native-sssa). Pull request are welcome and encouraged.
 
 ## DevKit
 
