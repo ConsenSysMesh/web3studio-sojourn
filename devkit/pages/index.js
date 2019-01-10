@@ -77,9 +77,19 @@ const Index = () => (
         <P>
           Success for us is you taking the kit’s ideas and{' '}
           <A href={links.apacheLicense} external>
-            open source
+            {' '}
+            open source{' '}
           </A>{' '}
-          code and building your own web3 applications.
+          code and building your own web3 applications. The open source code for
+          Sojourn lives in two repositories. One repository,{' '}
+          <A href={links.githubRepo}>web3studio-sojourn</A> contains a
+          react-native application that allows the user to interact with
+          Ethereum from a mobile device. The other,{' '}
+          <A href={links.rnSSSAGithubRepo}>react-native-sssa</A> , takes care of
+          encrypting the users files and spreading it across different nodes on
+          IPFS. It makes AES and Shamirs Secret Sharing Algorithm possible in a
+          react-native environment, ensuring each user has complete sovereignty
+          over their data.
         </P>
       </AsideText>
 
