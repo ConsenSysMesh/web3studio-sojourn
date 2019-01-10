@@ -74,7 +74,7 @@ const Index = () => (
           . Then we build some of these stories into developer kits like this
           one. The kits are open source.
         </P>
-        <P>
+        <P paragraph>
           Success for us is you taking the kit’s ideas and{' '}
           <A href={links.apacheLicense} external>
             {' '}
@@ -87,9 +87,9 @@ const Index = () => (
           The open source code for Sojourn lives in two repositories. One repository,{' '}
           <A href={links.githubRepo}>web3studio-sojourn</A> is Sojourn itself. It is a react-native
           application that allows a user to write and edit files from a mobile device, as well as 
-          hash a file onto Ethereum whenever they wish to save something forever. The other repository,{' '}
+          hash a file onto Ethereum. The other repository,{' '}
           <A href={links.rnSSSAGithubRepo}>react-native-sssa</A>, which is a dependency of the first, 
-          takes care of encrypting the users files and spreading it across different nodes on
+         encrypts the users files and spreads it across different nodes on
           IPFS. It makes AES and Shamirs Secret Sharing Algorithm possible in a
           react-native environment, ensuring each user has complete sovereignty
           over their data.
