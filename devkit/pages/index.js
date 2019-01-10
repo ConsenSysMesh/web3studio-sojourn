@@ -89,7 +89,7 @@ const Index = () => (
           application that allows a user to write and edit files from a mobile device, as well as 
           hash a file onto Ethereum whenever they wish to save something forever. The other repository,{' '}
           <A href={links.rnSSSAGithubRepo}>react-native-sssa</A>, which is a dependency of the first, 
-          takes care of encrypting the user's files and spreading it across different nodes on
+          takes care of encrypting the users files and spreading it across different nodes on
           IPFS. It makes AES and Shamirs Secret Sharing Algorithm possible in a
           react-native environment, ensuring each user has complete sovereignty
           over their data.
